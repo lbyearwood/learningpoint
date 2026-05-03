@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | LearningPoint</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>Student area</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-layout">
+    <section class="page-hero student-hero">
+      <div>
+        <p class="eyebrow">Student dashboard</p>
+        <h1>Welcome back.</h1>
+        <p class="lead">Your published workbook pages, quizzes and recent scores will appear here.</p>
+      </div>
+      <div class="quick-stat-panel">
+        <article>
+          <span>Published tasks</span>
+          <strong>4</strong>
+        </article>
+        <article>
+          <span>Recent score</span>
+          <strong>8/10</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="eyebrow">Published content</p>
+          <h2>Workbooks</h2>
+        </div>
+        <p class="muted">Only published items should appear here once Supabase is connected.</p>
+      </div>
+      <div id="publishedWorkbooks" class="card-grid two"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="eyebrow">Knowledge checks</p>
+          <h2>Quizzes</h2>
+        </div>
+        <p class="muted">Quiz cards will later be loaded from Supabase learning item records.</p>
+      </div>
+      <div id="publishedQuizzes" class="card-grid two"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Progress</p>
+        <h2>Recent scores</h2>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Quiz</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="recentScores"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint student area.</p>
+  </footer>
+
+  <script src="../assets/js/config/supabase-config.js"></script>
+  <script src="../assets/js/services/supabaseClient.js"></script>
+  <script src="../assets/js/services/authService.js"></script>
+  <script src="../assets/js/services/profileService.js"></script>
+  <script src="../assets/js/services/learningItemService.js"></script>
+  <script src="../assets/js/services/quizService.js"></script>
+  <script src="../assets/js/utils/dom.js"></script>
+  <script src="../assets/js/controllers/uiController.js"></script>
+  <script src="../assets/js/views/studentDashboardView.js"></script>
+  <script src="../assets/js/controllers/studentDashboardController.js"></script>
+</body>
+</html>
