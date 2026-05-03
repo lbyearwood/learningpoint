@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | LearningPoint</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-intro" aria-label="LearningPoint introduction">
+      <a class="brand large" href="index.html" aria-label="LearningPoint home">
+        <span class="brand-mark">LP</span>
+        <span>
+          <strong>LearningPoint</strong>
+          <small>Lessons, quizzes and progress tracking</small>
+        </span>
+      </a>
+      <h1>Sign in to continue learning.</h1>
+      <p>Access published workbook content, complete quizzes and check your progress.</p>
+      <a class="text-link" href="index.html">Back to home</a>
+    </section>
+
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="login-card-header">
+        <p class="eyebrow">Secure access</p>
+        <h2 id="login-title">Account sign in</h2>
+        <p>Use the account details provided by your teacher.</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-field">
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <button class="show-password" type="button" aria-label="Show password" data-target="password">Show</button>
+          </div>
+        </div>
+
+        <label class="check-row">
+          <input type="checkbox" name="remember">
+          <span>Remember me on this device</span>
+        </label>
+
+        <p id="loginMessage" class="form-message" aria-live="polite"></p>
+
+        <button id="signInButton" class="button button-primary full-width" type="submit">
+          <span class="button-text">Sign in</span>
+          <span class="button-loading" hidden>Checking...</span>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="login-footer">
+    <p>Static site powered by GitHub Pages. Authentication powered by Supabase.</p>
+  </footer>
+
+  <script src="assets/js/config/supabase-config.js"></script>
+  <script src="assets/js/services/supabaseClient.js"></script>
+  <script src="assets/js/services/authService.js"></script>
+  <script src="assets/js/services/profileService.js"></script>
+  <script src="assets/js/utils/dom.js"></script>
+  <script src="assets/js/utils/validation.js"></script>
+  <script src="assets/js/controllers/uiController.js"></script>
+  <script src="assets/js/controllers/loginController.js"></script>
+</body>
+</html>
