@@ -1,10 +1,11 @@
 const LearningItemService = {
   sampleItems: [
     {
-      id: "gcse-unit-5-characters-workbook",
+      id: "gcse-paper-1-unit-5-characters-workbook",
       title: "Characters workbook",
       course: "GCSE Computer Science",
-      unit: "Unit 5: Data Representation",
+      paper: "Paper 1: Computer Systems",
+      unit: "5. Data Representation",
       subtopic: "Characters",
       type: "workbook",
       page_url: "../workbooks/gcse/unit-5/characters.html",
@@ -12,10 +13,11 @@ const LearningItemService = {
       description: "Understand how computers represent characters using binary codes and character sets."
     },
     {
-      id: "gcse-unit-5-characters-quiz",
+      id: "gcse-paper-1-unit-5-characters-quiz",
       title: "Characters quiz",
       course: "GCSE Computer Science",
-      unit: "Unit 5: Data Representation",
+      paper: "Paper 1: Computer Systems",
+      unit: "5. Data Representation",
       subtopic: "Characters",
       type: "quiz",
       page_url: "../quizzes/gcse/unit-5/characters-quiz-1.html",
@@ -23,26 +25,28 @@ const LearningItemService = {
       description: "Check your understanding of characters, character sets and binary representation."
     },
     {
-      id: "btec-unit-21-workbook",
-      title: "Business processes workbook",
+      id: "btec-unit-21-learning-aim-a-workbook",
+      title: "Learning Aim A workbook",
       course: "BTEC IT",
       unit: "Unit 21: Business Process Modelling Tools",
-      subtopic: "Introduction",
+      learning_aim: "Learning Aim A",
+      subtopic: "Business processes",
       type: "workbook",
-      page_url: "../workbooks/btec/unit-21/introduction.html",
+      page_url: "../workbooks/btec/unit-21/learning-aim-a.html",
       is_published: true,
-      description: "Start learning how organisations use process modelling to analyse and improve business processes."
+      description: "Understand business processes, organisational aims, departments and the drivers for change."
     },
     {
-      id: "btec-unit-21-quiz",
-      title: "Business processes quiz",
+      id: "btec-unit-21-learning-aim-a-quiz",
+      title: "Learning Aim A quiz",
       course: "BTEC IT",
       unit: "Unit 21: Business Process Modelling Tools",
-      subtopic: "Introduction",
+      learning_aim: "Learning Aim A",
+      subtopic: "Business processes",
       type: "quiz",
-      page_url: "../quizzes/btec/unit-21/introduction-quiz-1.html",
+      page_url: "../quizzes/btec/unit-21/learning-aim-a-quiz-1.html",
       is_published: false,
-      description: "A draft knowledge check for the first Unit 21 topic."
+      description: "A draft knowledge check for Unit 21 Learning Aim A."
     }
   ],
 
