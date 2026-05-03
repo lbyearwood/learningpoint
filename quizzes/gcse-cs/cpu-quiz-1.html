@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPU Quiz 1 | LearningPoint</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>Quiz</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../student/dashboard.html">Dashboard</a>
+      <a href="../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <section class="page-title">
+      <p class="eyebrow">GCSE Computer Science</p>
+      <h1>CPU Quiz 1</h1>
+      <p class="lead">Answer the questions below. This temporary version marks the multiple-choice questions locally. Later, answers and scores will be saved to Supabase.</p>
+    </section>
+
+    <form id="quizForm" class="quiz-card" data-quiz-id="cpu-quiz-1" data-max-score="3" novalidate>
+      <div class="form-group">
+        <label for="studentName">Student name</label>
+        <input id="studentName" name="studentName" type="text" autocomplete="name" required>
+      </div>
+
+      <fieldset class="quiz-question" data-question="What is the main purpose of the CPU?" data-answer="process-instructions">
+        <legend>Q1) What is the main purpose of the CPU?</legend>
+        <label><input type="radio" name="q1" value="store-files"> To permanently store files</label>
+        <label><input type="radio" name="q1" value="process-instructions"> To process instructions and data</label>
+        <label><input type="radio" name="q1" value="display-images"> To display images on the screen</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-question="Which CPU component performs calculations and logical comparisons?" data-answer="alu">
+        <legend>Q2) Which CPU component performs calculations and logical comparisons?</legend>
+        <label><input type="radio" name="q2" value="control-unit"> Control Unit</label>
+        <label><input type="radio" name="q2" value="register"> Register</label>
+        <label><input type="radio" name="q2" value="alu"> Arithmetic Logic Unit</label>
+      </fieldset>
+
+      <div class="quiz-question written-question" data-question="Explain one role of registers inside the CPU.">
+        <label for="q3">Q3) Explain one role of registers inside the CPU.</label>
+        <textarea id="q3" name="q3" required></textarea>
+      </div>
+
+      <p id="quizMessage" class="form-message" aria-live="polite"></p>
+      <button class="button button-primary" type="submit">Submit quiz</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint quiz page.</p>
+  </footer>
+
+  <script src="../../assets/js/config/supabase-config.js"></script>
+  <script src="../../assets/js/services/supabaseClient.js"></script>
+  <script src="../../assets/js/services/authService.js"></script>
+  <script src="../../assets/js/services/quizService.js"></script>
+  <script src="../../assets/js/utils/dom.js"></script>
+  <script src="../../assets/js/utils/validation.js"></script>
+  <script src="../../assets/js/controllers/uiController.js"></script>
+  <script src="../../assets/js/views/quizView.js"></script>
+  <script src="../../assets/js/controllers/quizController.js"></script>
+</body>
+</html>
