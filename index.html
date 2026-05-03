@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearningPoint | Teaching and Learning Hub</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>Teaching and learning hub</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero two-column">
+      <div class="hero-copy">
+        <p class="eyebrow">Static site with Supabase support</p>
+        <h1>Workbook content, quizzes and progress in one simple place.</h1>
+        <p class="lead">LearningPoint is a teaching and learning platform for students to access published workbook pages, complete quizzes and view their own scores.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="login.html">Sign in</a>
+          <a class="button button-secondary" href="student/dashboard.html">Preview student dashboard</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Platform overview">
+        <h2>What students will do</h2>
+        <ul class="feature-list">
+          <li>Log in using their student account.</li>
+          <li>Open published workbooks and quizzes.</li>
+          <li>Submit quiz answers securely.</li>
+          <li>View their own scores and recent attempts.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">First stage</p>
+        <h2>UI foundation</h2>
+        <p>This version focuses on the visual structure only. Supabase connection points are prepared in the JavaScript files, but the live backend is not connected yet.</p>
+      </div>
+      <div class="card-grid three">
+        <article class="info-card">
+          <span class="card-label">Students</span>
+          <h3>Student dashboard</h3>
+          <p>Students will see only workbook pages and quizzes that have been published to them.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-label">Admin</span>
+          <h3>Control panel</h3>
+          <p>The admin area will manage published items, quiz responses and student scores.</p>
+        </article>
+        <article class="info-card">
+          <span class="card-label">Quizzes</span>
+          <h3>Quiz submission</h3>
+          <p>Quiz answers and scores will be stored in Supabase once the backend is connected.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint. Static site powered by GitHub Pages. Authentication will be powered by Supabase.</p>
+  </footer>
+
+  <script src="assets/js/utils/dom.js"></script>
+  <script src="assets/js/controllers/uiController.js"></script>
+</body>
+</html>
