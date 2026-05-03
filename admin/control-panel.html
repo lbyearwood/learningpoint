@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Control Panel | LearningPoint</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>Admin control panel</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a class="active" href="control-panel.html">Control panel</a>
+      <a href="../student/dashboard.html">Student preview</a>
+      <a href="../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="admin-layout">
+    <section class="page-hero admin-hero">
+      <div>
+        <p class="eyebrow">Admin area</p>
+        <h1>Control what students can see.</h1>
+        <p class="lead">Publish or unpublish workbook and quiz records, then review quiz responses and scores.</p>
+      </div>
+      <div class="quick-stat-panel dark">
+        <article>
+          <span>Published</span>
+          <strong>3</strong>
+        </article>
+        <article>
+          <span>Responses</span>
+          <strong>18</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-grid">
+      <article class="admin-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Workbooks</p>
+            <h2>Manage published workbooks</h2>
+          </div>
+        </div>
+        <div id="workbookAdminRows" class="admin-list"></div>
+      </article>
+
+      <article class="admin-card">
+        <div class="card-header">
+          <div>
+            <p class="eyebrow">Quizzes</p>
+            <h2>Manage published quizzes</h2>
+          </div>
+        </div>
+        <div id="quizAdminRows" class="admin-list"></div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Responses</p>
+        <h2>View quiz responses</h2>
+        <p>These are sample rows. Later this table will load quiz submissions from Supabase.</p>
+      </div>
+      <div class="table-card admin-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Class</th>
+              <th>Quiz</th>
+              <th>Score</th>
+              <th>Submitted</th>
+            </tr>
+          </thead>
+          <tbody id="responseRows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer admin-footer">
+    <p>LearningPoint admin area. Real access control must be enforced with Supabase Row Level Security.</p>
+  </footer>
+
+  <script src="../assets/js/config/supabase-config.js"></script>
+  <script src="../assets/js/services/supabaseClient.js"></script>
+  <script src="../assets/js/services/authService.js"></script>
+  <script src="../assets/js/services/profileService.js"></script>
+  <script src="../assets/js/services/learningItemService.js"></script>
+  <script src="../assets/js/services/quizService.js"></script>
+  <script src="../assets/js/utils/dom.js"></script>
+  <script src="../assets/js/controllers/uiController.js"></script>
+  <script src="../assets/js/views/adminControlPanelView.js"></script>
+  <script src="../assets/js/controllers/adminControlPanelController.js"></script>
+</body>
+</html>
