@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Sound sampling</title>
+  <desc id="desc">A sound wave with regular samples taken from it.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <text x="450" y="52" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#07111f">Sound is sampled at regular intervals</text>
+  <path d="M80 190 C130 80 180 80 230 190 S330 300 380 190 S480 80 530 190 S630 300 680 190 S780 80 830 190" fill="none" stroke="#008da8" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#202733" stroke-width="3">
+    <path d="M120 92v210"/><path d="M180 92v210"/><path d="M240 92v210"/><path d="M300 92v210"/><path d="M360 92v210"/><path d="M420 92v210"/><path d="M480 92v210"/><path d="M540 92v210"/><path d="M600 92v210"/><path d="M660 92v210"/><path d="M720 92v210"/>
+  </g>
+  <g fill="#e83e8c">
+    <circle cx="120" cy="125" r="8"/><circle cx="180" cy="91" r="8"/><circle cx="240" cy="204" r="8"/><circle cx="300" cy="292" r="8"/><circle cx="360" cy="225" r="8"/><circle cx="420" cy="115" r="8"/><circle cx="480" cy="102" r="8"/><circle cx="540" cy="218" r="8"/><circle cx="600" cy="288" r="8"/><circle cx="660" cy="206" r="8"/><circle cx="720" cy="100" r="8"/>
+  </g>
+  <text x="450" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#34465c">A higher sample rate takes more samples each second.</text>
+</svg>

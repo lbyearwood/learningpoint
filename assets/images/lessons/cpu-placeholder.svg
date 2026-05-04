@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">CPU connected to memory</title>
+  <desc id="desc">A simple placeholder diagram showing a CPU chip connected to memory and instructions.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <rect x="340" y="86" width="220" height="188" rx="20" fill="#0d4f8b"/>
+  <rect x="372" y="118" width="156" height="124" rx="12" fill="#ffffff"/>
+  <text x="450" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#0d4f8b">CPU</text>
+  <g stroke="#0d4f8b" stroke-width="5" stroke-linecap="round">
+    <path d="M236 142h86"/>
+    <path d="M236 218h86"/>
+    <path d="M578 142h86"/>
+    <path d="M578 218h86"/>
+  </g>
+  <g fill="#ffffff" stroke="#d8e1ec" stroke-width="3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">
+    <rect x="86" y="104" width="150" height="76" rx="16"/>
+    <text x="161" y="151" text-anchor="middle" fill="#142033" stroke="none">Memory</text>
+    <rect x="86" y="180" width="150" height="76" rx="16"/>
+    <text x="161" y="227" text-anchor="middle" fill="#142033" stroke="none">Data</text>
+    <rect x="664" y="104" width="150" height="76" rx="16"/>
+    <text x="739" y="151" text-anchor="middle" fill="#142033" stroke="none">Fetch</text>
+    <rect x="664" y="180" width="150" height="76" rx="16"/>
+    <text x="739" y="227" text-anchor="middle" fill="#142033" stroke="none">Execute</text>
+  </g>
+</svg>

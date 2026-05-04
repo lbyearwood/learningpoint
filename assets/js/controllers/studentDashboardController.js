@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const workbooks = items.filter((item) => item.type === "workbook");
   const quizzes = items.filter((item) => item.type === "quiz");
 
-  StudentDashboardView.renderCards(workbooksContainer, workbooks);
-  StudentDashboardView.renderCards(quizzesContainer, quizzes);
+  StudentDashboardView.renderGroupedCards(workbooksContainer, workbooks);
+  StudentDashboardView.renderGroupedCards(quizzesContainer, quizzes);
 
   StudentDashboardView.renderScores(scoresContainer, [
     { quiz: "Characters quiz", score: "Not attempted", date: "Pending" },

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Resolution and file size</title>
+  <desc id="desc">A comparison showing that more pixels and more colour depth increase file size.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="70" y="86" width="300" height="200" rx="18" fill="#ffffff" stroke="#50677f" stroke-width="4"/>
+    <text x="220" y="132" text-anchor="middle" font-size="25" font-weight="700" fill="#07111f">Lower resolution</text>
+    <rect x="140" y="158" width="34" height="34" fill="#008da8"/>
+    <rect x="180" y="158" width="34" height="34" fill="#e83e8c"/>
+    <rect x="220" y="158" width="34" height="34" fill="#f4b400"/>
+    <rect x="260" y="158" width="34" height="34" fill="#202733"/>
+    <text x="220" y="238" text-anchor="middle" font-size="24" font-weight="700" fill="#005b70">Fewer pixels</text>
+    <rect x="530" y="86" width="300" height="200" rx="18" fill="#ffffff" stroke="#50677f" stroke-width="4"/>
+    <text x="680" y="132" text-anchor="middle" font-size="25" font-weight="700" fill="#07111f">Higher resolution</text>
+    <g transform="translate(590 154)">
+      <rect width="22" height="22" fill="#008da8"/><rect x="26" width="22" height="22" fill="#e83e8c"/><rect x="52" width="22" height="22" fill="#f4b400"/><rect x="78" width="22" height="22" fill="#202733"/>
+      <rect y="28" width="22" height="22" fill="#f4b400"/><rect x="26" y="28" width="22" height="22" fill="#008da8"/><rect x="52" y="28" width="22" height="22" fill="#e83e8c"/><rect x="78" y="28" width="22" height="22" fill="#f4b400"/>
+      <rect y="56" width="22" height="22" fill="#202733"/><rect x="26" y="56" width="22" height="22" fill="#f4b400"/><rect x="52" y="56" width="22" height="22" fill="#008da8"/><rect x="78" y="56" width="22" height="22" fill="#e83e8c"/>
+    </g>
+    <text x="680" y="258" text-anchor="middle" font-size="24" font-weight="700" fill="#005b70">More pixels</text>
+    <text x="450" y="320" text-anchor="middle" font-size="24" fill="#34465c">File size increases when resolution or colour depth increases.</text>
+  </g>
+</svg>

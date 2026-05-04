@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teacher Dashboard | LearningPoint</title>
+  <title>Quiz Responses | LearningPoint</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body class="admin-page">
@@ -12,12 +12,12 @@
       <span class="brand-mark">LP</span>
       <span>
         <strong>LearningPoint</strong>
+        <small>Quiz responses</small>
       </span>
     </a>
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="../index.html">Home</a>
-      <a class="active" href="control-panel.html">Teacher dashboard</a>
+      <a href="control-panel.html">Teacher dashboard</a>
       <a href="../student/dashboard.html">Student dashboard</a>
       <a href="../login.html">Sign out</a>
     </nav>
@@ -26,53 +26,30 @@
   <main class="admin-layout">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
-        <li><span aria-current="page">Teacher dashboard</span></li>
+        <li><a href="control-panel.html">Teacher dashboard</a></li>
+        <li><a href="quiz-overview.html">Quiz response overview</a></li>
+        <li><span aria-current="page">Student responses</span></li>
       </ol>
     </nav>
 
-    <section class="teacher-dashboard-title">
-      <div>
-        <h1>Courses, classes and quiz summaries.</h1>
-        <p class="lead">Choose a course to view, review a class, or check quiz response summaries.</p>
+    <section class="page-title admin-page-title">
+      <p class="eyebrow">Quiz responses</p>
+      <h1>Student responses</h1>
+      <div class="button-row">
+        <a class="button button-secondary" href="quiz-overview.html">Back to quiz response overview</a>
       </div>
     </section>
 
     <section class="teacher-section">
-      <div class="section-heading">
-        <p class="eyebrow">Option 1</p>
-        <h2>Choose a course to view</h2>
-        <p>Open a course page to view its units and topics.</p>
-      </div>
-      <div id="courseBrowser" class="course-browser"></div>
-    </section>
-
-    <section class="teacher-section">
-      <div class="section-heading">
-        <p class="eyebrow">Option 2</p>
-        <h2>Choose a class to review</h2>
-        <p>Use class cards to jump into response summaries.</p>
-      </div>
-      <div id="classCards" class="class-card-grid"></div>
-    </section>
-
-    <section id="quizResponses" class="teacher-section">
-      <div class="section-heading">
-        <p class="eyebrow">Option 3</p>
-        <h2>Check quiz response summaries</h2>
-        <p>Review progress by class and quiz.</p>
-      </div>
       <div class="table-card admin-table">
         <table>
           <thead>
             <tr>
+              <th>Student</th>
               <th>Class</th>
-              <th>Course</th>
               <th>Quiz</th>
+              <th>Score</th>
               <th>Submitted</th>
-              <th>Not submitted</th>
-              <th>Average score</th>
-              <th>Last submission</th>
-              <th>Action</th>
             </tr>
           </thead>
           <tbody id="responseRows"></tbody>
@@ -84,12 +61,10 @@
   <script src="../assets/js/config/supabase-config.js"></script>
   <script src="../assets/js/services/supabaseClient.js"></script>
   <script src="../assets/js/services/authService.js"></script>
-  <script src="../assets/js/services/profileService.js"></script>
-  <script src="../assets/js/services/learningItemService.js"></script>
   <script src="../assets/js/services/quizService.js"></script>
   <script src="../assets/js/utils/dom.js"></script>
   <script src="../assets/js/controllers/uiController.js"></script>
   <script src="../assets/js/views/adminControlPanelView.js"></script>
-  <script src="../assets/js/controllers/adminControlPanelController.js"></script>
+  <script src="../assets/js/controllers/responseDetailController.js"></script>
 </body>
 </html>

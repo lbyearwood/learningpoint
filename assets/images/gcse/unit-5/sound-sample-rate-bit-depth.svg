@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Sample rate and bit depth</title>
+  <desc id="desc">A simple diagram showing sample rate and bit depth affecting sound file size and quality.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="70" y="82" width="340" height="210" rx="18" fill="#ffffff" stroke="#50677f" stroke-width="4"/>
+    <text x="240" y="132" text-anchor="middle" font-size="28" font-weight="700" fill="#07111f">Sample rate</text>
+    <text x="240" y="182" text-anchor="middle" font-size="24" fill="#34465c">Samples per second</text>
+    <text x="240" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#008da8">Higher = more detail</text>
+    <rect x="490" y="82" width="340" height="210" rx="18" fill="#ffffff" stroke="#50677f" stroke-width="4"/>
+    <text x="660" y="132" text-anchor="middle" font-size="28" font-weight="700" fill="#07111f">Bit depth</text>
+    <text x="660" y="182" text-anchor="middle" font-size="24" fill="#34465c">Bits per sample</text>
+    <text x="660" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#e83e8c">Higher = more levels</text>
+    <text x="450" y="330" text-anchor="middle" font-size="23" fill="#34465c">Increasing either value usually improves quality and increases file size.</text>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 21 Learning Aim A Quiz | LearningPoint</title>
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>BTEC IT quiz</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../student/dashboard.html">Dashboard</a>
+      <a href="../../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <section class="page-title">
+      <p class="eyebrow">BTEC IT &gt; Unit 21: Business Process Modelling Tools</p>
+      <h1>Learning Aim A Quiz 1</h1>
+      <p class="lead">A draft local quiz for business aims, objectives, departments and drivers for change.</p>
+    </section>
+
+    <form id="quizForm" class="quiz-card" data-quiz-id="btec-unit-21-learning-aim-a-quiz" novalidate>
+      <div class="form-group">
+        <label for="studentName">Student name</label>
+        <input id="studentName" name="studentName" type="text" autocomplete="name" required>
+      </div>
+
+      <fieldset class="quiz-question" data-question="What is a business objective?" data-answer="specific-target">
+        <legend>Q1) What is a business objective?</legend>
+        <label><input type="radio" name="q1" value="specific-target"> A specific and measurable target</label>
+        <label><input type="radio" name="q1" value="broad-purpose"> A broad statement of purpose only</label>
+        <label><input type="radio" name="q1" value="software-tool"> A software tool used by finance</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-question="Which department normally manages invoices and payments?" data-answer="finance">
+        <legend>Q2) Which department normally manages invoices and payments?</legend>
+        <label><input type="radio" name="q2" value="sales"> Sales</label>
+        <label><input type="radio" name="q2" value="finance"> Finance</label>
+        <label><input type="radio" name="q2" value="hr"> Human Resources</label>
+      </fieldset>
+
+      <div class="quiz-question written-question" data-question="Explain one driver for changing a business process.">
+        <label for="q3">Q3) Explain one driver for changing a business process. (2 marks)</label>
+        <textarea id="q3" name="q3" required></textarea>
+      </div>
+
+      <p id="quizMessage" class="form-message" aria-live="polite"></p>
+      <button class="button button-primary" type="submit">Submit quiz</button>
+      <div id="quizResult" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint quiz page.</p>
+  </footer>
+
+  <script src="../../../assets/js/config/supabase-config.js"></script>
+  <script src="../../../assets/js/services/supabaseClient.js"></script>
+  <script src="../../../assets/js/services/authService.js"></script>
+  <script src="../../../assets/js/services/quizService.js"></script>
+  <script src="../../../assets/js/utils/dom.js"></script>
+  <script src="../../../assets/js/utils/validation.js"></script>
+  <script src="../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../assets/js/views/quizView.js"></script>
+  <script src="../../../assets/js/controllers/quizController.js"></script>
+</body>
+</html>

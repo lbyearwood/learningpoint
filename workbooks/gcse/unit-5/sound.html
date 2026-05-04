@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound | LearningPoint</title>
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../student/dashboard.html">Dashboard</a>
+      <a href="../../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <section class="page-title">
+      <p class="eyebrow">GCSE Computer Science &gt; Paper 1: Computer Systems &gt; 5. Data Representation</p>
+      <h1>Sound</h1>
+      <p class="lead">Learn how analogue sound is sampled and stored digitally using sample rate, bit depth and file size.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Analogue sound and digital samples</h2>
+        <p>Sound in the real world is analogue. This means it changes continuously. Computers cannot store continuous waves directly, so the sound is measured at regular intervals.</p>
+        <p>Each measurement is called a <strong>sample</strong>. The samples are stored as binary numbers.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram showing a sound wave being sampled at regular intervals" src="../../../assets/images/gcse/unit-5/sound-sampling.svg">
+          <figcaption>Sampling records the height of the sound wave at regular points.</figcaption>
+        </figure>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Sample rate and bit depth</h2>
+        <p><strong>Sample rate</strong> is the number of samples taken each second. It is measured in hertz. A higher sample rate captures the wave more often.</p>
+        <p><strong>Bit depth</strong> is the number of bits used for each sample. A higher bit depth can store more possible amplitude values.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram explaining sample rate and bit depth" src="../../../assets/images/gcse/unit-5/sound-sample-rate-bit-depth.svg">
+          <figcaption>Increasing sample rate or bit depth usually improves quality and increases file size.</figcaption>
+        </figure>
+        <table>
+          <tr><th>Term</th><th>Meaning</th><th>Effect if increased</th></tr>
+          <tr><td>Sample rate</td><td>The number of samples taken each second</td><td>More accurate sound and larger file size</td></tr>
+          <tr><td>Bit depth</td><td>The number of bits used per sample</td><td>More amplitude levels and larger file size</td></tr>
+          <tr><td>Duration</td><td>The length of the recording in seconds</td><td>Longer recordings need more storage</td></tr>
+        </table>
+
+        <h3>Comprehension questions</h3>
+        <p>Q1) State what is meant by sample rate. (1 mark)</p>
+        <table class="answer-lines"><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="sound-q1">Show answer</button>
+        <div class="answer-block" id="sound-q1"><p>Sample rate is the number of sound samples taken each second.</p></div>
+
+        <p>Q2) Explain why increasing sample rate can increase sound quality. (2 marks)</p>
+        <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="sound-q2">Show answer</button>
+        <div class="answer-block" id="sound-q2"><p>A higher sample rate records the sound wave more often. This means the digital version can more closely match the original sound.</p></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Calculating sound file size</h2>
+        <p>A simple estimate for sound file size is:</p>
+        <p><strong>sample rate x bit depth x duration</strong></p>
+        <p>This gives the size in bits for mono sound before compression is considered.</p>
+        <div class="activity-box">
+          <h3>Activity</h3>
+          <p>A 10 second sound clip uses a sample rate of 1,000 Hz and a bit depth of 8 bits. Calculate the file size in bits.</p>
+          <button aria-expanded="false" class="toggle-answer" data-target="sound-activity">Show answer</button>
+          <div class="answer-block" id="sound-activity"><p>1,000 x 8 x 10 = 80,000 bits.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Key points</h2>
+        <ul>
+          <li>Sound is sampled so it can be stored digitally.</li>
+          <li>Sample rate is the number of samples taken each second.</li>
+          <li>Bit depth is the number of bits used per sample.</li>
+          <li>Increasing sample rate, bit depth or duration increases file size.</li>
+        </ul>
+        <div class="button-row">
+          <a class="button button-secondary" href="../../../student/dashboard.html">Back to dashboard</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>LearningPoint workbook page.</p></footer>
+  <script src="../../../assets/js/utils/dom.js"></script>
+  <script src="../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../assets/js/controllers/workbookController.js"></script>
+</body>
+</html>

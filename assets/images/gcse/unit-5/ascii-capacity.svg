@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">ASCII capacity comparison</title>
+  <desc id="desc">A comparison of 7-bit ASCII and 8-bit extended ASCII capacity.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <text x="450" y="56" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#142033">ASCII uses bits to choose a character code</text>
+  <g>
+    <rect x="90" y="102" width="320" height="190" rx="18" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+    <text x="250" y="148" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#0d4f8b">Standard ASCII</text>
+    <text x="250" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#142033">7 bits</text>
+    <text x="250" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1e7a4d">128 codes</text>
+  </g>
+  <g>
+    <rect x="490" y="102" width="320" height="190" rx="18" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+    <text x="650" y="148" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#0d4f8b">Extended ASCII</text>
+    <text x="650" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#142033">8 bits</text>
+    <text x="650" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#1e7a4d">256 codes</text>
+  </g>
+  <path d="M432 198h34" stroke="#0d4f8b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M466 198l-14-9v18z" fill="#0d4f8b"/>
+  <text x="450" y="328" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#5f6d7d">Adding one more bit doubles the number of possible codes.</text>
+</svg>

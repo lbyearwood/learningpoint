@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Characters Quiz 1 | LearningPoint</title>
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>GCSE Computer Science quiz</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../student/dashboard.html">Dashboard</a>
+      <a href="../../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <section class="page-title">
+      <p class="eyebrow">GCSE Computer Science &gt; Paper 1: Computer Systems &gt; 5. Data Representation</p>
+      <h1>Characters Quiz 1</h1>
+      <p class="lead">Answer each question. Multiple-choice questions are marked automatically; written answers are recorded for teacher review.</p>
+    </section>
+
+    <form id="quizForm" class="quiz-card" data-quiz-id="gcse-paper-1-unit-5-characters-quiz" novalidate>
+      <div class="form-group">
+        <label for="studentName">Student name</label>
+        <input id="studentName" name="studentName" type="text" autocomplete="name" required>
+      </div>
+
+      <fieldset class="quiz-question" data-question="What is a character set?" data-answer="codes-for-characters">
+        <legend>Q1) What is a character set?</legend>
+        <label><input type="radio" name="q1" value="image-compression"> A method of compressing images</label>
+        <label><input type="radio" name="q1" value="codes-for-characters"> A list of characters and the codes used to represent them</label>
+        <label><input type="radio" name="q1" value="processor-register"> A small storage location inside the CPU</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-question="How many bits are used by standard ASCII?" data-answer="7-bits">
+        <legend>Q2) How many bits are used by standard ASCII?</legend>
+        <label><input type="radio" name="q2" value="4-bits"> 4 bits</label>
+        <label><input type="radio" name="q2" value="7-bits"> 7 bits</label>
+        <label><input type="radio" name="q2" value="16-bits"> 16 bits</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-question="Why is Unicode useful?" data-answer="many-languages">
+        <legend>Q3) Why is Unicode useful?</legend>
+        <label><input type="radio" name="q3" value="smaller-files"> It always makes text files smaller</label>
+        <label><input type="radio" name="q3" value="many-languages"> It can represent characters from many languages and symbol sets</label>
+        <label><input type="radio" name="q3" value="faster-cpu"> It makes the CPU run faster</label>
+      </fieldset>
+
+      <div class="quiz-question written-question" data-question="Explain why computers need to represent text using binary.">
+        <label for="q4">Q4) Explain why computers need to represent text using binary. (2 marks)</label>
+        <textarea id="q4" name="q4" required></textarea>
+      </div>
+
+      <p id="quizMessage" class="form-message" aria-live="polite"></p>
+      <button class="button button-primary" type="submit">Submit quiz</button>
+      <div id="quizResult" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint quiz page.</p>
+  </footer>
+
+  <script src="../../../assets/js/config/supabase-config.js"></script>
+  <script src="../../../assets/js/services/supabaseClient.js"></script>
+  <script src="../../../assets/js/services/authService.js"></script>
+  <script src="../../../assets/js/services/quizService.js"></script>
+  <script src="../../../assets/js/utils/dom.js"></script>
+  <script src="../../../assets/js/utils/validation.js"></script>
+  <script src="../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../assets/js/views/quizView.js"></script>
+  <script src="../../../assets/js/controllers/quizController.js"></script>
+</body>
+</html>

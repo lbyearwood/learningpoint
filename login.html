@@ -16,9 +16,7 @@
           <small>Lessons, quizzes and progress tracking</small>
         </span>
       </a>
-      <h1>Sign in to continue learning.</h1>
-      <p>Access published workbook content, complete quizzes and check your progress.</p>
-      <a class="text-link" href="index.html">Back to home</a>
+      <h1>Sign in to LearningPoint.</h1>
     </section>
 
     <section class="login-card" aria-labelledby="login-title">
@@ -42,6 +40,12 @@
           </div>
         </div>
 
+        <fieldset class="form-group test-role-group">
+          <legend>Choose dashboard</legend>
+          <label><input type="radio" name="testRole" value="student" checked> Student dashboard</label>
+          <label><input type="radio" name="testRole" value="admin"> Teacher dashboard</label>
+        </fieldset>
+
         <label class="check-row">
           <input type="checkbox" name="remember">
           <span>Remember me on this device</span>
@@ -56,10 +60,6 @@
       </form>
     </section>
   </main>
-
-  <footer class="login-footer">
-    <p>Static site powered by GitHub Pages. Authentication powered by Supabase.</p>
-  </footer>
 
   <script src="assets/js/config/supabase-config.js"></script>
   <script src="assets/js/services/supabaseClient.js"></script>

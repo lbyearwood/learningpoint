@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Unicode supports many writing systems</title>
+  <desc id="desc">A simple diagram showing Unicode connecting many languages and symbols.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <circle cx="450" cy="180" r="96" fill="#eef6ff" stroke="#0d4f8b" stroke-width="4"/>
+  <text x="450" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#08375f">Unicode</text>
+  <text x="450" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#08375f">one large character set</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#142033">
+    <rect x="86" y="72" width="178" height="70" rx="16" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+    <text x="175" y="116" text-anchor="middle">English A-Z</text>
+    <rect x="636" y="72" width="178" height="70" rx="16" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+    <text x="725" y="116" text-anchor="middle">Accents</text>
+    <rect x="86" y="218" width="178" height="70" rx="16" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+    <text x="175" y="262" text-anchor="middle">Symbols</text>
+    <rect x="636" y="218" width="178" height="70" rx="16" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+    <text x="725" y="262" text-anchor="middle">World text</text>
+  </g>
+  <g stroke="#0d4f8b" stroke-width="4" stroke-linecap="round">
+    <path d="M264 108 C326 120 360 136 382 150"/>
+    <path d="M636 108 C574 120 540 136 518 150"/>
+    <path d="M264 252 C326 240 360 224 382 210"/>
+    <path d="M636 252 C574 240 540 224 518 210"/>
+  </g>
+  <text x="450" y="332" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#5f6d7d">Useful when software needs to handle text from different languages.</text>
+</svg>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images | LearningPoint</title>
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../student/dashboard.html">Dashboard</a>
+      <a href="../../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <section class="page-title">
+      <p class="eyebrow">GCSE Computer Science &gt; Paper 1: Computer Systems &gt; 5. Data Representation</p>
+      <h1>Images</h1>
+      <p class="lead">Learn how bitmap images are represented using pixels, colour depth, resolution and metadata.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Pixels and bitmap images</h2>
+        <p>A bitmap image is made from a grid of tiny squares called <strong>pixels</strong>. Each pixel stores one colour using a binary value.</p>
+        <p>When the pixels are shown together, they form the image that we see on screen.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram showing an image grid of pixels mapped to binary colour values" src="../../../assets/images/gcse/unit-5/image-pixels-colour-depth.svg">
+          <figcaption>Each pixel has a binary value that represents its colour.</figcaption>
+        </figure>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Resolution and colour depth</h2>
+        <p><strong>Resolution</strong> is the number of pixels in an image. A higher resolution image has more pixels and can show more detail.</p>
+        <p><strong>Colour depth</strong> is the number of bits used to store the colour of each pixel. A higher colour depth allows more possible colours.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram comparing lower and higher image resolution" src="../../../assets/images/gcse/unit-5/image-resolution-file-size.svg">
+          <figcaption>More pixels or more bits per pixel usually increases file size.</figcaption>
+        </figure>
+        <table>
+          <tr><th>Term</th><th>Meaning</th><th>Effect if increased</th></tr>
+          <tr><td>Resolution</td><td>The number of pixels in the image</td><td>More detail and larger file size</td></tr>
+          <tr><td>Colour depth</td><td>The number of bits used for each pixel colour</td><td>More colours and larger file size</td></tr>
+          <tr><td>Metadata</td><td>Data about the image file</td><td>Stores information such as width, height and colour depth</td></tr>
+        </table>
+
+        <h3>Comprehension questions</h3>
+        <p>Q1) State what is meant by image resolution. (1 mark)</p>
+        <table class="answer-lines"><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="image-q1">Show answer</button>
+        <div class="answer-block" id="image-q1"><p>Resolution is the number of pixels in an image.</p></div>
+
+        <p>Q2) Explain why increasing colour depth increases file size. (2 marks)</p>
+        <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="image-q2">Show answer</button>
+        <div class="answer-block" id="image-q2"><p>Increasing colour depth uses more bits for each pixel. This means more data must be stored for the image, so the file size increases.</p></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Calculating bitmap file size</h2>
+        <p>A simple estimate for bitmap image file size is:</p>
+        <p><strong>width in pixels x height in pixels x colour depth</strong></p>
+        <p>This gives the size in bits before any compression or extra metadata is considered.</p>
+        <div class="activity-box">
+          <h3>Activity</h3>
+          <p>An image is 100 pixels wide and 50 pixels high. It uses 8 bits per pixel. Calculate the file size in bits.</p>
+          <button aria-expanded="false" class="toggle-answer" data-target="image-activity">Show answer</button>
+          <div class="answer-block" id="image-activity"><p>100 x 50 x 8 = 40,000 bits.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Key points</h2>
+        <ul>
+          <li>Bitmap images are made from pixels.</li>
+          <li>Resolution is the number of pixels in the image.</li>
+          <li>Colour depth is the number of bits used for each pixel colour.</li>
+          <li>Increasing resolution or colour depth usually increases file size.</li>
+        </ul>
+        <div class="button-row">
+          <a class="button button-secondary" href="../../../student/dashboard.html">Back to dashboard</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>LearningPoint workbook page.</p></footer>
+  <script src="../../../assets/js/utils/dom.js"></script>
+  <script src="../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../assets/js/controllers/workbookController.js"></script>
+</body>
+</html>

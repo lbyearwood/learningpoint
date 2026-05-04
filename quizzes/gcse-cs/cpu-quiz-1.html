@@ -27,7 +27,7 @@
     <section class="page-title">
       <p class="eyebrow">GCSE Computer Science</p>
       <h1>CPU Quiz 1</h1>
-      <p class="lead">Answer the questions below. This temporary version marks the multiple-choice questions locally. Later, answers and scores will be saved to Supabase.</p>
+      <p class="lead">Answer the questions below. Multiple-choice questions are marked automatically; written answers are recorded for teacher review.</p>
     </section>
 
     <form id="quizForm" class="quiz-card" data-quiz-id="cpu-quiz-1" data-max-score="3" novalidate>
@@ -57,6 +57,7 @@
 
       <p id="quizMessage" class="form-message" aria-live="polite"></p>
       <button class="button button-primary" type="submit">Submit quiz</button>
+      <div id="quizResult" aria-live="polite"></div>
     </form>
   </main>
 

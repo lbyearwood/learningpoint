@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Characters | LearningPoint</title>
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>GCSE Computer Science workbook</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../student/dashboard.html">Dashboard</a>
+      <a href="../../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <section class="page-title">
+      <p class="eyebrow">GCSE Computer Science &gt; Paper 1: Computer Systems &gt; 5. Data Representation</p>
+      <h1>Characters</h1>
+      <p class="lead">Learn how computers represent letters, numbers, symbols and control characters using binary codes.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>What is a character?</h2>
+        <p>A <strong>character</strong> is any single letter, number, symbol or control instruction that a computer can store and process as text.</p>
+        <p>Examples include <strong>A</strong>, <strong>7</strong>, <strong>?</strong>, a space, a new line and punctuation marks. Computers only store binary, so each character needs a unique binary code.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram showing characters being mapped to binary codes" src="../../../assets/images/gcse/unit-5/character-binary-mapping.svg">
+          <figcaption>Each character is stored using a binary pattern from a character set.</figcaption>
+        </figure>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Character sets</h2>
+        <p>A <strong>character set</strong> is a defined list of characters and the binary codes used to represent them. If two computers use the same character set, they can interpret the same binary pattern as the same character.</p>
+        <p>For example, in ASCII the uppercase letter <strong>A</strong> is represented by decimal 65, which is binary <strong>01000001</strong>.</p>
+        <table>
+          <tr><th>Term</th><th>Meaning</th><th>Example</th></tr>
+          <tr><td>Character</td><td>A single letter, number, symbol or control code</td><td>A, 4, ?, space</td></tr>
+          <tr><td>Character set</td><td>A list that matches characters to codes</td><td>ASCII or Unicode</td></tr>
+          <tr><td>Character code</td><td>The number or binary pattern assigned to a character</td><td>A = 01000001 in ASCII</td></tr>
+        </table>
+
+        <h3>Comprehension questions</h3>
+        <p>Q1) State what is meant by a character set. (1 mark)</p>
+        <table class="answer-lines"><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="charset-q1">Show answer</button>
+        <div class="answer-block" id="charset-q1"><p>A character set is a defined list of characters and the codes used to represent them.</p></div>
+
+        <p>Q2) Explain why character sets are needed. (2 marks)</p>
+        <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="charset-q2">Show answer</button>
+        <div class="answer-block" id="charset-q2"><p>Character sets are needed so computers can store text as binary and interpret the same binary codes as the correct characters.</p></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>ASCII</h2>
+        <p><strong>ASCII</strong> is an older character set that was designed mainly for English text. Standard ASCII uses 7 bits, which gives 128 possible codes.</p>
+        <p>Extended ASCII uses 8 bits, which gives 256 possible codes. This allows some extra symbols and characters, but it is still limited compared with modern text needs.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram comparing 7-bit ASCII and 8-bit extended ASCII capacity" src="../../../assets/images/gcse/unit-5/ascii-capacity.svg">
+          <figcaption>More bits allow a character set to represent more characters.</figcaption>
+        </figure>
+        <div class="activity-box">
+          <h3>Activity</h3>
+          <p>If standard ASCII uses 7 bits, how many different characters can it represent?</p>
+          <button aria-expanded="false" class="toggle-answer" data-target="ascii-activity">Show answer</button>
+          <div class="answer-block" id="ascii-activity"><p>7 bits can represent 2 to the power of 7 values, so standard ASCII can represent 128 different codes.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Unicode</h2>
+        <p><strong>Unicode</strong> is a much larger character set. It was created so computers can represent characters from many languages, including accented letters, non-Latin scripts, mathematical symbols and emoji.</p>
+        <p>Unicode helps make text work consistently across different countries, devices and software.</p>
+        <figure>
+          <img class="lesson-image" alt="Diagram showing Unicode supporting many languages and symbols" src="../../../assets/images/gcse/unit-5/unicode-world-text.svg">
+          <figcaption>Unicode can represent far more characters than ASCII.</figcaption>
+        </figure>
+
+        <h3>Exam-style question</h3>
+        <p>A website needs to store names written in many languages. Explain why Unicode would be more suitable than ASCII. (3 marks)</p>
+        <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+        <button aria-expanded="false" class="toggle-answer" data-target="unicode-exam">Show answer</button>
+        <div class="answer-block" id="unicode-exam"><p>Unicode is more suitable because it can represent a much wider range of characters. ASCII is limited and mainly supports English text. Unicode can store characters from many languages, so names are less likely to be missing or displayed incorrectly.</p></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Key points</h2>
+        <ul>
+          <li>Computers store characters using binary codes.</li>
+          <li>A character set links each character to a code.</li>
+          <li>ASCII is small and mainly designed for English text.</li>
+          <li>Unicode is much larger and supports many languages and symbols.</li>
+        </ul>
+        <div class="button-row">
+          <a class="button button-primary" href="../../../quizzes/gcse/unit-5/characters-quiz-1.html">Take the Characters quiz</a>
+          <a class="button button-secondary" href="../../../student/dashboard.html">Back to dashboard</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint workbook page.</p>
+  </footer>
+
+  <script src="../../../assets/js/utils/dom.js"></script>
+  <script src="../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../assets/js/controllers/workbookController.js"></script>
+</body>
+</html>

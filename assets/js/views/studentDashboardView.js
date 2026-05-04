@@ -10,11 +10,36 @@ const StudentDashboardView = {
     container.innerHTML = items.map((item) => this.cardTemplate(item)).join("");
   },
 
+  renderGroupedCards(container, items) {
+    if (!container) return;
+
+    if (!items.length) {
+      container.innerHTML = `<article class="info-card"><h3>No published items yet</h3><p>Your teacher has not published anything in this section yet.</p></article>`;
+      return;
+    }
+
+    const groups = items.reduce((groupedItems, item) => {
+      const course = item.course || "Other";
+      if (!groupedItems[course]) groupedItems[course] = [];
+      groupedItems[course].push(item);
+      return groupedItems;
+    }, {});
+
+    container.innerHTML = Object.keys(groups).map((course) => `
+      <section class="course-group" aria-labelledby="${this.slug(course)}-${container.id}">
+        <h3 id="${this.slug(course)}-${container.id}">${this.escape(course)}</h3>
+        <div class="card-grid two">
+          ${groups[course].map((item) => this.cardTemplate(item)).join("")}
+        </div>
+      </section>
+    `).join("");
+  },
+
   cardTemplate(item) {
-    const meta = [item.paper, item.unit, item.learning_aim, item.subtopic].filter(Boolean).join(" > ");
+    const meta = [item.course, item.paper, item.unit, item.learning_aim, item.subtopic].filter(Boolean).join(" > ");
     return `
       <article class="content-card">
-        <span class="card-label">${this.escape(item.course)}</span>
+        <span class="card-label">${this.escape(item.type)}</span>
         <h3>${this.escape(item.title)}</h3>
         <p><strong>${this.escape(meta)}</strong></p>
         <p>${this.escape(item.description)}</p>
@@ -47,5 +72,12 @@ const StudentDashboardView = {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  },
+
+  slug(value) {
+    return String(value ?? "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
   }
 };

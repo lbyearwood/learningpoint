@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Characters mapped to binary</title>
+  <desc id="desc">A simple diagram showing text characters connected to binary codes.</desc>
+  <rect width="900" height="360" fill="#f8fbff"/>
+  <rect x="52" y="54" width="300" height="252" rx="18" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+  <rect x="548" y="54" width="300" height="252" rx="18" fill="#ffffff" stroke="#d8e1ec" stroke-width="3"/>
+  <text x="202" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#142033">Characters</text>
+  <text x="698" y="94" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#142033">Binary codes</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0d4f8b">
+    <text x="112" y="158">A</text>
+    <text x="112" y="214">7</text>
+    <text x="112" y="270">?</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#142033">
+    <text x="610" y="158">01000001</text>
+    <text x="610" y="214">00110111</text>
+    <text x="610" y="270">00111111</text>
+  </g>
+  <g stroke="#0d4f8b" stroke-width="4" stroke-linecap="round">
+    <path d="M184 149 C310 149 392 149 526 149"/>
+    <path d="M184 205 C310 205 392 205 526 205"/>
+    <path d="M184 261 C310 261 392 261 526 261"/>
+  </g>
+  <g fill="#0d4f8b">
+    <path d="M526 149l-14-8v16z"/>
+    <path d="M526 205l-14-8v16z"/>
+    <path d="M526 261l-14-8v16z"/>
+  </g>
+  <rect x="366" y="130" width="168" height="150" rx="18" fill="#eef6ff" stroke="#b8d7f8" stroke-width="3"/>
+  <text x="450" y="187" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#08375f">Character</text>
+  <text x="450" y="217" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#08375f">set</text>
+</svg>

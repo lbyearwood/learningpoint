@@ -1,9 +1,15 @@
 const AuthService = {
-  async signIn(email, password) {
+  async signIn(email, password, testRole = "") {
     if (!SupabaseClient.isReady()) {
+      const mockRole = testRole || this.getStageOneRole(email);
       return {
-        data: null,
-        error: "Supabase is not connected yet. Add your project URL and anon key in assets/js/config/supabase-config.js."
+        data: {
+          user: {
+            email,
+            role: mockRole
+          }
+        },
+        error: null
       };
     }
 
@@ -15,6 +21,14 @@ const AuthService = {
       data: null,
       error: "Supabase configuration was found, but live authentication has not been wired in yet."
     };
+  },
+
+  getStageOneRole(email) {
+    // Stage 1 preview only. In Stage 2, the role must come from the Supabase profiles table.
+    const normalisedEmail = String(email || "").toLowerCase();
+    return normalisedEmail.includes("admin") || normalisedEmail.includes("teacher")
+      ? "admin"
+      : "student";
   },
 
   async getCurrentUser() {
