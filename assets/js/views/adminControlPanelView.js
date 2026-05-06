@@ -1,4 +1,4 @@
-const AdminControlPanelView = {
+﻿const AdminControlPanelView = {
   renderCourseBrowser(container, items) {
     if (!container) return;
 
@@ -67,7 +67,7 @@ const AdminControlPanelView = {
   courseSummary(course) {
     const topicCount = course.topics.size;
     const resourceCount = course.items.length;
-    return `${topicCount} topic${topicCount === 1 ? "" : "s"} · ${resourceCount} resource${resourceCount === 1 ? "" : "s"}`;
+    return `${topicCount} topic${topicCount === 1 ? "" : "s"} Â· ${resourceCount} resource${resourceCount === 1 ? "" : "s"}`;
   },
 
   joinSet(values) {
@@ -78,7 +78,7 @@ const AdminControlPanelView = {
     const unitCount = course.units.size;
     const topicCount = course.topics.size;
     const resourceCount = course.items.length;
-    return `${unitCount} unit${unitCount === 1 ? "" : "s"} · ${topicCount} topic${topicCount === 1 ? "" : "s"} · ${resourceCount} resource${resourceCount === 1 ? "" : "s"}`;
+    return `${unitCount} unit${unitCount === 1 ? "" : "s"} Â· ${topicCount} topic${topicCount === 1 ? "" : "s"} Â· ${resourceCount} resource${resourceCount === 1 ? "" : "s"}`;
   },
 
   topicSummary(items) {
@@ -206,12 +206,14 @@ const AdminControlPanelView = {
         classMap[summary.className] = {
           className: summary.className,
           courses: new Set(),
+          studentCount: Number(summary.studentCount) || 0,
           submitted: 0,
           notSubmitted: 0
         };
       }
 
       classMap[summary.className].courses.add(summary.course);
+      classMap[summary.className].studentCount = Math.max(classMap[summary.className].studentCount, Number(summary.studentCount) || 0);
       classMap[summary.className].submitted += Number(summary.submitted) || 0;
       classMap[summary.className].notSubmitted += Number(summary.notSubmitted) || 0;
       return classMap;
@@ -224,10 +226,10 @@ const AdminControlPanelView = {
           <div class="status-row">
             <span class="status-tag available">${this.escape(Array.from(classInfo.courses).join(", "))}</span>
           </div>
-          <p class="course-summary-text">${this.escape(classInfo.submitted)} submitted · ${this.escape(classInfo.notSubmitted)} not submitted</p>
+          <p class="course-summary-text">${this.escape(classInfo.studentCount)} students · ${this.escape(classInfo.submitted)} submitted · ${this.escape(classInfo.notSubmitted)} not submitted</p>
         </div>
         <div class="course-card-actions">
-          <a class="resource-link" href="${this.escape(this.classProgressUrl(classInfo.className))}">Review class</a>
+          <a class="resource-link" href="${this.escape(this.classProgressUrl(classInfo.className))}">View class</a>
         </div>
       </article>
     `).join("");
@@ -321,6 +323,113 @@ const AdminControlPanelView = {
     `).join("");
   },
 
+  renderClassOverview(container, summary) {
+    if (!container) return;
+
+    if (!summary) {
+      container.innerHTML = `<article class="class-progress-card"><h3>No class data available</h3><p class="course-summary-text">Class overview information will appear here when summary data is available.</p></article>`;
+      return;
+    }
+
+    container.innerHTML = `
+      <article class="class-progress-card">
+        <div class="course-card-main">
+          <h3>${this.escape(summary.className)}</h3>
+          <div class="status-row">
+            <span class="status-tag available">${this.escape(summary.course)}</span>
+            <span class="status-tag public">${this.escape(summary.studentCount)} students</span>
+          </div>
+          <p class="course-summary-text">${this.escape(summary.unit)} · ${this.escape(summary.topic)}</p>
+        </div>
+        <dl class="metadata-list">
+          ${this.metadataRow("Visible resources", summary.visibleResources)}
+          ${this.metadataRow("Quiz completion", `${summary.submitted} submitted, ${summary.notSubmitted} not submitted`)}
+          ${this.metadataRow("Average quiz score", summary.averageScore)}
+          ${this.metadataRow("Students needing support", summary.supportSummary)}
+        </dl>
+      </article>
+      <div class="class-route-grid">
+        <article class="course-browser-card">
+          <div class="course-card-main">
+            <h3>Course progress</h3>
+            <p class="course-summary-text">View workbook access and topic progress for this class.</p>
+          </div>
+          <div class="course-card-actions"><a class="resource-link" href="${this.escape(this.classDetailUrl(summary.className, "course-progress"))}">View course progress</a></div>
+        </article>
+        <article class="course-browser-card">
+          <div class="course-card-main">
+            <h3>Quiz completion</h3>
+            <p class="course-summary-text">View submitted and not submitted totals for the current quiz.</p>
+          </div>
+          <div class="course-card-actions"><a class="resource-link" href="${this.escape(this.classDetailUrl(summary.className, "quiz-completion"))}">View quiz completion</a></div>
+        </article>
+        <article class="course-browser-card">
+          <div class="course-card-main">
+            <h3>Students needing support</h3>
+            <p class="course-summary-text">View the support summary for students who need follow-up.</p>
+          </div>
+          <div class="course-card-actions"><a class="resource-link" href="${this.escape(this.classDetailUrl(summary.className, "support"))}">View students needing support</a></div>
+        </article>
+      </div>
+    `;
+  },
+
+  renderClassCourseProgress(container, summaries) {
+    if (!container) return;
+    container.innerHTML = summaries.map((summary) => `
+      <article class="class-progress-card">
+        <div class="course-card-main">
+          <h3>${this.escape(summary.topic)}</h3>
+          <div class="status-row">
+            <span class="status-tag available">${this.escape(summary.course)}</span>
+            <span class="status-tag public">${this.escape(summary.workbookAccess)}</span>
+          </div>
+          <p class="course-summary-text">${this.escape(summary.segment)} · ${this.escape(summary.unit)}</p>
+        </div>
+        <dl class="metadata-list">
+          ${this.metadataRow("Workbook access status", summary.workbookAccess)}
+          ${this.metadataRow("Visible resources", summary.visibleResources)}
+          ${this.metadataRow("Current topic", summary.topic)}
+        </dl>
+      </article>
+    `).join("");
+  },
+
+  renderClassQuizCompletion(container, summaries) {
+    if (!container) return;
+    container.innerHTML = summaries.map((summary) => `
+      <article class="class-progress-card">
+        <div class="course-card-main">
+          <h3>${this.escape(summary.quiz)}</h3>
+          <div class="status-row">
+            <span class="status-tag public">${this.escape(summary.submitted)} submitted</span>
+            <span class="status-tag private">${this.escape(summary.notSubmitted)} not submitted</span>
+          </div>
+          <p class="course-summary-text">Average score: ${this.escape(summary.averageScore)} · Last submission: ${this.escape(summary.lastSubmission)}</p>
+        </div>
+      </article>
+    `).join("");
+  },
+
+  renderStudentsNeedingSupport(container, summaries) {
+    if (!container) return;
+    container.innerHTML = summaries.map((summary) => `
+      <article class="class-progress-card">
+        <div class="course-card-main">
+          <h3>${this.escape(summary.topic)}</h3>
+          <div class="status-row">
+            <span class="status-tag private">${this.escape(summary.studentsNotSubmitted)} students</span>
+          </div>
+          <p class="course-summary-text">${this.escape(summary.supportSummary)}</p>
+        </div>
+      </article>
+    `).join("");
+  },
+
+  classDetailUrl(className, view) {
+    return `${String(className || "").toLowerCase()}-${view}.html`;
+  },
+
   renderClassSummaryRows(container, summaries) {
     if (!container) return;
 
@@ -361,3 +470,5 @@ const AdminControlPanelView = {
       .replaceAll("'", "&#039;");
   }
 };
+
+

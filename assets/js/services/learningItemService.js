@@ -1,6 +1,21 @@
 const LearningItemService = {
   sampleItems: [
     {
+      id: "gcse-j277-01-1-1-1-cpu-architecture-workbook",
+      title: "1.1.1 Architecture of the CPU workbook",
+      course: "GCSE Computer Science",
+      paper: "J277/01: Computer systems",
+      unit: "1.1 Systems architecture",
+      segment: "J277/01: Computer systems",
+      subtopic: "1.1.1 Architecture of the CPU",
+      type: "workbook",
+      page_url: "../workbooks/gcse/j277-01/1-1-systems-architecture/1-1-1-architecture-of-the-cpu.html",
+      course_units_url: "courses/gcse-computer-science.html",
+      topic_management_url: "courses/gcse/j277-01/subtopics/1-1-1-architecture-of-the-cpu.html",
+      is_published: true,
+      description: "Learn the purpose of the CPU, the fetch-execute cycle, CPU components and Von Neumann registers."
+    },
+    {
       id: "gcse-paper-2-unit-6-characters-workbook",
       title: "Characters workbook",
       course: "GCSE Computer Science",

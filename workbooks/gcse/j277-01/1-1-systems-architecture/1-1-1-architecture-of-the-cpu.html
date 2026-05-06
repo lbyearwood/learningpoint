@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.1.1 Architecture of the CPU | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span>
+        <strong>LearningPoint</strong>
+        <small>GCSE Computer Science workbook</small>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../index.html">Home</a>
+      <a href="../../../../student/dashboard.html">Dashboard</a>
+      <a href="../../../../login.html">Sign in</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a href="../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a href="../../../../admin/courses/gcse/j277-01-computer-systems.html">J277/01 Computer systems</a></li>
+        <li><a href="../../../../admin/courses/gcse/j277-01/1-1-systems-architecture.html">1.1 Systems architecture</a></li>
+        <li><a href="../../../../admin/courses/gcse/j277-01/subtopics/1-1-1-architecture-of-the-cpu.html">1.1.1 Architecture of the CPU</a></li>
+        <li><span aria-current="page">Workbook</span></li>
+      </ol>
+    </nav>
+    <section class="page-title">
+      <p class="eyebrow">GCSE Computer Science OCR J277</p>
+      <h1>1.1.1 Architecture of the CPU</h1>
+      <p class="lead">Learn the purpose of the CPU, the fetch-execute cycle, common CPU components and the key Von Neumann registers.</p>
+      <div class="button-row">
+        <a class="button button-secondary back-button" href="../../../../admin/courses/gcse/j277-01/subtopics/1-1-1-architecture-of-the-cpu.html">Back to 1.1.1 Architecture of the CPU</a>
+      </div>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul>
+          <li>I can explain the purpose of the CPU.</li>
+          <li>I can describe the fetch-execute cycle.</li>
+          <li>I can explain the role of the ALU, CU, cache and registers.</li>
+          <li>I can describe the purpose of the MAR, MDR, Program Counter and Accumulator.</li>
+          <li>I can explain the difference between data and an address.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>The purpose of the CPU</h2>
+        <p>The <strong>Central Processing Unit</strong>, or <strong>CPU</strong>, is the part of the computer that processes instructions. It carries out the instructions in programs and controls the movement of data around the computer system.</p>
+        <p>The CPU repeatedly fetches instructions from memory, decodes them so it knows what to do, and executes them. This repeated process is called the <strong>fetch-execute cycle</strong>.</p>
+
+        <div class="activity-box">
+          <h3>Activity 1: Explain the CPU</h3>
+          <p>Write a short answer explaining the purpose of the CPU.</p>
+          <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+          <button aria-expanded="false" class="toggle-answer" data-target="activity-1">Show answer</button>
+          <div class="answer-block" id="activity-1">
+            <p>The CPU processes program instructions and controls the movement of data in the computer. It repeatedly fetches, decodes and executes instructions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>The fetch-execute cycle</h2>
+        <p>The fetch-execute cycle is the repeated process the CPU uses to run program instructions.</p>
+        <table>
+          <tr><th>Stage</th><th>What happens</th></tr>
+          <tr><td>Fetch</td><td>The CPU gets the next instruction from memory.</td></tr>
+          <tr><td>Decode</td><td>The CPU works out what the instruction means and what must be done.</td></tr>
+          <tr><td>Execute</td><td>The CPU carries out the instruction, such as a calculation, comparison or data movement.</td></tr>
+        </table>
+        <p>At GCSE level, focus on the main action at each stage. You do not need to describe detailed data transfers between registers at every stage.</p>
+
+        <figure class="diagram-card cycle-diagram" role="group" aria-labelledby="fetch-cycle-title">
+          <figcaption id="fetch-cycle-title">Fetch-decode-execute cycle</figcaption>
+          <svg class="learning-diagram" viewBox="0 0 780 250" role="img" aria-label="Cycle diagram showing fetch, decode and execute repeating">
+            <defs>
+              <marker id="arrow-cycle" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L7,3 L0,6 Z" fill="#587084"></path>
+              </marker>
+            </defs>
+            <line x1="235" y1="88" x2="290" y2="88" stroke="#587084" stroke-width="3" marker-end="url(#arrow-cycle)"></line>
+            <line x1="490" y1="88" x2="545" y2="88" stroke="#587084" stroke-width="3" marker-end="url(#arrow-cycle)"></line>
+            <path d="M645 158 C645 214, 135 214, 135 158" fill="none" stroke="#587084" stroke-width="3" marker-end="url(#arrow-cycle)"></path>
+            <text x="390" y="226" text-anchor="middle" class="svg-caption">Cycle repeats while the program is running</text>
+            <g>
+              <rect x="45" y="45" width="190" height="112" rx="14" fill="#d8f4f7" stroke="#008da8" stroke-width="2.5"></rect>
+              <text x="140" y="82" text-anchor="middle" class="svg-title">Fetch</text>
+              <text x="140" y="111" text-anchor="middle" class="svg-small">Gets the next</text>
+              <text x="140" y="132" text-anchor="middle" class="svg-small">instruction from memory.</text>
+            </g>
+            <g>
+              <rect x="295" y="45" width="190" height="112" rx="14" fill="#fff4cc" stroke="#b98500" stroke-width="2.5"></rect>
+              <text x="390" y="82" text-anchor="middle" class="svg-title">Decode</text>
+              <text x="390" y="111" text-anchor="middle" class="svg-small">Works out what</text>
+              <text x="390" y="132" text-anchor="middle" class="svg-small">the instruction means.</text>
+            </g>
+            <g>
+              <rect x="545" y="45" width="190" height="112" rx="14" fill="#fce0ed" stroke="#c72b72" stroke-width="2.5"></rect>
+              <text x="640" y="82" text-anchor="middle" class="svg-title">Execute</text>
+              <text x="640" y="111" text-anchor="middle" class="svg-small">Carries out</text>
+              <text x="640" y="132" text-anchor="middle" class="svg-small">the instruction.</text>
+            </g>
+          </svg>
+          <p class="diagram-caption">The CPU repeats this cycle while a program is running.</p>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 2: Put the fetch-execute cycle in order</h3>
+          <p>Write the three stages in the correct order.</p>
+          <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+          <button aria-expanded="false" class="toggle-answer" data-target="activity-2">Show answer</button>
+          <div class="answer-block" id="activity-2">
+            <p>1. Fetch<br>2. Decode<br>3. Execute</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Common CPU components</h2>
+        <p>The CPU contains different components that work together during processing. Each component has a specific role.</p>
+
+        <figure class="diagram-card" role="group" aria-labelledby="cpu-components-title">
+          <figcaption id="cpu-components-title">CPU components</figcaption>
+          <svg class="learning-diagram" viewBox="0 0 780 430" role="img" aria-label="Diagram showing Control Unit, ALU, cache and registers inside the CPU">
+            <rect x="48" y="40" width="684" height="350" rx="22" fill="#eef3f8" stroke="#39465a" stroke-width="3"></rect>
+            <text x="390" y="82" text-anchor="middle" class="svg-heading">Central Processing Unit (CPU)</text>
+            <g>
+              <rect x="88" y="118" width="292" height="96" rx="14" fill="#d8f4f7" stroke="#008da8" stroke-width="2.5"></rect>
+              <text x="234" y="154" text-anchor="middle" class="svg-title">Control Unit</text>
+              <text x="234" y="183" text-anchor="middle" class="svg-small">Controls the fetch-execute cycle</text>
+            </g>
+            <g>
+              <rect x="400" y="118" width="292" height="96" rx="14" fill="#fff4cc" stroke="#b98500" stroke-width="2.5"></rect>
+              <text x="546" y="154" text-anchor="middle" class="svg-title">ALU</text>
+              <text x="546" y="183" text-anchor="middle" class="svg-small">Arithmetic and logic operations</text>
+            </g>
+            <g>
+              <rect x="88" y="244" width="292" height="96" rx="14" fill="#e6f5ec" stroke="#1e7a4d" stroke-width="2.5"></rect>
+              <text x="234" y="280" text-anchor="middle" class="svg-title">Cache</text>
+              <text x="234" y="309" text-anchor="middle" class="svg-small">Frequently used data/instructions</text>
+            </g>
+            <g>
+              <rect x="400" y="244" width="292" height="96" rx="14" fill="#fce0ed" stroke="#c72b72" stroke-width="2.5"></rect>
+              <text x="546" y="280" text-anchor="middle" class="svg-title">Registers</text>
+              <text x="546" y="309" text-anchor="middle" class="svg-small">Small, fast CPU storage</text>
+            </g>
+          </svg>
+          <p class="diagram-caption">These parts are inside the CPU and work together while instructions are processed.</p>
+        </figure>
+
+        <table>
+          <tr><th>Component</th><th>Main job</th><th>Example of what it does</th></tr>
+          <tr><td>ALU</td><td>Performs arithmetic and logic operations.</td><td>Adds two numbers or compares values.</td></tr>
+          <tr><td>CU</td><td>Controls and coordinates CPU activity.</td><td>Decodes instructions and sends control signals.</td></tr>
+          <tr><td>Cache</td><td>Stores frequently used data and instructions close to the CPU.</td><td>Provides quicker access than main memory.</td></tr>
+          <tr><td>Registers</td><td>Small, fast storage locations inside the CPU.</td><td>Hold data, instructions or addresses currently being used.</td></tr>
+        </table>
+
+        <div class="activity-box">
+          <h3>Activity 3: Match the component to its job</h3>
+          <p>Match each component to the correct job: ALU, CU, cache, registers.</p>
+          <table>
+            <tr><th>Job</th><th>Component</th></tr>
+            <tr><td>Controls and coordinates the CPU.</td><td></td></tr>
+            <tr><td>Performs calculations and logic comparisons.</td><td></td></tr>
+            <tr><td>Stores frequently used data and instructions close to the CPU.</td><td></td></tr>
+            <tr><td>Small, fast storage locations inside the CPU.</td><td></td></tr>
+          </table>
+          <button aria-expanded="false" class="toggle-answer" data-target="activity-3">Show answer</button>
+          <div class="answer-block" id="activity-3">
+            <p>Control Unit, ALU, cache, registers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Von Neumann architecture</h2>
+        <p><strong>Von Neumann architecture</strong> is a computer architecture where program instructions and data are stored in the same memory. The CPU fetches instructions from memory and processes them using registers and CPU components.</p>
+        <p>Registers are small, fast storage locations inside the CPU. Some registers store data, while others store memory addresses. This distinction is important.</p>
+
+        <figure class="diagram-card" role="group" aria-labelledby="von-neumann-title">
+          <figcaption id="von-neumann-title">Von Neumann architecture</figcaption>
+          <svg class="learning-diagram von-neumann-svg" viewBox="0 0 860 470" role="img" aria-label="Diagram showing CPU and memory connected by address and data buses, with MAR, MDR, Program Counter and Accumulator registers">
+            <defs>
+              <marker id="arrow-vn-address" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L7,3 L0,6 Z" fill="#008da8"></path>
+              </marker>
+              <marker id="arrow-vn-data" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                <path d="M0,0 L7,3 L0,6 Z" fill="#c72b72"></path>
+              </marker>
+            </defs>
+            <rect x="52" y="56" width="380" height="342" rx="22" fill="#eef3f8" stroke="#39465a" stroke-width="3"></rect>
+            <text x="242" y="100" text-anchor="middle" class="svg-heading">CPU</text>
+            <rect x="76" y="130" width="158" height="82" rx="13" fill="#d8f4f7" stroke="#008da8" stroke-width="2.5"></rect>
+            <text x="155" y="162" text-anchor="middle" class="svg-title">MAR</text>
+            <text x="155" y="190" text-anchor="middle" class="svg-small">Stores address</text>
+            <rect x="252" y="130" width="158" height="82" rx="13" fill="#fce0ed" stroke="#c72b72" stroke-width="2.5"></rect>
+            <text x="331" y="162" text-anchor="middle" class="svg-title">MDR</text>
+            <text x="331" y="190" text-anchor="middle" class="svg-small">Stores data/instruction</text>
+            <rect x="76" y="242" width="158" height="90" rx="13" fill="#d8f4f7" stroke="#008da8" stroke-width="2.5"></rect>
+            <text x="155" y="274" text-anchor="middle" class="svg-title">Program</text>
+            <text x="155" y="297" text-anchor="middle" class="svg-title">Counter</text>
+            <text x="155" y="320" text-anchor="middle" class="svg-small">Next address</text>
+            <rect x="252" y="242" width="158" height="90" rx="13" fill="#e6f5ec" stroke="#1e7a4d" stroke-width="2.5"></rect>
+            <text x="331" y="278" text-anchor="middle" class="svg-title">Accumulator</text>
+            <text x="331" y="307" text-anchor="middle" class="svg-small">Calculation results</text>
+
+            <rect x="568" y="112" width="230" height="220" rx="18" fill="#fff4cc" stroke="#b98500" stroke-width="3"></rect>
+            <text x="683" y="176" text-anchor="middle" class="svg-heading">Memory</text>
+            <text x="683" y="212" text-anchor="middle" class="svg-small">Stores data and</text>
+            <text x="683" y="236" text-anchor="middle" class="svg-small">instructions</text>
+
+            <text x="500" y="164" text-anchor="middle" class="svg-bus-label">Address bus</text>
+            <line x1="432" y1="186" x2="568" y2="186" stroke="#008da8" stroke-width="4" marker-end="url(#arrow-vn-address)"></line>
+            <text x="500" y="278" text-anchor="middle" class="svg-bus-label">Data bus</text>
+            <line x1="568" y1="256" x2="432" y2="256" stroke="#c72b72" stroke-width="4" marker-end="url(#arrow-vn-data)"></line>
+          </svg>
+          <p class="diagram-caption">In Von Neumann architecture, program instructions and data are stored in the same memory. The CPU communicates with memory using buses.</p>
+          <p class="diagram-note"><strong>Address</strong> = location in memory. <strong>Data</strong> = value or instruction stored there.</p>
+        </figure>
+
+        <table>
+          <tr><th>Register</th><th>Full name</th><th>Stores data or address?</th><th>Purpose</th></tr>
+          <tr><td>MAR</td><td>Memory Address Register</td><td>Address</td><td>Stores the memory address currently being used.</td></tr>
+          <tr><td>MDR</td><td>Memory Data Register</td><td>Data or instruction</td><td>Stores data or an instruction being transferred to or from memory.</td></tr>
+          <tr><td>Program Counter</td><td>Program Counter</td><td>Address</td><td>Stores the address of the next instruction to be fetched.</td></tr>
+          <tr><td>Accumulator</td><td>Accumulator</td><td>Data</td><td>Stores intermediate results from calculations.</td></tr>
+        </table>
+
+        <div class="register-summary-grid" aria-label="Register purpose summary">
+          <article>
+            <h3>MAR</h3>
+            <p><strong>Full name:</strong> Memory Address Register</p>
+            <p><strong>Stores:</strong> address</p>
+            <p>Holds the address of the memory location being accessed.</p>
+          </article>
+          <article>
+            <h3>MDR</h3>
+            <p><strong>Full name:</strong> Memory Data Register</p>
+            <p><strong>Stores:</strong> data or instruction</p>
+            <p>Holds data or an instruction being transferred to or from memory.</p>
+          </article>
+          <article>
+            <h3>Program Counter</h3>
+            <p><strong>Stores:</strong> address</p>
+            <p>Holds the address of the next instruction.</p>
+          </article>
+          <article>
+            <h3>Accumulator</h3>
+            <p><strong>Stores:</strong> data</p>
+            <p>Holds intermediate results from calculations.</p>
+          </article>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Register check</h3>
+          <p>For each register, identify whether it stores data or an address.</p>
+          <table>
+            <tr><th>Register</th><th>Data or address?</th></tr>
+            <tr><td>MAR</td><td></td></tr>
+            <tr><td>MDR</td><td></td></tr>
+            <tr><td>Program Counter</td><td></td></tr>
+            <tr><td>Accumulator</td><td></td></tr>
+          </table>
+          <button aria-expanded="false" class="toggle-answer" data-target="activity-4">Show answer</button>
+          <div class="answer-block" id="activity-4">
+            <p>MAR: address. MDR: data or instruction. Program Counter: address. Accumulator: data.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Data vs address</h2>
+        <p><strong>Data</strong> is the value or instruction being used. For example, the number 42, the letter A, or a program instruction can be data.</p>
+        <p>An <strong>address</strong> is a location in memory where data or an instruction can be found. An address is like a label that tells the computer where to look.</p>
+        <p>For this topic, remember: the MAR stores an address, the Program Counter stores an address, the MDR stores data or an instruction, and the Accumulator stores data from calculations.</p>
+
+        <figure class="diagram-card mini-memory-diagram" role="group" aria-labelledby="data-address-title">
+          <figcaption id="data-address-title">Data vs address</figcaption>
+          <div class="memory-location">
+            <div class="memory-address">
+              <strong>Memory address</strong>
+              <span>2048</span>
+              <small>the location in memory</small>
+            </div>
+            <div class="memory-data">
+              <strong>Data stored there</strong>
+              <span>73</span>
+              <small>the value at that location</small>
+            </div>
+          </div>
+          <p>An address tells the CPU where something is stored. Data is the actual value or instruction stored there.</p>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 5: Data or address?</h3>
+          <p>Identify whether each example is data or an address.</p>
+          <table>
+            <tr><th>Example</th><th>Data or address?</th></tr>
+            <tr><td>The number 15 being added in a calculation</td><td></td></tr>
+            <tr><td>The memory location of the next instruction</td><td></td></tr>
+            <tr><td>An instruction copied from memory</td><td></td></tr>
+            <tr><td>The location in memory being accessed</td><td></td></tr>
+          </table>
+          <button aria-expanded="false" class="toggle-answer" data-target="activity-5">Show answer</button>
+          <div class="answer-block" id="activity-5">
+            <p>Data, address, data or instruction, address.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <span class="question-number">Question 1</span>
+                <h3>Definition</h3>
+              </div>
+              <span class="marks-tag">1 mark</span>
+            </div>
+            <p>State what CPU stands for.</p>
+            <table class="answer-lines"><tr><td></td></tr></table>
+            <button aria-expanded="false" class="toggle-answer" data-target="exam-1">Show answer</button>
+            <div class="answer-block" id="exam-1"><p>Central Processing Unit.</p></div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <span class="question-number">Question 2</span>
+                <h3>CPU purpose</h3>
+              </div>
+              <span class="marks-tag">2 marks</span>
+            </div>
+            <p>Describe the purpose of the CPU.</p>
+            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr></table>
+            <button aria-expanded="false" class="toggle-answer" data-target="exam-2">Show answer</button>
+            <div class="answer-block" id="exam-2"><p>The CPU processes program instructions and controls the movement of data around the computer system.</p></div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <span class="question-number">Question 3</span>
+                <h3>CPU components</h3>
+              </div>
+              <span class="marks-tag">3 marks</span>
+            </div>
+            <p>Explain the role of three CPU components.</p>
+            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+            <button aria-expanded="false" class="toggle-answer" data-target="exam-3">Show answer</button>
+            <div class="answer-block" id="exam-3"><p>The ALU performs arithmetic and logic operations. The CU controls and coordinates CPU activity. Cache stores frequently used data and instructions close to the CPU for faster access.</p></div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <span class="question-number">Question 4</span>
+                <h3>Fetch-execute cycle</h3>
+              </div>
+              <span class="marks-tag">4 marks</span>
+            </div>
+            <p>Describe the fetch-execute cycle.</p>
+            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+            <button aria-expanded="false" class="toggle-answer" data-target="exam-4">Show answer</button>
+            <div class="answer-block" id="exam-4"><p>The CPU fetches the next instruction from memory. It decodes the instruction to work out what it means. It then executes the instruction by carrying out the required action. This cycle repeats while the program is running.</p></div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <span class="question-number">Question 5</span>
+                <h3>Von Neumann architecture and registers</h3>
+              </div>
+              <span class="marks-tag">6 marks</span>
+            </div>
+            <p>Explain Von Neumann architecture and the purpose of the MAR, MDR, Program Counter and Accumulator.</p>
+            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+            <button aria-expanded="false" class="toggle-answer" data-target="exam-5">Show answer</button>
+            <div class="answer-block" id="exam-5"><p>Von Neumann architecture stores program instructions and data in the same memory. The MAR stores the address of the memory location being used. The MDR stores data or an instruction being transferred to or from memory. The Program Counter stores the address of the next instruction. The Accumulator stores intermediate results from calculations.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul>
+          <li>I can explain the purpose of the CPU.</li>
+          <li>I can describe the fetch-execute cycle.</li>
+          <li>I can explain the role of the ALU, CU, cache and registers.</li>
+          <li>I can describe the purpose of the MAR, MDR, Program Counter and Accumulator.</li>
+          <li>I can explain the difference between data and an address.</li>
+        </ul>
+        <div class="button-row">
+          <a class="button button-secondary" href="../../../../admin/courses/gcse/j277-01/subtopics/1-1-1-architecture-of-the-cpu.html">Back to 1.1.1 Architecture of the CPU</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>LearningPoint workbook page.</p>
+  </footer>
+
+  <script src="../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../../assets/js/controllers/workbookController.js"></script>
+</body>
+</html>

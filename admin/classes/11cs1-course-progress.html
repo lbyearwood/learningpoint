@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11CS1 Course Progress | LearningPoint</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="admin-page class-progress-page" data-class-name="11CS1" data-class-view="course-progress">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../index.html" aria-label="LearningPoint home"><span class="brand-mark">LP</span><span><strong>LearningPoint</strong></span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../control-panel.html">Teacher dashboard</a>
+      <a href="../../student/dashboard.html">Student dashboard</a>
+      <a href="../../login.html">Sign out</a>
+    </nav>
+  </header>
+  <main class="admin-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../control-panel.html">Teacher dashboard</a></li><li><a href="11cs1.html">11CS1</a></li><li><span aria-current="page">Course progress</span></li></ol></nav>
+    <section class="page-title admin-page-title compact-title">
+      <h1>Course progress</h1>
+      <p class="lead">View workbook access and current topic progress for 11CS1.</p>
+      <div class="button-row"><a class="button button-secondary back-button" href="11cs1.html">Back to 11CS1</a></div>
+    </section>
+    <section class="teacher-section compact-section"><h2>Course progress</h2><div id="classProgress" class="class-progress-grid"></div></section>
+  </main>
+  <script src="../../assets/js/config/supabase-config.js"></script>
+  <script src="../../assets/js/services/supabaseClient.js"></script>
+  <script src="../../assets/js/services/authService.js"></script>
+  <script src="../../assets/js/services/quizService.js"></script>
+  <script src="../../assets/js/utils/dom.js"></script>
+  <script src="../../assets/js/controllers/uiController.js"></script>
+  <script src="../../assets/js/views/adminControlPanelView.js"></script>
+  <script src="../../assets/js/controllers/classProgressController.js"></script>
+</body>
+</html>
