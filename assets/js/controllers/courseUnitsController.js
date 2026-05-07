@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const courseItems = (items || []).filter((item) => item.course === course).map((item) => ({
     ...item,
-    topic_management_url: item.topic_management_url ? `../${item.topic_management_url.replace("courses/", "")}` : "#"
+    topic_view_url: item.topic_view_url ? `../${item.topic_view_url.replace("courses/", "")}` : "#"
   }));
 
   AdminControlPanelView.renderCourseUnits(container, courseItems);

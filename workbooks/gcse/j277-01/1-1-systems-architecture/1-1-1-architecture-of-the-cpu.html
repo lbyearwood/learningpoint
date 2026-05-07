@@ -63,7 +63,9 @@
         <div class="activity-box">
           <h3>Activity 1: Explain the CPU</h3>
           <p>Write a short answer explaining the purpose of the CPU.</p>
-          <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+          <label class="answer-label" for="activity-1-response">Your answer</label>
+          <textarea id="activity-1-response" class="student-answer" rows="4" placeholder="Type your answer here..." aria-describedby="activity-1-paste-message"></textarea>
+          <p class="paste-message" id="activity-1-paste-message" aria-live="polite"></p>
           <button aria-expanded="false" class="toggle-answer" data-target="activity-1">Show answer</button>
           <div class="answer-block" id="activity-1">
             <p>The CPU processes program instructions and controls the movement of data in the computer. It repeatedly fetches, decodes and executes instructions.</p>
@@ -119,7 +121,9 @@
         <div class="activity-box">
           <h3>Activity 2: Put the fetch-execute cycle in order</h3>
           <p>Write the three stages in the correct order.</p>
-          <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+          <label class="answer-label" for="activity-2-response">Your answer</label>
+          <textarea id="activity-2-response" class="student-answer" rows="4" placeholder="Type the three stages in order..." aria-describedby="activity-2-paste-message"></textarea>
+          <p class="paste-message" id="activity-2-paste-message" aria-live="polite"></p>
           <button aria-expanded="false" class="toggle-answer" data-target="activity-2">Show answer</button>
           <div class="answer-block" id="activity-2">
             <p>1. Fetch<br>2. Decode<br>3. Execute</p>
@@ -173,11 +177,12 @@
           <p>Match each component to the correct job: ALU, CU, cache, registers.</p>
           <table>
             <tr><th>Job</th><th>Component</th></tr>
-            <tr><td>Controls and coordinates the CPU.</td><td></td></tr>
-            <tr><td>Performs calculations and logic comparisons.</td><td></td></tr>
-            <tr><td>Stores frequently used data and instructions close to the CPU.</td><td></td></tr>
-            <tr><td>Small, fast storage locations inside the CPU.</td><td></td></tr>
+            <tr><td>Controls and coordinates the CPU.</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Component for controls and coordinates the CPU" placeholder="Type component..." aria-describedby="activity-3-paste-message"></textarea></td></tr>
+            <tr><td>Performs calculations and logic comparisons.</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Component for performs calculations and logic comparisons" placeholder="Type component..." aria-describedby="activity-3-paste-message"></textarea></td></tr>
+            <tr><td>Stores frequently used data and instructions close to the CPU.</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Component for stores frequently used data and instructions" placeholder="Type component..." aria-describedby="activity-3-paste-message"></textarea></td></tr>
+            <tr><td>Small, fast storage locations inside the CPU.</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Component for small fast storage locations" placeholder="Type component..." aria-describedby="activity-3-paste-message"></textarea></td></tr>
           </table>
+          <p class="paste-message" id="activity-3-paste-message" aria-live="polite"></p>
           <button aria-expanded="false" class="toggle-answer" data-target="activity-3">Show answer</button>
           <div class="answer-block" id="activity-3">
             <p>Control Unit, ALU, cache, registers.</p>
@@ -269,11 +274,12 @@
           <p>For each register, identify whether it stores data or an address.</p>
           <table>
             <tr><th>Register</th><th>Data or address?</th></tr>
-            <tr><td>MAR</td><td></td></tr>
-            <tr><td>MDR</td><td></td></tr>
-            <tr><td>Program Counter</td><td></td></tr>
-            <tr><td>Accumulator</td><td></td></tr>
+            <tr><td>MAR</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for MAR" placeholder="Type data or address..." aria-describedby="activity-4-paste-message"></textarea></td></tr>
+            <tr><td>MDR</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for MDR" placeholder="Type data or address..." aria-describedby="activity-4-paste-message"></textarea></td></tr>
+            <tr><td>Program Counter</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for Program Counter" placeholder="Type data or address..." aria-describedby="activity-4-paste-message"></textarea></td></tr>
+            <tr><td>Accumulator</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for Accumulator" placeholder="Type data or address..." aria-describedby="activity-4-paste-message"></textarea></td></tr>
           </table>
+          <p class="paste-message" id="activity-4-paste-message" aria-live="polite"></p>
           <button aria-expanded="false" class="toggle-answer" data-target="activity-4">Show answer</button>
           <div class="answer-block" id="activity-4">
             <p>MAR: address. MDR: data or instruction. Program Counter: address. Accumulator: data.</p>
@@ -309,11 +315,12 @@
           <p>Identify whether each example is data or an address.</p>
           <table>
             <tr><th>Example</th><th>Data or address?</th></tr>
-            <tr><td>The number 15 being added in a calculation</td><td></td></tr>
-            <tr><td>The memory location of the next instruction</td><td></td></tr>
-            <tr><td>An instruction copied from memory</td><td></td></tr>
-            <tr><td>The location in memory being accessed</td><td></td></tr>
+            <tr><td>The number 15 being added in a calculation</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for number 15 example" placeholder="Type data or address..." aria-describedby="activity-5-paste-message"></textarea></td></tr>
+            <tr><td>The memory location of the next instruction</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for memory location of next instruction" placeholder="Type data or address..." aria-describedby="activity-5-paste-message"></textarea></td></tr>
+            <tr><td>An instruction copied from memory</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for instruction copied from memory" placeholder="Type data or address..." aria-describedby="activity-5-paste-message"></textarea></td></tr>
+            <tr><td>The location in memory being accessed</td><td><textarea class="student-answer short-answer" rows="1" aria-label="Data or address for memory location being accessed" placeholder="Type data or address..." aria-describedby="activity-5-paste-message"></textarea></td></tr>
           </table>
+          <p class="paste-message" id="activity-5-paste-message" aria-live="polite"></p>
           <button aria-expanded="false" class="toggle-answer" data-target="activity-5">Show answer</button>
           <div class="answer-block" id="activity-5">
             <p>Data, address, data or instruction, address.</p>
@@ -333,7 +340,9 @@
               <span class="marks-tag">1 mark</span>
             </div>
             <p>State what CPU stands for.</p>
-            <table class="answer-lines"><tr><td></td></tr></table>
+            <label class="answer-label" for="exam-1-response">Your answer</label>
+            <textarea id="exam-1-response" class="student-answer" rows="2" placeholder="Type your answer here..." aria-describedby="exam-1-paste-message"></textarea>
+            <p class="paste-message" id="exam-1-paste-message" aria-live="polite"></p>
             <button aria-expanded="false" class="toggle-answer" data-target="exam-1">Show answer</button>
             <div class="answer-block" id="exam-1"><p>Central Processing Unit.</p></div>
           </article>
@@ -347,7 +356,9 @@
               <span class="marks-tag">2 marks</span>
             </div>
             <p>Describe the purpose of the CPU.</p>
-            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr></table>
+            <label class="answer-label" for="exam-2-response">Your answer</label>
+            <textarea id="exam-2-response" class="student-answer" rows="3" placeholder="Type your answer here..." aria-describedby="exam-2-paste-message"></textarea>
+            <p class="paste-message" id="exam-2-paste-message" aria-live="polite"></p>
             <button aria-expanded="false" class="toggle-answer" data-target="exam-2">Show answer</button>
             <div class="answer-block" id="exam-2"><p>The CPU processes program instructions and controls the movement of data around the computer system.</p></div>
           </article>
@@ -361,7 +372,9 @@
               <span class="marks-tag">3 marks</span>
             </div>
             <p>Explain the role of three CPU components.</p>
-            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+            <label class="answer-label" for="exam-3-response">Your answer</label>
+            <textarea id="exam-3-response" class="student-answer" rows="4" placeholder="Type your answer here..." aria-describedby="exam-3-paste-message"></textarea>
+            <p class="paste-message" id="exam-3-paste-message" aria-live="polite"></p>
             <button aria-expanded="false" class="toggle-answer" data-target="exam-3">Show answer</button>
             <div class="answer-block" id="exam-3"><p>The ALU performs arithmetic and logic operations. The CU controls and coordinates CPU activity. Cache stores frequently used data and instructions close to the CPU for faster access.</p></div>
           </article>
@@ -375,7 +388,9 @@
               <span class="marks-tag">4 marks</span>
             </div>
             <p>Describe the fetch-execute cycle.</p>
-            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+            <label class="answer-label" for="exam-4-response">Your answer</label>
+            <textarea id="exam-4-response" class="student-answer" rows="5" placeholder="Type your answer here..." aria-describedby="exam-4-paste-message"></textarea>
+            <p class="paste-message" id="exam-4-paste-message" aria-live="polite"></p>
             <button aria-expanded="false" class="toggle-answer" data-target="exam-4">Show answer</button>
             <div class="answer-block" id="exam-4"><p>The CPU fetches the next instruction from memory. It decodes the instruction to work out what it means. It then executes the instruction by carrying out the required action. This cycle repeats while the program is running.</p></div>
           </article>
@@ -389,7 +404,9 @@
               <span class="marks-tag">6 marks</span>
             </div>
             <p>Explain Von Neumann architecture and the purpose of the MAR, MDR, Program Counter and Accumulator.</p>
-            <table class="answer-lines"><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr></table>
+            <label class="answer-label" for="exam-5-response">Your answer</label>
+            <textarea id="exam-5-response" class="student-answer" rows="7" placeholder="Type your answer here..." aria-describedby="exam-5-paste-message"></textarea>
+            <p class="paste-message" id="exam-5-paste-message" aria-live="polite"></p>
             <button aria-expanded="false" class="toggle-answer" data-target="exam-5">Show answer</button>
             <div class="answer-block" id="exam-5"><p>Von Neumann architecture stores program instructions and data in the same memory. The MAR stores the address of the memory location being used. The MDR stores data or an instruction being transferred to or from memory. The Program Counter stores the address of the next instruction. The Accumulator stores intermediate results from calculations.</p></div>
           </article>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Characters | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../../../../student/dashboard.html">Student dashboard</a></li>
+        <li><a href="../../../../student/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a href="../../../../student/courses/gcse/j277-01-computer-systems.html">J277/01 Computer systems</a></li>
+        <li><a href="../../../../student/courses/gcse/j277-01/1-2-memory-and-storage.html">1.2 Memory and storage</a></li>
+        <li><a href="../../../../student/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html">1.2.4 Data representation</a></li>
+        <li><span aria-current="page">Characters</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" href="../../../../student/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html">Back to 1.2.4 Data representation</a>
+      </div>
+      <p class="eyebrow">GCSE Computer Science OCR J277</p>
+      <h1>Characters</h1>
+      <p class="lead">Learn how computers represent letters, digits, punctuation and symbols using binary character codes.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can explain how characters are represented using binary codes.</li>
+          <li>I can define the term character set.</li>
+          <li>I can explain the difference between ASCII and Unicode.</li>
+          <li>I can explain how the number of bits per character affects the number of possible characters.</li>
+          <li>I can explain why character sets are logically ordered.</li>
+          <li>I can recognise that ASCII characters in the exam use 8-bit binary.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>How computers store characters</h2>
+        <p>Computers store all data using binary. Characters such as letters, digits, punctuation marks and symbols are also stored using binary codes.</p>
+        <p>Each character is assigned a unique binary code. When the computer stores text, it stores the binary code for each character in the text. A character such as <strong>A</strong> is stored as a binary code, but you do not need to memorise the exact code for the exam.</p>
+
+        <div class="diagram-card character-binary-diagram">
+          <h3>Example: storing the word CAT</h3>
+          <div class="character-code-grid" aria-label="Characters in CAT mapped to example 8-bit binary codes">
+            <div class="character-code-card">
+              <span class="character-letter">C</span>
+              <span class="diagram-arrow" aria-hidden="true">to</span>
+              <code>01000011</code>
+            </div>
+            <div class="character-code-card">
+              <span class="character-letter">A</span>
+              <span class="diagram-arrow" aria-hidden="true">to</span>
+              <code>01000001</code>
+            </div>
+            <div class="character-code-card">
+              <span class="character-letter">T</span>
+              <span class="diagram-arrow" aria-hidden="true">to</span>
+              <code>01010100</code>
+            </div>
+          </div>
+          <p class="diagram-caption">This is an 8-bit ASCII example. You need to understand the idea, not memorise full character code tables.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 1: Storing a word</h3>
+          <label class="answer-label" for="activity-store-word">Explain in your own words how a computer can store a word using binary.</label>
+          <textarea id="activity-store-word" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Character sets</h2>
+        <p>A <strong>character set</strong> is a collection of characters and the binary codes used to represent them. It tells the computer which binary code represents which character.</p>
+        <p>Different character sets can represent different numbers and ranges of characters. The table below uses illustrative example codes only. You do not need to memorise character set codes.</p>
+
+        <div class="diagram-card">
+          <h3>Character set mapping</h3>
+          <svg class="learning-diagram character-set-svg" viewBox="0 0 760 330" role="img" aria-labelledby="character-set-title character-set-desc">
+            <title id="character-set-title">Character set concept diagram</title>
+            <desc id="character-set-desc">A character set maps characters such as A, B, 7 and question mark to binary codes.</desc>
+            <defs>
+              <marker id="characters-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L8,3 z" fill="#007a91"></path>
+              </marker>
+            </defs>
+            <rect x="30" y="78" width="210" height="175" rx="18" fill="#e8f8fb" stroke="#007a91" stroke-width="4"></rect>
+            <text x="135" y="140" text-anchor="middle" class="svg-heading">Character set</text>
+            <text x="135" y="178" text-anchor="middle" class="svg-small">characters + codes</text>
+            <text x="135" y="210" text-anchor="middle" class="svg-small">meaning/mapping</text>
+            <g class="mapping-row">
+              <line x1="255" y1="100" x2="360" y2="100" stroke="#007a91" stroke-width="4" marker-end="url(#characters-arrow)"></line>
+              <rect x="380" y="70" width="90" height="60" rx="12" fill="#fff7d7" stroke="#b98200" stroke-width="3"></rect>
+              <text x="425" y="108" text-anchor="middle" class="svg-card-title">A</text>
+              <rect x="500" y="70" width="190" height="60" rx="12" fill="#fff" stroke="#b8c8d8" stroke-width="3"></rect>
+              <text x="595" y="106" text-anchor="middle" class="svg-code">01000001</text>
+            </g>
+            <g class="mapping-row">
+              <line x1="255" y1="155" x2="360" y2="155" stroke="#007a91" stroke-width="4" marker-end="url(#characters-arrow)"></line>
+              <rect x="380" y="125" width="90" height="60" rx="12" fill="#ffe3e6" stroke="#b23a48" stroke-width="3"></rect>
+              <text x="425" y="163" text-anchor="middle" class="svg-card-title">B</text>
+              <rect x="500" y="125" width="190" height="60" rx="12" fill="#fff" stroke="#b8c8d8" stroke-width="3"></rect>
+              <text x="595" y="161" text-anchor="middle" class="svg-code">01000010</text>
+            </g>
+            <g class="mapping-row">
+              <line x1="255" y1="210" x2="360" y2="210" stroke="#007a91" stroke-width="4" marker-end="url(#characters-arrow)"></line>
+              <rect x="380" y="180" width="90" height="60" rx="12" fill="#e9edff" stroke="#4657c7" stroke-width="3"></rect>
+              <text x="425" y="218" text-anchor="middle" class="svg-card-title">7</text>
+              <rect x="500" y="180" width="190" height="60" rx="12" fill="#fff" stroke="#b8c8d8" stroke-width="3"></rect>
+              <text x="595" y="216" text-anchor="middle" class="svg-code">00110111</text>
+            </g>
+            <g class="mapping-row">
+              <line x1="255" y1="265" x2="360" y2="265" stroke="#007a91" stroke-width="4" marker-end="url(#characters-arrow)"></line>
+              <rect x="380" y="235" width="90" height="60" rx="12" fill="#eaf7e7" stroke="#2f7d32" stroke-width="3"></rect>
+              <text x="425" y="273" text-anchor="middle" class="svg-card-title">?</text>
+              <rect x="500" y="235" width="190" height="60" rx="12" fill="#fff" stroke="#b8c8d8" stroke-width="3"></rect>
+              <text x="595" y="271" text-anchor="middle" class="svg-code">00111111</text>
+            </g>
+          </svg>
+          <p class="diagram-caption">A character set defines which binary code represents each character.</p>
+        </div>
+
+        <div class="diagram-card">
+          <h3>Example character codes</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Character</th>
+                <th scope="col">Example binary code</th>
+                <th scope="col">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td><code>01000001</code></td>
+                <td>The uppercase letter A</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td><code>01000010</code></td>
+                <td>The uppercase letter B</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><code>00110111</code></td>
+                <td>The digit 7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Define it</h3>
+          <label class="answer-label" for="activity-character-set">What is a character set?</label>
+          <textarea id="activity-character-set" class="student-answer short-answer" rows="2" placeholder="Type your definition here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Bits per character</h2>
+        <p>The number of bits used for each character limits how many different characters can be represented. More bits means more possible binary combinations.</p>
+        <p>The number of possible characters can be calculated using <strong>2^number of bits</strong>.</p>
+
+        <div class="diagram-card bits-diagram">
+          <h3>Bits decide the number of possible characters</h3>
+          <div class="formula-card" aria-label="Number of possible characters equals 2 to the power of number of bits">
+            <span>Possible characters</span>
+            <strong>= 2 ^ number of bits</strong>
+          </div>
+          <div class="bits-card-grid">
+            <div><strong>1 bit</strong><span>2 possible characters</span></div>
+            <div><strong>2 bits</strong><span>4 possible characters</span></div>
+            <div><strong>3 bits</strong><span>8 possible characters</span></div>
+            <div><strong>4 bits</strong><span>16 possible characters</span></div>
+            <div><strong>8 bits</strong><span>256 possible characters</span></div>
+          </div>
+          <div class="mini-flow" aria-label="More bits means more combinations and more possible characters">
+            <span>more bits</span>
+            <span class="flow-arrow">to</span>
+            <span>more combinations</span>
+            <span class="flow-arrow">to</span>
+            <span>more characters</span>
+          </div>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Calculate combinations</h3>
+          <p>If a character set uses 8 bits per character, how many different characters can it represent?</p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-bits">Show answer</button>
+          <div id="answer-bits" class="answer-block" hidden>
+            <p>8 bits can represent 2^8 combinations, which is 256 possible characters.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>ASCII</h2>
+        <p>ASCII is a character set. It is commonly used to represent English letters, digits, punctuation and control characters.</p>
+        <p>In the OCR exam, binary representation of ASCII will use <strong>8 bits</strong>. ASCII is limited compared with Unicode because it cannot represent as many characters from different languages and symbol systems.</p>
+        <p>You do not need to memorise ASCII codes. You do need to understand that each character has a binary code.</p>
+
+        <div class="activity-box">
+          <h3>Activity 4: ASCII limits</h3>
+          <label class="answer-label" for="activity-ascii-limits">Why might ASCII be too limited for a global website or app?</label>
+          <textarea id="activity-ascii-limits" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Unicode</h2>
+        <p>Unicode is a larger character set. It can represent a much wider range of characters, symbols and languages.</p>
+        <p>Unicode is useful for modern systems because software and websites may need to support many languages and symbols. If more bits are used per character, Unicode can require more storage than smaller character sets.</p>
+
+        <div class="diagram-card">
+          <h3>ASCII compared with Unicode</h3>
+          <div class="comparison-diagram">
+            <section class="comparison-panel ascii-panel" aria-label="ASCII summary">
+              <h4>ASCII</h4>
+              <ul>
+                <li>Smaller character set</li>
+                <li>English letters, digits and common symbols</li>
+                <li>OCR exam representation uses 8 bits</li>
+                <li>Limited compared with Unicode</li>
+              </ul>
+            </section>
+            <section class="comparison-panel unicode-panel" aria-label="Unicode summary">
+              <h4>Unicode</h4>
+              <ul>
+                <li>Much larger character set</li>
+                <li>Many languages and symbols</li>
+                <li>Better for global systems</li>
+                <li>Wider range of characters</li>
+              </ul>
+            </section>
+          </div>
+          <p class="diagram-caption">ASCII is useful for a smaller range of text. Unicode is designed for modern systems that need a much wider range of characters.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: ASCII and Unicode</h3>
+          <p>Think through the differences between ASCII and Unicode.</p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-unicode">Show model answer</button>
+          <div id="answer-unicode" class="answer-block" hidden>
+            <p>ASCII is more limited and is mainly suitable for English letters, digits and common symbols. Unicode can represent many more characters, including characters from different languages and symbol systems.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Logical ordering</h2>
+        <p>Character sets are arranged in a logical order. For example, the code for <strong>B</strong> is one more than the code for <strong>A</strong>.</p>
+        <p>This means computers can compare and sort characters. It also helps explain why letters can be processed in order.</p>
+
+        <div class="diagram-card">
+          <h3>Logical sequence</h3>
+          <div class="order-grid" aria-label="A, B and C in logical character code order">
+            <div class="order-card">
+              <strong>A</strong>
+              <span>code value</span>
+            </div>
+            <span class="flow-arrow">+1</span>
+            <div class="order-card">
+              <strong>B</strong>
+              <span>next value</span>
+            </div>
+            <span class="flow-arrow">+1</span>
+            <div class="order-card">
+              <strong>C</strong>
+              <span>next value</span>
+            </div>
+          </div>
+          <p class="diagram-caption">Character sets are logically ordered, which helps computers compare and sort characters.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 6: Character order</h3>
+          <label class="answer-label" for="activity-logical-order">If A, B and C are stored in logical order, what can you say about the code for C compared with A?</label>
+          <textarea id="activity-logical-order" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>ASCII and Unicode comparison</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">ASCII</th>
+              <th scope="col">Unicode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Purpose</th>
+              <td>Represents common text characters.</td>
+              <td>Represents a very wide range of text characters.</td>
+            </tr>
+            <tr>
+              <th scope="row">Number of possible characters</th>
+              <td>More limited.</td>
+              <td>Much larger.</td>
+            </tr>
+            <tr>
+              <th scope="row">Language support</th>
+              <td>Best suited to English text.</td>
+              <td>Supports many languages and symbols.</td>
+            </tr>
+            <tr>
+              <th scope="row">Typical use</th>
+              <td>Simple text where a small character set is enough.</td>
+              <td>Modern websites, apps and systems used internationally.</td>
+            </tr>
+            <tr>
+              <th scope="row">Limitation</th>
+              <td>Cannot represent as many characters.</td>
+              <td>May need more storage if more bits are used per character.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Character set</p>
+              </div>
+              <span class="mark-tag">1 mark</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Define the term character set.</label>
+            <textarea id="exam-q1" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>A character set is a collection of characters and the binary codes used to represent them.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Binary representation</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">Explain how characters are represented in binary.</label>
+            <textarea id="exam-q2" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>Each character is assigned a unique binary code. When text is stored, the computer stores the binary code for each character.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Possible characters</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q3">A character set uses 8 bits per character. Calculate how many different characters can be represented.</label>
+            <textarea id="exam-q3" class="student-answer short-answer" rows="2" placeholder="Type your calculation here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>2^8 = 256, so 256 different characters can be represented.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 4</h3>
+                <p>ASCII and Unicode</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q4">Explain one difference between ASCII and Unicode.</label>
+            <textarea id="exam-q4" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show model answer</button>
+            <div id="answer-q4" class="answer-block" hidden>
+              <p>Unicode can represent a much wider range of characters and languages than ASCII. ASCII is more limited.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 5</h3>
+                <p>Global website</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q5">Explain why Unicode is useful for a website used by people in different countries.</label>
+            <textarea id="exam-q5" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q5">Show model answer</button>
+            <div id="answer-q5" class="answer-block" hidden>
+              <p>Unicode can represent characters from many languages and symbol systems. This helps a website display names, words and symbols correctly for users in different countries.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 6</h3>
+                <p>OCR J277 understanding</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q6">A student says, "I need to memorise the binary code for every ASCII character." Explain why this is not necessary for OCR J277 and what the student does need to understand.</label>
+            <textarea id="exam-q6" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q6">Show model answer</button>
+            <div id="answer-q6" class="answer-block" hidden>
+              <p>The student does not need to memorise every code. They need to understand that characters are represented by binary codes in a character set, that ASCII uses 8-bit binary in the exam, and that character codes are logically ordered.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can explain how characters are represented using binary codes.</li>
+          <li>I can define the term character set.</li>
+          <li>I can explain the difference between ASCII and Unicode.</li>
+          <li>I can explain how the number of bits per character affects the number of possible characters.</li>
+          <li>I can explain why character sets are logically ordered.</li>
+          <li>I can recognise that ASCII characters in the exam use 8-bit binary.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    // Prototype only.
+    // Later, currentUserRole and workbookCovered will come from Supabase.
+    const currentUserRole = params.get("role") || (params.get("route") === "teacher" || document.referrer.includes("/admin/") ? "teacher" : "student");
+    const workbookCovered = false || params.get("covered") === "true";
+    const canViewAnswers = currentUserRole === "teacher" || workbookCovered === true;
+
+    const routeIsTeacher = currentUserRole === "teacher";
+    if (routeIsTeacher) {
+      const breadcrumbLinks = document.querySelectorAll(".breadcrumb a");
+      const teacherBreadcrumbs = [
+        ["Teacher dashboard", "../../../../admin/control-panel.html"],
+        ["GCSE Computer Science", "../../../../admin/courses/gcse-computer-science.html"],
+        ["J277/01 Computer systems", "../../../../admin/courses/gcse/j277-01-computer-systems.html"],
+        ["1.2 Memory and storage", "../../../../admin/courses/gcse/j277-01/1-2-memory-and-storage.html"],
+        ["1.2.4 Data representation", "../../../../admin/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html"]
+      ];
+      breadcrumbLinks.forEach((link, index) => {
+        link.textContent = teacherBreadcrumbs[index][0];
+        link.href = teacherBreadcrumbs[index][1];
+      });
+      document.querySelector(".back-button").href = "../../../../admin/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html";
+    }
+
+    function showPasteMessage(field) {
+      const message = field.parentElement.querySelector(".paste-message");
+      if (!message) return;
+      message.textContent = "Please type your answer rather than pasting it.";
+      window.clearTimeout(message.dataset.timer);
+      message.dataset.timer = window.setTimeout(() => {
+        message.textContent = "";
+      }, 3000);
+    }
+
+    document.querySelectorAll(".student-answer").forEach((field) => {
+      field.addEventListener("paste", (event) => {
+        event.preventDefault();
+        showPasteMessage(field);
+      });
+
+      field.addEventListener("keydown", (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+          event.preventDefault();
+          showPasteMessage(field);
+        }
+      });
+
+      field.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        showPasteMessage(field);
+      });
+    });
+
+    const workbook = document.querySelector(".interactive-workbook");
+    if (!canViewAnswers && workbook) {
+      const notice = document.createElement("p");
+      notice.className = "learning-state-notice";
+      notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+      workbook.prepend(notice);
+      document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+      document.querySelectorAll(".answer-block").forEach((answer) => answer.hidden = true);
+    }
+
+    if (canViewAnswers) {
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.hidden = false;
+        button.disabled = false;
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          const isHidden = answer.hidden;
+          answer.hidden = !isHidden;
+          button.textContent = isHidden ? "Hide answer" : "Show answer";
+        });
+      });
+    }
+  </script>
+  <script src="../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../assets/js/controllers/uiController.js"></script>
+</body>
+</html>

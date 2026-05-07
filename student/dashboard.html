@@ -3,100 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Dashboard | LearningPoint</title>
+  <title>Student dashboard | LearningPoint</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="../index.html" aria-label="LearningPoint home">
       <span class="brand-mark">LP</span>
-      <span>
-        <strong>LearningPoint</strong>
-        <small>Student area</small>
-      </span>
+      <span><strong>LearningPoint</strong><small>Student area</small></span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="../index.html">Home</a>
-      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="dashboard.html">Dashboard</a>
       <a href="../login.html">Sign out</a>
     </nav>
   </header>
-
   <main class="dashboard-layout">
-    <section class="page-hero student-hero">
-      <div>
-        <p class="eyebrow">Student dashboard</p>
-        <h1>Welcome back.</h1>
-        <p class="lead">Your published workbook pages, quizzes and recent scores will appear here.</p>
-      </div>
-      <div class="quick-stat-panel">
-        <article>
-          <span>Focus areas</span>
-          <strong>2</strong>
+    <section class="page-title admin-page-title compact-title course-topic-title">
+      <p class="eyebrow">Student dashboard</p>
+      <h1>Choose a course</h1>
+      <p class="lead">Open a course to view the units, topics, workbooks and quizzes your teacher has made available.</p>
+    </section>
+    <section class="teacher-section compact-section course-topic-section">
+      <h2>Courses</h2>
+      <div class="course-browser unit-list two-column-list topic-card-grid">
+        <article class="course-browser-card unit-list-card topic-overview-card">
+          <div class="course-card-main">
+            <h3>BTEC IT</h3>
+            <div class="status-row"><span class="status-tag public">Public</span><span class="status-tag available">Available</span></div>
+            <p class="course-summary-text">BTEC IT units, tutorials and support resources.</p>
+          </div>
+          <div class="course-card-actions"><a class="resource-link" href="courses/btec-it.html">View course</a></div>
         </article>
-        <article>
-          <span>Recent score</span>
-          <strong>Pending</strong>
+        <article class="course-browser-card unit-list-card topic-overview-card">
+          <div class="course-card-main">
+            <h3>GCSE Computer Science</h3>
+            <div class="status-row"><span class="status-tag public">Public</span><span class="status-tag available">Available</span></div>
+            <p class="course-summary-text">OCR J277 Computer systems and programming topics.</p>
+          </div>
+          <div class="course-card-actions"><a class="resource-link" href="courses/gcse-computer-science.html">View course</a></div>
         </article>
       </div>
     </section>
-
-    <section class="section">
-      <div class="section-heading row-heading">
-        <div>
-          <p class="eyebrow">Published content</p>
-          <h2>Workbooks</h2>
-        </div>
-        <p class="muted">Open the workbook pages your teacher has made available.</p>
-      </div>
-      <div id="publishedWorkbooks" class="course-group-list"></div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading row-heading">
-        <div>
-          <p class="eyebrow">Knowledge checks</p>
-          <h2>Quizzes</h2>
-        </div>
-        <p class="muted">Complete available knowledge checks and review your progress.</p>
-      </div>
-      <div id="publishedQuizzes" class="course-group-list"></div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Progress</p>
-        <h2>Recent scores</h2>
-      </div>
-      <div class="table-card">
-        <table>
-          <thead>
-            <tr>
-              <th>Quiz</th>
-              <th>Score</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody id="recentScores"></tbody>
-        </table>
-      </div>
-    </section>
+    <section class="teacher-section compact-section"><h2>Recently available workbooks</h2><p class="muted">Your teacher will use the course path above to direct you to workbooks and quizzes.</p></section>
   </main>
-
-  <footer class="site-footer">
-    <p>LearningPoint student area.</p>
-  </footer>
-
-  <script src="../assets/js/config/supabase-config.js"></script>
-  <script src="../assets/js/services/supabaseClient.js"></script>
-  <script src="../assets/js/services/authService.js"></script>
-  <script src="../assets/js/services/profileService.js"></script>
-  <script src="../assets/js/services/learningItemService.js"></script>
-  <script src="../assets/js/services/quizService.js"></script>
   <script src="../assets/js/utils/dom.js"></script>
   <script src="../assets/js/controllers/uiController.js"></script>
-  <script src="../assets/js/views/studentDashboardView.js"></script>
-  <script src="../assets/js/controllers/studentDashboardController.js"></script>
 </body>
 </html>

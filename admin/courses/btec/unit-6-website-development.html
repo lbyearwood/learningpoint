@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 6 Website Development | LearningPoint</title>
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>Teacher course view</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../control-panel.html">Teacher dashboard</a>
+      <a href="../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../login.html">Sign out</a>
+    </nav>
+  </header>
+  <main class="admin-layout course-topic-screen">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../../control-panel.html">Teacher dashboard</a></li>
+        <li><a href="../btec-it.html">BTEC IT</a></li>
+        <li><span aria-current="page">Unit 6 Website Development</span></li>
+      </ol>
+    </nav>
+    <section class="page-title admin-page-title compact-title course-topic-title">
+      <div class="button-row course-back-row"><a class="button button-secondary back-button" href="../btec-it.html">? Back to BTEC IT</a></div>
+      <h1>Unit 6 Website Development</h1>
+      <p class="lead">Choose a section to view.</p>
+    </section>
+    <section class="teacher-section compact-section course-topic-section">
+      <h2>Sections</h2>
+      <div class="course-browser unit-list two-column-list topic-card-grid">
+        <article class="course-browser-card unit-list-card topic-overview-card">
+          <div class="course-card-main">
+            <h3>Tutorials</h3>
+            <div class="status-row">
+              <span class="status-tag private">Private</span>
+              <span class="status-tag available">Available</span>
+            </div>
+            <p class="course-summary-text">HTML, CSS and website-building tutorials to support practical website development.</p>
+          </div>
+          <div class="course-card-actions"><a class="resource-link" href="unit-6/tutorials.html">View tutorials</a></div>
+        </article>
+        <article class="course-browser-card unit-list-card topic-overview-card">
+          <div class="course-card-main">
+            <h3>Assignment support</h3>
+            <div class="status-row">
+              <span class="status-tag private">Private</span>
+              <span class="status-tag coming-soon">Coming soon</span>
+            </div>
+            <p class="course-summary-text">Planning and writing support for future Unit 6 assignments.</p>
+          </div>
+        </article>
+        <article class="course-browser-card unit-list-card topic-overview-card">
+          <div class="course-card-main">
+            <h3>Assessment resources</h3>
+            <div class="status-row">
+              <span class="status-tag private">Private</span>
+              <span class="status-tag coming-soon">Coming soon</span>
+            </div>
+            <p class="course-summary-text">Assessment guidance and revision resources will be added later.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="../../../assets/js/utils/dom.js"></script>
+  <script src="../../../assets/js/controllers/uiController.js"></script>
+</body>
+</html>

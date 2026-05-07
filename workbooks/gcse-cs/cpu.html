@@ -39,7 +39,8 @@
         <div class="activity-box">
           <h3>Activity</h3>
           <p>Write one sentence explaining why the CPU is important when a program is running.</p>
-          <textarea aria-label="Activity answer for why the CPU is important"></textarea>
+          <textarea class="student-answer" aria-label="Activity answer for why the CPU is important" aria-describedby="cpu-activity-1-paste-message"></textarea>
+          <p class="paste-message" id="cpu-activity-1-paste-message" aria-live="polite"></p>
         </div>
       </section>
 
@@ -49,7 +50,8 @@
         <div class="activity-box">
           <h3>Activity</h3>
           <p>Explain the difference between the Control Unit and the Arithmetic Logic Unit.</p>
-          <textarea aria-label="Activity answer for CPU components"></textarea>
+          <textarea class="student-answer" aria-label="Activity answer for CPU components" aria-describedby="cpu-activity-2-paste-message"></textarea>
+          <p class="paste-message" id="cpu-activity-2-paste-message" aria-live="polite"></p>
         </div>
       </section>
 
@@ -59,7 +61,8 @@
         <div class="challenge-box">
           <h3>Challenge</h3>
           <p>Explain why this cycle needs to happen many times while a program runs.</p>
-          <textarea aria-label="Challenge answer for fetch decode execute cycle"></textarea>
+          <textarea class="student-answer" aria-label="Challenge answer for fetch decode execute cycle" aria-describedby="cpu-challenge-paste-message"></textarea>
+          <p class="paste-message" id="cpu-challenge-paste-message" aria-live="polite"></p>
         </div>
       </section>
     </article>
@@ -71,5 +74,6 @@
 
   <script src="../../assets/js/utils/dom.js"></script>
   <script src="../../assets/js/controllers/uiController.js"></script>
+  <script src="../../assets/js/controllers/workbookController.js"></script>
 </body>
 </html>

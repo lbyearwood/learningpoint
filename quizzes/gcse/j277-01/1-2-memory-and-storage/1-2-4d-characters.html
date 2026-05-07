@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Characters quiz | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science quiz</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="../../../../student/dashboard.html">Student dashboard</a></li>
+        <li><a href="../../../../student/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a href="../../../../student/courses/gcse/j277-01-computer-systems.html">J277/01 Computer systems</a></li>
+        <li><a href="../../../../student/courses/gcse/j277-01/1-2-memory-and-storage.html">1.2 Memory and storage</a></li>
+        <li><a href="../../../../student/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html">1.2.4 Data representation</a></li>
+        <li><span aria-current="page">Characters quiz</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" href="../../../../student/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html">Back to 1.2.4 Data representation</a>
+      </div>
+      <p class="eyebrow">GCSE Computer Science OCR J277</p>
+      <h1>Characters quiz</h1>
+      <p class="lead">Check your understanding of character sets, ASCII, Unicode and binary character codes.</p>
+    </section>
+
+    <article class="quiz-card">
+      <section id="quizLocked" class="lesson-block">
+        <h2>Quiz locked</h2>
+        <p>This quiz will unlock when your teacher has marked the Characters workbook as covered.</p>
+      </section>
+
+      <form id="charactersQuizForm" hidden>
+        <section class="lesson-block">
+          <h2>Instructions</h2>
+          <p>Answer all 10 questions, then submit the quiz to see your prototype score and feedback.</p>
+        </section>
+
+        <fieldset class="quiz-question">
+          <legend>1. What is a character set?</legend>
+          <label><input type="radio" name="q1" value="fonts"> A collection of fonts used by a computer</label>
+          <label><input type="radio" name="q1" value="collection"> A collection of characters and the codes used to represent them</label>
+          <label><input type="radio" name="q1" value="storage"> A storage device used for text files</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>2. Why do computers use binary codes to represent characters?</legend>
+          <label><input type="radio" name="q2" value="binary"> Computers store and process data using binary</label>
+          <label><input type="radio" name="q2" value="smaller"> Binary always makes text files smaller</label>
+          <label><input type="radio" name="q2" value="random"> Characters do not need a fixed code</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>3. ASCII is best described as:</legend>
+          <label><input type="radio" name="q3" value="processor"> A processor register</label>
+          <label><input type="radio" name="q3" value="ascii-character-set"> A character set used to represent text characters</label>
+          <label><input type="radio" name="q3" value="language"> A high-level programming language</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>4. Unicode is useful because:</legend>
+          <label><input type="radio" name="q4" value="smaller"> It always uses less storage than ASCII</label>
+          <label><input type="radio" name="q4" value="unicode-languages"> It can represent a wider range of characters, symbols and languages</label>
+          <label><input type="radio" name="q4" value="hardware"> It is a type of memory hardware</label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q5">5. In the OCR exam, ASCII binary representation will use how many bits?</label>
+          <input id="q5" name="q5" class="student-answer short-answer" type="text" autocomplete="off" inputmode="numeric" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q6">6. A character set uses 8 bits per character. How many different characters can it represent?</label>
+          <input id="q6" name="q6" class="student-answer short-answer" type="text" autocomplete="off" inputmode="numeric" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q7">7. Explain why using more bits per character allows more characters to be represented.</label>
+          <textarea id="q7" name="q7" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q8">8. Give one difference between ASCII and Unicode.</label>
+          <textarea id="q8" name="q8" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="quiz-question">
+          <legend>9. In a logically ordered character set, the code for B is one more than the code for A. What does this show?</legend>
+          <label><input type="radio" name="q9" value="sequence"> Character codes follow a sequence that can be compared or sorted</label>
+          <label><input type="radio" name="q9" value="random"> Character codes are random and cannot be ordered</label>
+          <label><input type="radio" name="q9" value="same"> A and B have the same binary code</label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q10">10. Why is memorising character set codes not required?</label>
+          <textarea id="q10" name="q10" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="button-row">
+          <button class="button" type="submit">Submit quiz</button>
+        </div>
+      </form>
+
+      <section id="quizResult" class="lesson-block" hidden aria-live="polite">
+        <h2>Your result</h2>
+        <p id="scoreText"></p>
+        <div id="feedbackList"></div>
+        <p class="muted">Scores will be saved later when Supabase is connected.</p>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    const workbookCovered = false || new URLSearchParams(window.location.search).get("covered") === "true";
+
+    const routeIsTeacher = new URLSearchParams(window.location.search).get("route") === "teacher" || document.referrer.includes("/admin/");
+    if (routeIsTeacher) {
+      const breadcrumbLinks = document.querySelectorAll(".breadcrumb a");
+      const teacherBreadcrumbs = [
+        ["Teacher dashboard", "../../../../admin/control-panel.html"],
+        ["GCSE Computer Science", "../../../../admin/courses/gcse-computer-science.html"],
+        ["J277/01 Computer systems", "../../../../admin/courses/gcse/j277-01-computer-systems.html"],
+        ["1.2 Memory and storage", "../../../../admin/courses/gcse/j277-01/1-2-memory-and-storage.html"],
+        ["1.2.4 Data representation", "../../../../admin/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html"]
+      ];
+      breadcrumbLinks.forEach((link, index) => {
+        link.textContent = teacherBreadcrumbs[index][0];
+        link.href = teacherBreadcrumbs[index][1];
+      });
+      document.querySelector(".back-button").href = "../../../../admin/courses/gcse/j277-01/subtopics/1-2-4-data-representation.html";
+    }
+
+    const lockedPanel = document.getElementById("quizLocked");
+    const quizForm = document.getElementById("charactersQuizForm");
+
+    if (workbookCovered) {
+      lockedPanel.hidden = true;
+      quizForm.hidden = false;
+    }
+
+    function showPasteMessage(field) {
+      const message = field.parentElement.querySelector(".paste-message");
+      if (!message) return;
+      message.textContent = "Please type your answer rather than pasting it.";
+      window.clearTimeout(message.dataset.timer);
+      message.dataset.timer = window.setTimeout(() => {
+        message.textContent = "";
+      }, 3000);
+    }
+
+    document.querySelectorAll(".student-answer").forEach((field) => {
+      field.addEventListener("paste", (event) => {
+        event.preventDefault();
+        showPasteMessage(field);
+      });
+
+      field.addEventListener("keydown", (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+          event.preventDefault();
+          showPasteMessage(field);
+        }
+      });
+
+      field.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        showPasteMessage(field);
+      });
+    });
+
+    function normalise(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function containsAny(value, keywords) {
+      const answer = normalise(value);
+      return keywords.some((keyword) => answer.includes(keyword));
+    }
+
+    function markShortAnswer(value, keywordGroups) {
+      return keywordGroups.every((group) => containsAny(value, group));
+    }
+
+    quizForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const formData = new FormData(quizForm);
+      let score = 0;
+      const feedback = [];
+
+      const exactAnswers = {
+        q1: "collection",
+        q2: "binary",
+        q3: "ascii-character-set",
+        q4: "unicode-languages",
+        q9: "sequence"
+      };
+
+      Object.entries(exactAnswers).forEach(([question, answer]) => {
+        if (formData.get(question) === answer) {
+          score += 1;
+          feedback.push(`${question.toUpperCase()}: correct.`);
+        } else {
+          feedback.push(`${question.toUpperCase()}: check this one again.`);
+        }
+      });
+
+      if (normalise(formData.get("q5")) === "8" || containsAny(formData.get("q5"), ["8 bit", "8-bit", "eight"])) {
+        score += 1;
+        feedback.push("Q5: correct.");
+      } else {
+        feedback.push("Q5: ASCII binary representation in the OCR exam uses 8 bits.");
+      }
+
+      if (normalise(formData.get("q6")) === "256" || containsAny(formData.get("q6"), ["2^8", "2 to the power of 8"])) {
+        score += 1;
+        feedback.push("Q6: correct.");
+      } else {
+        feedback.push("Q6: 8 bits gives 2^8, which is 256 combinations.");
+      }
+
+      if (markShortAnswer(formData.get("q7"), [["more", "extra", "additional"], ["bits"], ["combination", "characters", "values", "codes"]])) {
+        score += 1;
+        feedback.push("Q7: good explanation.");
+      } else {
+        feedback.push("Q7: mention that more bits create more binary combinations, so more characters can be represented.");
+      }
+
+      if (markShortAnswer(formData.get("q8"), [["ascii", "unicode"], ["more", "larger", "limited", "languages", "symbols", "characters"]])) {
+        score += 1;
+        feedback.push("Q8: good comparison.");
+      } else {
+        feedback.push("Q8: compare ASCII's smaller range with Unicode's wider language and symbol support.");
+      }
+
+      if (markShortAnswer(formData.get("q10"), [["memorise", "remember", "learn"], ["not", "no", "unnecessary", "understand"], ["character set", "binary", "8", "logical"]])) {
+        score += 1;
+        feedback.push("Q10: good answer.");
+      } else {
+        feedback.push("Q10: explain that students need to understand character sets and binary representation, not memorise every code.");
+      }
+
+      document.getElementById("scoreText").textContent = `Score: ${score} out of 10`;
+      document.getElementById("feedbackList").innerHTML = `<ul>${feedback.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+      document.getElementById("quizResult").hidden = false;
+      document.getElementById("quizResult").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  </script>
+  <script src="../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../assets/js/controllers/uiController.js"></script>
+</body>
+</html>

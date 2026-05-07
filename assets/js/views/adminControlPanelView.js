@@ -287,7 +287,7 @@
   },
 
   relativeTopicUrl(item) {
-    return item.topic_management_url || "#";
+    return item.topic_view_url || "#";
   },
 
   renderClassProgress(container, summaries) {
