@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count-controlled loops | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../../assets/css/styles.css">
+  <style>
+    .loop-diagram{max-width:820px;margin:1rem 0}.loop-diagram svg{width:100%;height:auto;display:block}.node-start{fill:#e0f2fe;stroke:#0369a1}.node-process{fill:#ede9fe;stroke:#6d28d9}.node-decision{fill:#fef3c7;stroke:#b45309}.node-true{fill:#dcfce7;stroke:#15803d}.node-warn{fill:#ffe4e6;stroke:#be123c}.flow-line{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}.diagram-label{font:600 14px Arial,sans-serif;fill:#0f172a}.small-label{font:500 12px Arial,sans-serif;fill:#334155}.range-pill{fill:#dbeafe;stroke:#2563eb}.mistake-list li{margin-bottom:.5rem}
+  </style>
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../../index.html" aria-label="LearningPoint home"><span class="brand-mark">LP</span><span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation"><a href="../../../../../../admin/control-panel.html">Teacher dashboard</a><a href="../../../../../../student/dashboard.html">Student dashboard</a><a href="../../../../../../login.html">Sign out</a></nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+      <li><a data-role-link="dashboard" href="../../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+      <li><a data-role-link="gcse" href="../../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+      <li><a data-role-link="unit" href="../../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+      <li><a data-role-link="tools" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+      <li><a data-role-link="section" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+      <li><a data-role-link="topic" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/iteration.html">Iteration</a></li>
+      <li><span aria-current="page">Count-controlled loops</span></li>
+    </ol></nav>
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row"><a class="button button-secondary back-button" data-role-link="back" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/iteration.html">Back to Iteration</a></div>
+      <p class="eyebrow">OCR J277 &middot; Programming tools &middot; Iteration &middot; Python</p>
+      <h1>Count-controlled loops</h1>
+      <p class="lead">Learn how Python <code>for</code> loops repeat code a known number of times.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define iteration.</li>
+          <li>I can explain what a count-controlled loop is.</li>
+          <li>I can use Python <code>for</code> loops and <code>range()</code>.</li>
+          <li>I can trace start, stop and step values.</li>
+          <li>I can spot off-by-one errors.</li>
+          <li>I can choose when a count-controlled loop is suitable.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What iteration means</h2>
+        <p><strong>Iteration</strong> means repetition. A loop repeats a block of code.</p>
+        <p>A <strong>count-controlled loop</strong> is used when the number of repeats is known before the loop starts. In Python, this is usually written as a <code>for</code> loop.</p>
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">For-loop cycle</h3>
+          <svg viewBox="0 0 900 330" role="img" aria-label="For loop cycle showing values remain check, body, next value and stop">
+            <defs><marker id="forArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker><marker id="forTrueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#15803d"/></marker><marker id="forFalseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#be123c"/></marker></defs>
+            <rect class="flow-process-node" x="35" y="130" width="145" height="60" rx="14"/><text class="flow-note" x="108" y="154" text-anchor="middle">Set loop</text><text class="flow-note" x="108" y="172" text-anchor="middle">variable</text>
+            <path class="flow-line-neutral" marker-end="url(#forArrow)" d="M180 160 H260"/>
+            <polygon class="flow-choice-node" points="390,90 520,160 390,230 260,160"/><text class="flow-note" x="390" y="155" text-anchor="middle">values</text><text class="flow-note" x="390" y="173" text-anchor="middle">remain?</text>
+            <path class="flow-line-true" marker-end="url(#forTrueArrow)" d="M520 160 H630"/><text class="flow-note" x="575" y="145" text-anchor="middle">True</text>
+            <rect class="flow-action-node" x="630" y="130" width="120" height="60" rx="14"/><text class="flow-label" x="690" y="166" text-anchor="middle">Run body</text>
+            <path class="flow-line-neutral" marker-end="url(#forArrow)" d="M690 190 V270 H390 V230"/><text class="flow-note" x="548" y="257" text-anchor="middle">next value, repeat</text>
+            <path class="flow-line-false" marker-end="url(#forFalseArrow)" d="M390 230 V300 H760"/><text class="flow-note" x="420" y="292">False</text>
+            <rect class="flow-end-node" x="760" y="277" width="95" height="46" rx="18"/><text class="flow-label" x="808" y="306" text-anchor="middle">Stop</text>
+          </svg>
+          <figcaption class="diagram-caption">A Python for loop takes the next value, runs the body, then returns to check whether more values remain.</figcaption>
+        </figure>
+        <div class="diagram-card"><h3>Basic repeat</h3><pre><code>for i in range(5):
+    print("Hello")</code></pre><p>This prints <code>Hello</code> five times. The loop variable is <code>i</code>.</p></div>
+        <div class="activity-box"><h3>Activity 1: How many repeats?</h3><label class="answer-label" for="repeat-count">How many times does this loop run?</label><pre><code>for i in range(5):
+    print("Hello")</code></pre><input id="repeat-count" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-repeat-count">Show answer</button><div id="answer-repeat-count" class="answer-block" hidden><p>It runs 5 times.</p></div></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Using range()</h2>
+        <p><code>range()</code> creates the sequence of values used by the loop. A common GCSE mistake is thinking <code>range(5)</code> means 1 to 5. It actually produces 0 to 4.</p>
+        <figure class="loop-diagram" aria-label="Python range diagram">
+          <svg viewBox="0 0 820 150" role="img">
+            <rect class="node-process" x="30" y="45" width="150" height="58" rx="14"/><text class="diagram-label" x="105" y="80" text-anchor="middle">range(5)</text>
+            <rect class="range-pill" x="250" y="50" width="70" height="48" rx="20"/><text class="diagram-label" x="285" y="80" text-anchor="middle">0</text>
+            <rect class="range-pill" x="340" y="50" width="70" height="48" rx="20"/><text class="diagram-label" x="375" y="80" text-anchor="middle">1</text>
+            <rect class="range-pill" x="430" y="50" width="70" height="48" rx="20"/><text class="diagram-label" x="465" y="80" text-anchor="middle">2</text>
+            <rect class="range-pill" x="520" y="50" width="70" height="48" rx="20"/><text class="diagram-label" x="555" y="80" text-anchor="middle">3</text>
+            <rect class="range-pill" x="610" y="50" width="70" height="48" rx="20"/><text class="diagram-label" x="645" y="80" text-anchor="middle">4</text>
+          </svg>
+          <figcaption class="diagram-caption"><code>range(5)</code> stops before 5.</figcaption>
+        </figure>
+        <div class="diagram-card"><h3>Counting from 0 to 4</h3><pre><code>for i in range(5):
+    print(i)</code></pre><p>The output is <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>.</p></div>
+        <div class="diagram-card"><h3>Counting from 1 to 5</h3><pre><code>for i in range(1, 6):
+    print(i)</code></pre><p>The stop value is <code>6</code> because Python stops before the stop value.</p></div>
+        <div class="activity-box"><h3>Activity 2: Predict output</h3><label class="answer-label" for="predict-output">What values are printed?</label><pre><code>for i in range(1, 4):
+    print(i)</code></pre><textarea id="predict-output" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-predict-output">Show answer</button><div id="answer-predict-output" class="answer-block" hidden><p>The output is <code>1</code>, <code>2</code>, <code>3</code>.</p></div></div>
+        <div class="activity-box"><h3>Activity 3: Complete range values</h3><label class="answer-label" for="complete-range">Complete the missing range so the loop prints 1 to 10.</label><pre><code>for i in range(...):
+    print(i)</code></pre><input id="complete-range" class="student-answer short-answer" type="text" placeholder="Type the range here..."><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-complete-range">Show answer</button><div id="answer-complete-range" class="answer-block" hidden><p>Use <code>range(1, 11)</code>.</p></div></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Step values and list loops</h2>
+        <p>A third value in <code>range()</code> is the step. It controls how much the loop variable changes each time.</p>
+        <div class="diagram-card"><h3>Using a step</h3><pre><code>for i in range(2, 11, 2):
+    print(i)</code></pre><p>The output is <code>2</code>, <code>4</code>, <code>6</code>, <code>8</code>, <code>10</code>.</p></div>
+        <div class="diagram-card"><h3>Looping through a list</h3><pre><code>names = ["Asha", "Ben", "Cara"]
+for name in names:
+    print(name)</code></pre><p>The loop variable <code>name</code> takes each list value in turn.</p></div>
+        <figure class="loop-diagram" aria-label="Loop trace diagram">
+          <table class="data-table">
+            <thead><tr><th scope="col">Iteration</th><th scope="col">i</th><th scope="col">output</th></tr></thead>
+            <tbody><tr><td>1</td><td><code>2</code></td><td><code>2</code></td></tr><tr><td>2</td><td><code>4</code></td><td><code>4</code></td></tr><tr><td>3</td><td><code>6</code></td><td><code>6</code></td></tr><tr><td>4</td><td><code>8</code></td><td><code>8</code></td></tr><tr><td>5</td><td><code>10</code></td><td><code>10</code></td></tr></tbody>
+          </table>
+          <figcaption class="diagram-caption">Tracing a loop helps you follow the value of the loop variable.</figcaption>
+        </figure>
+        <div class="activity-box"><h3>Activity 4: Print even numbers</h3><label class="answer-label" for="even-loop">Write a Python for loop that prints even numbers from 2 to 20.</label><textarea id="even-loop" class="student-answer" rows="5"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-even-loop">Show model answer</button><div id="answer-even-loop" class="answer-block" hidden><pre><code>for i in range(2, 21, 2):
+    print(i)</code></pre></div></div>
+        <div class="activity-box"><h3>Activity 5: Loop through a list</h3><label class="answer-label" for="list-loop">Write a for loop that prints each value in <code>names</code>.</label><textarea id="list-loop" class="student-answer" rows="5"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-list-loop">Show model answer</button><div id="answer-list-loop" class="answer-block" hidden><pre><code>for name in names:
+    print(name)</code></pre></div></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Off-by-one errors</h2>
+        <p>An off-by-one error happens when a loop runs one too many or one too few times. This often happens because the stop value in <code>range()</code> is not included.</p>
+        <figure class="loop-diagram" aria-label="Off by one diagram">
+          <svg viewBox="0 0 820 150" role="img">
+            <rect class="node-warn" x="30" y="35" width="230" height="80" rx="14"/><text class="diagram-label" x="145" y="68" text-anchor="middle">range(1, 5)</text><text class="small-label" x="145" y="92" text-anchor="middle">gives 1, 2, 3, 4</text>
+            <rect class="node-true" x="350" y="35" width="230" height="80" rx="14"/><text class="diagram-label" x="465" y="68" text-anchor="middle">not</text><text class="small-label" x="465" y="92" text-anchor="middle">1, 2, 3, 4, 5</text>
+          </svg>
+          <figcaption class="diagram-caption">To print 1 to 5, use <code>range(1, 6)</code>.</figcaption>
+        </figure>
+        <div class="activity-box"><h3>Activity 6: Explain range(1, 6)</h3><label class="answer-label" for="explain-range">Explain why <code>range(1, 6)</code> is needed to print 1 to 5.</label><textarea id="explain-range" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-explain-range">Show model answer</button><div id="answer-explain-range" class="answer-block" hidden><p>Python includes the start value but stops before the stop value, so a stop value of 6 is needed for 5 to be printed.</p></div></div>
+      </section>
+
+      <section class="lesson-block"><h2>Common mistakes</h2><ul class="mistake-list"><li>Thinking <code>range(5)</code> prints 1 to 5.</li><li>Forgetting the colon at the end of the <code>for</code> line.</li><li>Forgetting to indent the loop body.</li><li>Using the wrong stop value.</li><li>Changing the loop variable unnecessarily inside the loop.</li><li>Using a for loop when the number of repeats is not known.</li></ul></section>
+
+      <section class="lesson-block"><h2>Exam-style questions</h2><div class="question-stack">
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 1</h3><p>Define</p></div><span class="mark-tag">1 mark</span></div><label class="answer-label" for="exam-q1">Define iteration.</label><textarea id="exam-q1" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show answer</button><div id="answer-q1" class="answer-block" hidden><p>Iteration means repeating code.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 2</h3><p>Loop type</p></div><span class="mark-tag">1 mark</span></div><label class="answer-label" for="exam-q2">State what type of loop is normally used when the number of repeats is known.</label><input id="exam-q2" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button><div id="answer-q2" class="answer-block" hidden><p>A count-controlled loop, usually a Python <code>for</code> loop.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 3</h3><p>Predict</p></div><span class="mark-tag">2 marks</span></div><pre><code>for i in range(3):
+    print(i)</code></pre><textarea id="exam-q3" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button><div id="answer-q3" class="answer-block" hidden><p>The output is <code>0</code>, <code>1</code>, <code>2</code>.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 4</h3><p>Explain range</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q4">Explain what <code>range(1, 6)</code> produces.</label><textarea id="exam-q4" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show answer</button><div id="answer-q4" class="answer-block" hidden><p>It produces 1, 2, 3, 4 and 5. The stop value 6 is not included.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 5</h3><p>Write loop</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q5">Write a Python for loop that prints the numbers 1 to 10.</label><textarea id="exam-q5" class="student-answer" rows="5"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q5">Show answer</button><div id="answer-q5" class="answer-block" hidden><pre><code>for i in range(1, 11):
+    print(i)</code></pre></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 6</h3><p>Off-by-one</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q6">Explain one common off-by-one error in Python for loops.</label><textarea id="exam-q6" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q6">Show answer</button><div id="answer-q6" class="answer-block" hidden><p>A common error is using <code>range(1, 5)</code> to try to print 1 to 5. It only prints 1 to 4 because the stop value is excluded.</p></div></article>
+      </div></section>
+
+      <section class="lesson-block"><h2>Final review checklist</h2><ul class="checklist"><li>I can explain count-controlled iteration.</li><li>I can use <code>range()</code> correctly.</li><li>I can trace Python for loops.</li><li>I can avoid common off-by-one errors.</li></ul></section>
+    </article>
+  </main>
+  <script src="../../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/iteration.html"],
+          back: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/iteration.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing.
+      // Later, set to false so student answer access depends on covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => { message.textContent = ""; }, 3000);
+      }
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => { event.preventDefault(); showPasteMessage(field); });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => { event.preventDefault(); showPasteMessage(field); });
+      });
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

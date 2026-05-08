@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IF statements | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../../assets/css/styles.css">
+  <style>
+    .selection-diagram{max-width:760px;margin:1rem 0}.selection-diagram svg{width:100%;height:auto;display:block}.flow-start{fill:#e0f2fe;stroke:#0369a1}.flow-decision{fill:#fef3c7;stroke:#b45309}.flow-true{fill:#dcfce7;stroke:#15803d}.flow-false{fill:#ffe4e6;stroke:#be123c}.flow-code{fill:#ede9fe;stroke:#6d28d9}.flow-line{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}.true-line{stroke:#15803d;stroke-width:2;marker-end:url(#arrow-green)}.false-line{stroke:#be123c;stroke-width:2;marker-end:url(#arrow-red)}.diagram-label{font:600 14px Arial,sans-serif;fill:#0f172a}.small-label{font:500 12px Arial,sans-serif;fill:#334155}.code-structure{border-left:4px solid #6d28d9;background:#f5f3ff;padding:1rem;border-radius:8px}.mistake-list li{margin-bottom:.5rem}
+  </style>
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/selection.html">Selection</a></li>
+        <li><span aria-current="page">IF statements</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/selection.html">Back to Selection</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; Programming tools &middot; Selection</p>
+      <h1>IF statements</h1>
+      <p class="lead">Learn how a program uses an IF statement to make a one-way decision.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define selection.</li>
+          <li>I can identify the condition in an IF statement.</li>
+          <li>I can explain that the IF block only runs when the condition is true.</li>
+          <li>I can use comparison operators in simple conditions.</li>
+          <li>I can read and write simple IF statements.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What selection means</h2>
+        <p><strong>Selection</strong> is when a program chooses whether to run some code based on a condition. An IF statement is the simplest selection tool.</p>
+        <p>The condition is a test that is either true or false. If it is true, the indented action in the IF block runs. If it is false, the IF block is skipped.</p>
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">IF statement flowchart</h3>
+          <svg viewBox="0 0 900 300" role="img" aria-label="IF statement flowchart with true and false paths">
+            <defs><marker id="ifArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker><marker id="ifTrueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#15803d"/></marker><marker id="ifFalseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#be123c"/></marker></defs>
+            <rect class="flow-start-node" x="35" y="122" width="90" height="46" rx="18"/><text class="flow-label" x="80" y="151" text-anchor="middle">Start</text>
+            <path class="flow-line-neutral" marker-end="url(#ifArrow)" d="M125 145 H215"/>
+            <polygon class="flow-choice-node" points="350,70 490,145 350,220 210,145"/><text class="flow-label" x="350" y="151" text-anchor="middle">condition?</text>
+            <path class="flow-line-true" marker-end="url(#ifTrueArrow)" d="M490 145 H610"/><text class="flow-note" x="550" y="130" text-anchor="middle">True</text>
+            <rect class="flow-action-node" x="610" y="115" width="130" height="60" rx="14"/><text class="flow-label" x="675" y="151" text-anchor="middle">Run action</text>
+            <path class="flow-line-neutral" marker-end="url(#ifArrow)" d="M740 145 H810"/><rect class="flow-end-node" x="810" y="122" width="80" height="46" rx="18"/><text class="flow-label" x="850" y="151" text-anchor="middle">Continue</text>
+            <path class="flow-line-false" marker-end="url(#ifFalseArrow)" d="M350 220 V260 H810 V168"/><text class="flow-note" x="382" y="250">False: skip action</text>
+          </svg>
+          <figcaption class="diagram-caption">The IF block only runs on the true path. The false path skips the action and continues with the next line of code.</figcaption>
+        </figure>
+        <div class="activity-box">
+          <h3>Activity 1: Define selection</h3>
+          <label class="answer-label" for="selection-definition">What does selection mean in programming?</label>
+          <textarea id="selection-definition" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-selection-definition">Show model answer</button>
+          <div id="answer-selection-definition" class="answer-block" hidden><p>Selection is when a program chooses which code to run based on whether a condition is true or false.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Conditions and comparison operators</h2>
+        <p>An IF statement often uses a comparison operator such as <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code> or <code>!=</code>.</p>
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">True and false paths</h3>
+          <svg viewBox="0 0 900 290" role="img" aria-label="Score greater than or equal to 50 decision with pass and skip paths">
+            <defs><marker id="scoreTrueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#15803d"/></marker><marker id="scoreFalseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#be123c"/></marker><marker id="scoreArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <polygon class="flow-choice-node" points="410,45 570,130 410,215 250,130"/><text class="flow-label" x="410" y="126" text-anchor="middle">score &gt;= 50?</text><text class="flow-note" x="410" y="146" text-anchor="middle">condition</text>
+            <path class="flow-line-true" marker-end="url(#scoreTrueArrow)" d="M570 130 H700"/><text class="flow-note" x="635" y="115" text-anchor="middle">True</text>
+            <rect class="flow-output-node" x="700" y="100" width="145" height="60" rx="14"/><text class="flow-label" x="773" y="136" text-anchor="middle">print "Pass"</text>
+            <path class="flow-line-neutral" marker-end="url(#scoreArrow)" d="M773 160 V235 H410"/>
+            <path class="flow-line-false" marker-end="url(#scoreFalseArrow)" d="M410 215 V235"/><text class="flow-note" x="438" y="231">False</text>
+            <rect class="flow-false-node" x="195" y="205" width="170" height="60" rx="14"/><text class="flow-label" x="280" y="229" text-anchor="middle">no output</text><text class="flow-note" x="280" y="248" text-anchor="middle">skip IF block</text>
+          </svg>
+          <figcaption class="diagram-caption">A score of 50 or more follows the true path and prints Pass. A lower score follows the false path, produces no IF output and continues.</figcaption>
+        </figure>
+        <div class="diagram-card">
+          <h3>Worked example</h3>
+          <pre><code>score = 62
+
+if score &gt;= 50 then
+    print("Pass")
+endif</code></pre>
+          <p>Because <code>62 &gt;= 50</code> is true, the output is <code>Pass</code>.</p>
+        </div>
+        <div class="activity-box">
+          <h3>Activity 2: Identify the condition</h3>
+          <label class="answer-label" for="condition-identify">In the example above, what is the condition?</label>
+          <input id="condition-identify" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-condition-identify">Show answer</button>
+          <div id="answer-condition-identify" class="answer-block" hidden><p>The condition is <code>score &gt;= 50</code>.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>IF statement structure</h2>
+        <p>OCR-style pseudocode uses <code>if</code>, <code>then</code> and <code>endif</code>. The action is placed inside the IF block.</p>
+        <figure class="selection-diagram" aria-label="IF statement code structure diagram">
+          <svg viewBox="0 0 760 210" role="img">
+            <rect class="flow-code" x="70" y="30" width="620" height="150" rx="16"/>
+            <text class="diagram-label" x="120" y="70">if condition then</text>
+            <text class="small-label" x="430" y="70">condition is tested</text>
+            <text class="diagram-label" x="150" y="110">action</text>
+            <text class="small-label" x="430" y="110">runs only if condition is true</text>
+            <text class="diagram-label" x="120" y="150">endif</text>
+            <text class="small-label" x="430" y="150">ends the IF block</text>
+          </svg>
+          <figcaption class="diagram-caption">The action belongs inside the IF block.</figcaption>
+        </figure>
+        <div class="activity-box">
+          <h3>Activity 3: Predict the output</h3>
+          <pre><code>age = 15
+
+if age &gt;= 16 then
+    print("Can apply")
+endif</code></pre>
+          <label class="answer-label" for="predict-output">What is printed?</label>
+          <textarea id="predict-output" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-predict-output">Show answer</button>
+          <div id="answer-predict-output" class="answer-block" hidden><p>Nothing is printed because <code>15 &gt;= 16</code> is false.</p></div>
+        </div>
+        <div class="activity-box">
+          <h3>Activity 4: Write an IF statement</h3>
+          <label class="answer-label" for="write-if">Write an IF statement that prints <code>"Adult"</code> if <code>age</code> is at least <code>18</code>.</label>
+          <textarea id="write-if" class="student-answer" rows="5" placeholder="Type your pseudocode here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-write-if">Show model answer</button>
+          <div id="answer-write-if" class="answer-block" hidden><pre><code>if age &gt;= 18 then
+    print("Adult")
+endif</code></pre></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Common mistakes</h2>
+        <ul class="mistake-list">
+          <li>Forgetting to write a condition after <code>if</code>.</li>
+          <li>Thinking the IF block always runs. It only runs when the condition is true.</li>
+          <li>Using assignment when a comparison is needed.</li>
+          <li>Forgetting that ELSE, ELSE IF and nested IF statements are later selection tools.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 1</h3><p>Define</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q1">Define selection.</label><textarea id="exam-q1" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button><div id="answer-q1" class="answer-block" hidden><p>Selection is when a program decides whether to run code based on a condition.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 2</h3><p>Identify</p></div><span class="mark-tag">1 mark</span></div><pre><code>if lives == 0 then
+    print("Game over")
+endif</code></pre><label class="answer-label" for="exam-q2">Identify the condition.</label><input id="exam-q2" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button><div id="answer-q2" class="answer-block" hidden><p><code>lives == 0</code></p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 3</h3><p>Predict</p></div><span class="mark-tag">2 marks</span></div><pre><code>temperature = 18
+if temperature &gt; 20 then
+    print("Hot")
+endif</code></pre><label class="answer-label" for="exam-q3">Predict the output.</label><textarea id="exam-q3" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button><div id="answer-q3" class="answer-block" hidden><p>There is no output because the condition is false.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 4</h3><p>Write</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q4">Write an IF statement that prints <code>"High score"</code> if <code>score</code> is greater than <code>100</code>.</label><textarea id="exam-q4" class="student-answer" rows="5"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show model answer</button><div id="answer-q4" class="answer-block" hidden><pre><code>if score &gt; 100 then
+    print("High score")
+endif</code></pre></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 5</h3><p>Explain</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q5">Explain how an IF statement controls program flow.</label><textarea id="exam-q5" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q5">Show model answer</button><div id="answer-q5" class="answer-block" hidden><p>The condition is checked. If it is true, the code inside the IF block runs. If it is false, that code is skipped and the program continues after the IF statement.</p></div></article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define selection.</li>
+          <li>I can identify a condition.</li>
+          <li>I can predict whether an IF block runs.</li>
+          <li>I can write a simple IF statement.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/selection.html"],
+          back: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/selection.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing.
+      // Later, set to false so student answer access depends on covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => { message.textContent = ""; }, 3000);
+      }
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => { event.preventDefault(); showPasteMessage(field); });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => { event.preventDefault(); showPasteMessage(field); });
+      });
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

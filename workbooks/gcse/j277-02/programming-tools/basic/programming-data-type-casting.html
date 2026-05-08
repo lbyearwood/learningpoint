@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type casting workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Programming data</a></li>
+        <li><span aria-current="page">Type casting workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Back to Programming data</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Type casting workbook</h1>
+      <p class="lead">Learn how programs convert values from one data type to another so they can be used correctly.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term type casting.</li>
+          <li>I can explain why input often needs to be type cast.</li>
+          <li>I can convert strings to integers or real numbers for calculations.</li>
+          <li>I can convert numbers to strings for output.</li>
+          <li>I can identify errors caused by unsuitable conversions.</li>
+          <li>I can trace simple code that uses type casting.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What is type casting?</h2>
+        <p><strong>Type casting</strong> means converting a value from one data type to another.</p>
+        <p>Programs use type casting when a value is stored as one type but needs to be used as another type. A common example is user input: input is often received as a string, even if the user typed a number.</p>
+
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">Type conversion flow</h3>
+          <svg viewBox="0 0 850 240" role="img" aria-label="Input string converted by int function into integer">
+            <defs><marker id="castArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="flow-code-node" x="45" y="80" width="185" height="70" rx="14"/><text class="flow-label" x="138" y="108" text-anchor="middle">input string</text><text class="flow-note" x="138" y="130" text-anchor="middle">"15"</text>
+            <path class="flow-line-neutral" marker-end="url(#castArrow)" d="M230 115 H335"/><text class="flow-note" x="282" y="98" text-anchor="middle">cast</text>
+            <rect class="flow-process-node" x="335" y="78" width="155" height="74" rx="14"/><text class="flow-label" x="413" y="109" text-anchor="middle">int()</text><text class="flow-note" x="413" y="130" text-anchor="middle">conversion</text>
+            <path class="flow-line-neutral" marker-end="url(#castArrow)" d="M490 115 H595"/>
+            <rect class="flow-action-node" x="595" y="80" width="185" height="70" rx="14"/><text class="flow-label" x="688" y="108" text-anchor="middle">integer</text><text class="flow-note" x="688" y="130" text-anchor="middle">15</text>
+          </svg>
+          <figcaption class="diagram-caption">Type casting converts a value from one data type into another so the program can use it correctly.</figcaption>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Before casting</th>
+                <th scope="col">Cast</th>
+                <th scope="col">After casting</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>"12"</code> as a string</td>
+                <td><code>int("12")</code></td>
+                <td><code>12</code> as an integer</td>
+              </tr>
+              <tr>
+                <td><code>"3.5"</code> as a string</td>
+                <td><code>float("3.5")</code></td>
+                <td><code>3.5</code> as a real/float</td>
+              </tr>
+              <tr>
+                <td><code>42</code> as an integer</td>
+                <td><code>str(42)</code></td>
+                <td><code>"42"</code> as a string</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define">Write a definition of type casting.</label>
+          <textarea id="activity-define" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define">Show model answer</button>
+          <div id="answer-define" class="answer-block" hidden>
+            <p>Type casting is converting a value from one data type to another, such as converting a string to an integer.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Why input often needs casting</h2>
+        <p>When a program asks the user to type something, the input may be stored as a string. If the program needs to do arithmetic, the string must be converted to a number first.</p>
+
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">Problem and fix</h3>
+          <svg viewBox="0 0 850 250" role="img" aria-label="String plus integer fails, int conversion plus integer works">
+            <defs><marker id="fixArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="flow-false-node" x="45" y="55" width="310" height="70" rx="14"/><text class="flow-label" x="200" y="84" text-anchor="middle">"15" + 1</text><text class="flow-note" x="200" y="106" text-anchor="middle">string and integer do not match</text>
+            <path class="flow-line-neutral" marker-end="url(#fixArrow)" d="M355 90 H490"/>
+            <rect class="flow-action-node" x="490" y="55" width="315" height="70" rx="14"/><text class="flow-label" x="648" y="84" text-anchor="middle">int("15") + 1</text><text class="flow-note" x="648" y="106" text-anchor="middle">16</text>
+            <rect class="flow-code-node" x="235" y="160" width="380" height="58" rx="14"/><text class="flow-note" x="425" y="194" text-anchor="middle">Convert first, then calculate.</text>
+          </svg>
+          <figcaption class="diagram-caption">A string that contains digits still behaves like text until it is cast to a number.</figcaption>
+          <pre><code>ageText = input("Enter your age")
+age = int(ageText)
+nextAge = age + 1</code></pre>
+          <p class="diagram-caption">The input is first stored as text. <code>int(ageText)</code> converts it to an integer so 1 can be added.</p>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 2: Explain the cast</h3>
+          <label class="answer-label" for="activity-input">Why is <code>int(ageText)</code> used before adding 1?</label>
+          <textarea id="activity-input" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-input">Show model answer</button>
+          <div id="answer-input" class="answer-block" hidden>
+            <p>The input is stored as a string. It must be converted to an integer before the program can add 1 as a number.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Casting for calculations</h2>
+        <p>Different casts are used for different kinds of numbers. Use an integer cast for whole numbers and a real/float cast for decimal values.</p>
+
+        <div class="diagram-card">
+          <h3>Choosing the cast</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Input value</th>
+                <th scope="col">Needed type</th>
+                <th scope="col">Suitable cast</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>"8"</code></td>
+                <td>Integer</td>
+                <td><code>int("8")</code></td>
+              </tr>
+              <tr>
+                <td><code>"4.99"</code></td>
+                <td>Real or float</td>
+                <td><code>float("4.99")</code></td>
+              </tr>
+              <tr>
+                <td><code>16</code></td>
+                <td>String</td>
+                <td><code>str(16)</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Choose the cast</h3>
+          <label class="answer-label" for="activity-cast">A user enters <code>"6.5"</code> as a height in metres. Which cast is most suitable before doing calculations?</label>
+          <textarea id="activity-cast" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-cast">Show model answer</button>
+          <div id="answer-cast" class="answer-block" hidden>
+            <p>A real/float cast is most suitable, such as <code>float("6.5")</code>, because the value includes a decimal part.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Casting for output</h2>
+        <p>Sometimes a number must be converted to a string before it can be joined with other text for output.</p>
+
+        <div class="diagram-card">
+          <h3>Output example</h3>
+          <pre><code>score = 12
+message = "Score: " + str(score)
+print(message)</code></pre>
+          <p class="diagram-caption"><code>str(score)</code> converts the number to text so it can be joined to <code>"Score: "</code>.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Explain the output</h3>
+          <label class="answer-label" for="activity-output">Why is <code>str(score)</code> used in the example?</label>
+          <textarea id="activity-output" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-output">Show model answer</button>
+          <div id="answer-output" class="answer-block" hidden>
+            <p><code>score</code> is a number. It is converted to a string so it can be joined with the text <code>"Score: "</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Invalid casts</h2>
+        <p>Not every value can be converted to every type. A program may crash or produce an error if the cast does not make sense.</p>
+
+        <div class="diagram-card">
+          <h3>Safe and unsafe examples</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Cast</th>
+                <th scope="col">Likely outcome</th>
+                <th scope="col">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>int("15")</code></td>
+                <td>Works</td>
+                <td>The string contains a whole number.</td>
+              </tr>
+              <tr>
+                <td><code>float("15.5")</code></td>
+                <td>Works</td>
+                <td>The string contains a decimal number.</td>
+              </tr>
+              <tr>
+                <td><code>int("hello")</code></td>
+                <td>Error</td>
+                <td>The string does not contain a valid number.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Spot the error</h3>
+          <label class="answer-label" for="activity-error">Why would <code>int("cat")</code> cause a problem?</label>
+          <textarea id="activity-error" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-error">Show model answer</button>
+          <div id="answer-error" class="answer-block" hidden>
+            <p><code>"cat"</code> is text that does not represent a whole number, so it cannot be converted to an integer.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Definition</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Define the term type casting.</label>
+            <textarea id="exam-q1" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>Type casting is converting a value from one data type to another so it can be used in the required way.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Input</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">A user enters their age as <code>"15"</code>. Explain why the value may need to be type cast before adding 1.</label>
+            <textarea id="exam-q2" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>The input may be stored as a string. To add 1 as a number, the program needs to convert <code>"15"</code> to an integer first, for example using <code>int("15")</code>.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Trace code</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>What is output by this code?</p>
+            <pre><code>numberText = "6"
+number = int(numberText)
+print(number + 4)</code></pre>
+            <label class="answer-label" for="exam-q3">Output:</label>
+            <input id="exam-q3" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>The output is 10. The string <code>"6"</code> is converted to the integer <code>6</code>, then 4 is added.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term type casting.</li>
+          <li>I can explain why input often needs to be type cast.</li>
+          <li>I can convert strings to integers or real numbers for calculations.</li>
+          <li>I can convert numbers to strings for output.</li>
+          <li>I can identify errors caused by unsuitable conversions.</li>
+          <li>I can trace simple code that uses type casting.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

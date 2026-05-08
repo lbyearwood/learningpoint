@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1D lists or arrays quiz | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science quiz</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Lists or arrays</a></li>
+        <li><span aria-current="page">1D lists or arrays quiz</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Back to Lists or arrays</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>1D lists or arrays quiz</h1>
+      <p class="lead">Check your understanding of storing related values in a one-dimensional list or array.</p>
+    </section>
+
+    <article class="quiz-card">
+      <section id="quizLocked" class="lesson-block">
+        <h2>Quiz locked</h2>
+        <p>This quiz will unlock when your teacher has marked the 1D lists or arrays workbook as covered.</p>
+      </section>
+
+      <form id="oneDListsQuizForm" hidden>
+        <section class="lesson-block">
+          <h2>Instructions</h2>
+          <p>Answer all 10 questions, then submit the quiz to see your prototype score and feedback.</p>
+        </section>
+
+        <fieldset class="quiz-question">
+          <legend>1. What is a 1D list or array?</legend>
+          <label><input type="radio" name="q1" value="sequence"> A sequence of related values stored under one name</label>
+          <label><input type="radio" name="q1" value="single"> One variable that can only store one value</label>
+          <label><input type="radio" name="q1" value="comment"> A comment used to explain code</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>2. What are the values stored in a list or array called?</legend>
+          <label><input type="radio" name="q2" value="elements"> Elements</label>
+          <label><input type="radio" name="q2" value="buttons"> Buttons</label>
+          <label><input type="radio" name="q2" value="screens"> Screens</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>3. Which is most likely to be a 1D list or array?</legend>
+          <label><input type="radio" name="q3" value="scores"> <code>scores = [8, 10, 6]</code></label>
+          <label><input type="radio" name="q3" value="score"> <code>score = 8</code></label>
+          <label><input type="radio" name="q3" value="constant"> <code>MAX_SCORE = 100</code></label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>4. Why are lists or arrays useful?</legend>
+          <label><input type="radio" name="q4" value="process"> They store related values together so they can be processed more easily</label>
+          <label><input type="radio" name="q4" value="avoid"> They stop a program from using variables</label>
+          <label><input type="radio" name="q4" value="style"> They only change the way code looks</label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q5">5. How many elements are in this list?</label>
+          <pre><code>names = ["Ava", "Sam", "Noor", "Kai"]</code></pre>
+          <input id="q5" name="q5" class="student-answer short-answer" type="text" autocomplete="off" inputmode="numeric" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q6">6. What is the final value of <code>total</code>?</label>
+          <pre><code>marks = [3, 4, 8]
+total = marks[0] + marks[1] + marks[2]</code></pre>
+          <input id="q6" name="q6" class="student-answer short-answer" type="text" autocomplete="off" inputmode="numeric" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q7">7. Explain why storing 30 quiz scores in a list or array is sensible.</label>
+          <textarea id="q7" name="q7" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="quiz-question">
+          <legend>8. Which set of data is most suitable for a list or array?</legend>
+          <label><input type="radio" name="q8" value="weekly"> Temperatures recorded for each day of a week</label>
+          <label><input type="radio" name="q8" value="single-name"> One username</label>
+          <label><input type="radio" name="q8" value="one-answer"> One True or False answer</label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q9">9. What value is read by <code>colours[2]</code>?</label>
+          <pre><code>colours = ["red", "blue", "green"]</code></pre>
+          <input id="q9" name="q9" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q10">10. Explain one advantage of a list or array over many separate variables.</label>
+          <textarea id="q10" name="q10" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="button-row">
+          <button class="button" type="submit">Submit quiz</button>
+        </div>
+      </form>
+
+      <section id="quizResult" class="lesson-block" hidden aria-live="polite">
+        <h2>Your result</h2>
+        <p id="scoreText"></p>
+        <div id="feedbackList"></div>
+        <p class="muted">Scores will be saved later when Supabase is connected.</p>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const workbookCovered = params.get("covered") === "true";
+      const lockedPanel = document.getElementById("quizLocked");
+      const quizForm = document.getElementById("oneDListsQuizForm");
+      if (workbookCovered) {
+        lockedPanel.hidden = true;
+        quizForm.hidden = false;
+      }
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      function normalise(value) {
+        return String(value || "").trim().toLowerCase();
+      }
+
+      function containsAny(value, keywords) {
+        const answer = normalise(value);
+        return keywords.some((keyword) => answer.includes(keyword));
+      }
+
+      function markShortAnswer(value, keywordGroups) {
+        return keywordGroups.every((group) => containsAny(value, group));
+      }
+
+      quizForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(quizForm);
+        let score = 0;
+        const feedback = [];
+
+        const exactAnswers = {
+          q1: "sequence",
+          q2: "elements",
+          q3: "scores",
+          q4: "process",
+          q8: "weekly",
+        };
+
+        Object.entries(exactAnswers).forEach(([question, answer]) => {
+          if (formData.get(question) === answer) {
+            score += 1;
+            feedback.push(`${question.toUpperCase()}: correct.`);
+          } else {
+            feedback.push(`${question.toUpperCase()}: check this one again.`);
+          }
+        });
+
+        if (normalise(formData.get("q5")) === "4" || containsAny(formData.get("q5"), ["four"])) {
+          score += 1;
+          feedback.push("Q5: correct.");
+        } else {
+          feedback.push("Q5: the list contains 4 elements.");
+        }
+
+        if (normalise(formData.get("q6")) === "15" || containsAny(formData.get("q6"), ["fifteen"])) {
+          score += 1;
+          feedback.push("Q6: correct.");
+        } else {
+          feedback.push("Q6: 3 + 4 + 8 = 15.");
+        }
+
+        if (markShortAnswer(formData.get("q7"), [["related", "same", "scores"], ["together", "one", "list", "array"], ["process", "loop", "search", "total", "average", "easier"]])) {
+          score += 1;
+          feedback.push("Q7: good explanation.");
+        } else {
+          feedback.push("Q7: mention that the scores are related and can be stored together so they are easier to process.");
+        }
+
+        if (containsAny(formData.get("q9"), ["green"])) {
+          score += 1;
+          feedback.push("Q9: correct.");
+        } else {
+          feedback.push("Q9: colours[2] reads green because index 2 is the third element.");
+        }
+
+        if (markShortAnswer(formData.get("q10"), [["related", "together", "one"], ["easier", "process", "loop", "search", "count", "update"]])) {
+          score += 1;
+          feedback.push("Q10: good explanation.");
+        } else {
+          feedback.push("Q10: explain that a list or array keeps related values together and makes them easier to process than many separate variables.");
+        }
+
+        document.getElementById("scoreText").textContent = `Score: ${score} out of 10`;
+        document.getElementById("feedbackList").innerHTML = `<ul>${feedback.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+        document.getElementById("quizResult").hidden = false;
+        document.getElementById("quizResult").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    })();
+  </script>
+</body>
+</html>

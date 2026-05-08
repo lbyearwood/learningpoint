@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data types | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../../assets/css/styles.css">
+  <style>
+    .type-diagram{max-width:880px;margin:1rem 0}.type-diagram svg{width:100%;height:auto;display:block}.type-card-string{fill:#e0f2fe;stroke:#0369a1}.type-card-int{fill:#dcfce7;stroke:#15803d}.type-card-float{fill:#fef3c7;stroke:#b45309}.type-card-bool{fill:#ede9fe;stroke:#6d28d9}.type-flow{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}.type-label{font:700 14px Arial,sans-serif;fill:#0f172a}.type-small{font:500 12px Arial,sans-serif;fill:#334155}.scenario-box{fill:#f8fafc;stroke:#94a3b8}.mistake-list li{margin-bottom:.5rem}
+  </style>
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../../index.html" aria-label="LearningPoint home"><span class="brand-mark">LP</span><span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation"><a href="../../../../../../admin/control-panel.html">Teacher dashboard</a><a href="../../../../../../student/dashboard.html">Student dashboard</a><a href="../../../../../../login.html">Sign out</a></nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+      <li><a data-role-link="dashboard" href="../../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+      <li><a data-role-link="gcse" href="../../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+      <li><a data-role-link="unit" href="../../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+      <li><a data-role-link="tools" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+      <li><a data-role-link="section" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+      <li><a data-role-link="topic" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Programming data</a></li>
+      <li><span aria-current="page">Data types</span></li>
+    </ol></nav>
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row"><a class="button button-secondary back-button" data-role-link="back" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Back to Programming data</a></div>
+      <p class="eyebrow">OCR J277 &middot; Programming tools &middot; Programming data &middot; Python</p>
+      <h1>Data types</h1>
+      <p class="lead">Learn how Python stores different kinds of values and why the type affects what a program can do with them.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define data type.</li>
+          <li>I can identify strings, integers, floats and Booleans.</li>
+          <li>I can choose a suitable data type for a scenario.</li>
+          <li>I can explain why data types affect operations in Python.</li>
+          <li>I can explain why some numbers are stored as strings.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What a data type is</h2>
+        <p>A <strong>data type</strong> tells the program what kind of value is being stored. The data type affects what operations can be carried out on that value.</p>
+        <p>Different data types are suitable for different kinds of data. A name is handled differently from a score, a decimal measurement or a True/False decision.</p>
+        <figure class="teaching-diagram type-diagram" aria-label="Data type overview diagram">
+          <h3 class="diagram-title">Data type overview grid</h3>
+          <svg viewBox="0 0 880 190" role="img">
+            <rect class="type-card-string" x="30" y="45" width="180" height="90" rx="14"/><text class="type-label" x="120" y="82" text-anchor="middle">String</text><text class="type-small" x="120" y="108" text-anchor="middle">text</text>
+            <rect class="type-card-int" x="250" y="45" width="180" height="90" rx="14"/><text class="type-label" x="340" y="82" text-anchor="middle">Integer</text><text class="type-small" x="340" y="108" text-anchor="middle">whole number</text>
+            <rect class="type-card-float" x="470" y="45" width="180" height="90" rx="14"/><text class="type-label" x="560" y="82" text-anchor="middle">Float</text><text class="type-small" x="560" y="108" text-anchor="middle">decimal number</text>
+            <rect class="type-card-bool" x="690" y="45" width="160" height="90" rx="14"/><text class="type-label" x="770" y="82" text-anchor="middle">Boolean</text><text class="type-small" x="770" y="108" text-anchor="middle">True / False</text>
+          </svg>
+          <figcaption class="diagram-caption">These are the main data types students meet when writing Python programs at GCSE.</figcaption>
+        </figure>
+        <div class="diagram-card">
+          <h3>Worked example: checking types</h3>
+          <pre><code>name = "Asha"
+age = 15
+height = 1.68
+is_member = True
+
+print(type(name))
+print(type(age))
+print(type(height))
+print(type(is_member))</code></pre>
+          <p>Python can report the type of each value. The values above are a string, integer, float and Boolean.</p>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Strings, integers, floats and Booleans</h2>
+        <p>A <strong>string</strong> stores text. In Python, string values are written inside quotation marks.</p>
+        <pre><code>name = "Asha"
+postcode = "RM12 4AB"</code></pre>
+        <p>Some numbers are stored as strings when they are not used for calculations. Phone numbers and postcodes are good examples because leading zeros and letters matter.</p>
+        <p>An <strong>integer</strong> is a whole number with no decimal point. It is suitable for counts, scores and whole-number quantities.</p>
+        <pre><code>age = 15
+score = 42</code></pre>
+        <p>A <strong>real number</strong> is a number with a decimal point. In Python these are called <strong>floats</strong>. They are useful for measurements, money approximations, averages and decimal values.</p>
+        <pre><code>price = 2.99
+temperature = 37.5</code></pre>
+        <p>A <strong>Boolean</strong> stores either <code>True</code> or <code>False</code>. Booleans are used in conditions and decisions, so they connect directly to selection.</p>
+        <pre><code>is_logged_in = True
+has_passed = False</code></pre>
+        <figure class="teaching-diagram type-diagram" aria-label="Value sorting diagram">
+          <h3 class="diagram-title">Value sorting diagram</h3>
+          <svg viewBox="0 0 880 250" role="img">
+            <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="scenario-box" x="25" y="30" width="150" height="42" rx="12"/><text class="type-label" x="100" y="57" text-anchor="middle">"Asha"</text><path class="type-flow" d="M175 51 H300"/><rect class="type-card-string" x="300" y="25" width="140" height="52" rx="12"/><text class="type-label" x="370" y="57" text-anchor="middle">string</text>
+            <rect class="scenario-box" x="25" y="85" width="150" height="42" rx="12"/><text class="type-label" x="100" y="112" text-anchor="middle">42</text><path class="type-flow" d="M175 106 H300"/><rect class="type-card-int" x="300" y="80" width="140" height="52" rx="12"/><text class="type-label" x="370" y="112" text-anchor="middle">integer</text>
+            <rect class="scenario-box" x="455" y="30" width="150" height="42" rx="12"/><text class="type-label" x="530" y="57" text-anchor="middle">3.14</text><path class="type-flow" d="M605 51 H730"/><rect class="type-card-float" x="730" y="25" width="125" height="52" rx="12"/><text class="type-label" x="793" y="57" text-anchor="middle">float</text>
+            <rect class="scenario-box" x="455" y="85" width="150" height="42" rx="12"/><text class="type-label" x="530" y="112" text-anchor="middle">True</text><path class="type-flow" d="M605 106 H730"/><rect class="type-card-bool" x="730" y="80" width="125" height="52" rx="12"/><text class="type-label" x="793" y="112" text-anchor="middle">Boolean</text>
+          </svg>
+          <figcaption class="diagram-caption">Sort values by looking at what kind of data they represent and how they are written.</figcaption>
+        </figure>
+        <div class="activity-box">
+          <h3>Activity 1: Identify the data type</h3>
+          <label class="answer-label" for="activity-types">Identify the data type for each value: <code>"Computer Science"</code>, <code>17</code>, <code>3.5</code>, <code>False</code>, <code>"07500111222"</code>, <code>100</code>.</label>
+          <textarea id="activity-types" class="student-answer" rows="5"></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-activity-types">Show answer</button>
+          <div id="answer-activity-types" class="answer-block" hidden><p>String, integer, float, Boolean, string, integer.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Choosing suitable data types</h2>
+        <p>Choose a data type by thinking about how the value will be used. A value that looks like a number may still be better as a string if it will not be used in a calculation.</p>
+        <figure class="teaching-diagram type-diagram" aria-label="Data type choice diagram">
+          <h3 class="diagram-title">Scenario to data type</h3>
+          <svg viewBox="0 0 880 260" role="img">
+            <defs><marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="scenario-box" x="40" y="30" width="245" height="42" rx="12"/><text class="type-label" x="163" y="57" text-anchor="middle">student name</text><path class="type-flow" style="marker-end:url(#arrow2)" d="M285 51 H415"/><rect class="type-card-string" x="415" y="25" width="160" height="52" rx="12"/><text class="type-label" x="495" y="57" text-anchor="middle">string</text>
+            <rect class="scenario-box" x="40" y="85" width="245" height="42" rx="12"/><text class="type-label" x="163" y="112" text-anchor="middle">number of attempts</text><path class="type-flow" style="marker-end:url(#arrow2)" d="M285 106 H415"/><rect class="type-card-int" x="415" y="80" width="160" height="52" rx="12"/><text class="type-label" x="495" y="112" text-anchor="middle">integer</text>
+            <rect class="scenario-box" x="40" y="140" width="245" height="42" rx="12"/><text class="type-label" x="163" y="167" text-anchor="middle">average score</text><path class="type-flow" style="marker-end:url(#arrow2)" d="M285 161 H415"/><rect class="type-card-float" x="415" y="135" width="160" height="52" rx="12"/><text class="type-label" x="495" y="167" text-anchor="middle">float</text>
+            <rect class="scenario-box" x="40" y="195" width="245" height="42" rx="12"/><text class="type-label" x="163" y="222" text-anchor="middle">quiz completed</text><path class="type-flow" style="marker-end:url(#arrow2)" d="M285 216 H415"/><rect class="type-card-bool" x="415" y="190" width="160" height="52" rx="12"/><text class="type-label" x="495" y="222" text-anchor="middle">Boolean</text>
+          </svg>
+          <figcaption class="diagram-caption">The scenario should guide the choice of data type.</figcaption>
+        </figure>
+        <div class="activity-box">
+          <h3>Activity 2: Choose the best type</h3>
+          <label class="answer-label" for="activity-scenarios">Choose the best data type for: username, number of lives in a game, product price, whether a password is correct, average speed, exam mark.</label>
+          <textarea id="activity-scenarios" class="student-answer" rows="5"></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-activity-scenarios">Show answer</button>
+          <div id="answer-activity-scenarios" class="answer-block" hidden><p>Username: string. Number of lives: integer. Product price: float. Password correct: Boolean. Average speed: float. Exam mark: usually integer.</p></div>
+        </div>
+        <div class="activity-box">
+          <h3>Activity 3: Phone numbers</h3>
+          <label class="answer-label" for="activity-phone">Explain why a phone number is often stored as a string rather than an integer.</label>
+          <textarea id="activity-phone" class="student-answer" rows="4"></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-activity-phone">Show answer</button>
+          <div id="answer-activity-phone" class="answer-block" hidden><p>A phone number is not normally used for maths. It may contain a leading zero, spaces or symbols, so storing it as a string preserves the exact text.</p></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Why data types matter</h2>
+        <p>Python handles operations differently depending on the data type. Two integers can be added. Two strings are joined together, which is called concatenation.</p>
+        <figure class="teaching-diagram type-diagram" aria-label="String vs number diagram">
+          <h3 class="diagram-title">String vs number behaviour</h3>
+          <svg viewBox="0 0 880 190" role="img">
+            <rect class="type-card-int" x="50" y="35" width="330" height="90" rx="14"/><text class="type-label" x="215" y="72" text-anchor="middle">Numbers</text><text class="type-small" x="215" y="100" text-anchor="middle">10 + 5 = 15</text>
+            <rect class="type-card-string" x="500" y="35" width="330" height="90" rx="14"/><text class="type-label" x="665" y="72" text-anchor="middle">Strings</text><text class="type-small" x="665" y="100" text-anchor="middle">"10" + "5" = "105"</text>
+          </svg>
+          <figcaption class="diagram-caption">The symbol <code>+</code> can mean addition for numbers or joining for strings.</figcaption>
+        </figure>
+        <div class="diagram-card">
+          <h3>Worked example: addition</h3>
+          <pre><code>score = 10
+bonus = 5
+print(score + bonus)</code></pre>
+          <p>This outputs <code>15</code> because both values are integers.</p>
+        </div>
+        <div class="diagram-card">
+          <h3>Worked example: joining strings</h3>
+          <pre><code>score = "10"
+bonus = "5"
+print(score + bonus)</code></pre>
+          <p>This outputs <code>105</code> because both values are strings. The values are joined together instead of added.</p>
+        </div>
+        <p>Type casting is used to convert values between data types. This workbook only introduces why conversion might be needed; the separate Type casting workbook teaches conversion in detail.</p>
+        <div class="activity-box">
+          <h3>Activity 4: Predict the output</h3>
+          <pre><code>age = "15"
+print(age + age)</code></pre>
+          <label class="answer-label" for="activity-predict">What is the output? Explain why.</label>
+          <textarea id="activity-predict" class="student-answer" rows="4"></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-activity-predict">Show answer</button>
+          <div id="answer-activity-predict" class="answer-block" hidden><p>The output is <code>1515</code>. <code>age</code> stores a string, so <code>+</code> joins the two strings.</p></div>
+        </div>
+        <div class="activity-box">
+          <h3>Activity 5: Write assignments</h3>
+          <label class="answer-label" for="activity-assignments">Write Python variable assignments for a student name, a score, a height and whether homework has been completed.</label>
+          <textarea id="activity-assignments" class="student-answer" rows="6"></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-activity-assignments">Show model answer</button>
+          <div id="answer-activity-assignments" class="answer-block" hidden><pre><code>student_name = "Asha"
+score = 42
+height = 1.68
+homework_completed = True</code></pre></div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Common mistakes</h2>
+        <ul class="mistake-list">
+          <li>Thinking all numbers should be integers.</li>
+          <li>Storing decimal values as integers.</li>
+          <li>Storing numbers as strings and expecting maths to work.</li>
+          <li>Confusing <code>"True"</code> as a string with <code>True</code> as a Boolean.</li>
+          <li>Using a float when a whole number is more appropriate.</li>
+          <li>Choosing a data type without thinking about how the value will be used.</li>
+          <li>Trying to add text and numbers together without conversion.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 1</h3><p>Define</p></div><span class="mark-tag">1 mark</span></div><label class="answer-label" for="exam-q1">Define the term data type.</label><textarea id="exam-q1" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show answer</button><div id="answer-q1" class="answer-block" hidden><p>A data type tells the program what kind of value is being stored.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 2</h3><p>Identify</p></div><span class="mark-tag">4 marks</span></div><label class="answer-label" for="exam-q2">Identify the data type of <code>"Blue"</code>, <code>12</code>, <code>4.5</code> and <code>False</code>.</label><textarea id="exam-q2" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button><div id="answer-q2" class="answer-block" hidden><p><code>"Blue"</code> is a string, <code>12</code> is an integer, <code>4.5</code> is a float and <code>False</code> is a Boolean.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 3</h3><p>Justify</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q3">State a suitable data type for storing a person's age and justify your answer.</label><textarea id="exam-q3" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button><div id="answer-q3" class="answer-block" hidden><p>An integer is suitable because age is usually stored as a whole number of years.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 4</h3><p>Compare</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q4">Explain the difference between an integer and a float.</label><textarea id="exam-q4" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show answer</button><div id="answer-q4" class="answer-block" hidden><p>An integer is a whole number with no decimal point. A float is a number that can include a decimal point.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 5</h3><p>Explain</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q5">Explain why a postcode should usually be stored as a string.</label><textarea id="exam-q5" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q5">Show answer</button><div id="answer-q5" class="answer-block" hidden><p>A postcode can contain letters, numbers and spaces. It is not used for calculations, so string is suitable.</p></div></article>
+          <article class="question-card"><div class="question-card-header"><div><h3>Question 6</h3><p>Predict</p></div><span class="mark-tag">3 marks</span></div><pre><code>first = "7"
+second = "3"
+total = 7 + 3
+print(first + second)
+print(total)</code></pre><label class="answer-label" for="exam-q6">Predict the output and explain the two lines.</label><textarea id="exam-q6" class="student-answer" rows="5"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q6">Show answer</button><div id="answer-q6" class="answer-block" hidden><p>The output is <code>73</code> then <code>10</code>. The first line joins two strings, while the second line adds two integers.</p></div></article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define data type.</li>
+          <li>I can identify strings, integers, floats and Booleans.</li>
+          <li>I can choose a suitable data type for a scenario.</li>
+          <li>I can explain why data types affect how values behave in Python.</li>
+          <li>I can explain why some numbers may be stored as strings.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+  <script src="../../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+          back: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing.
+      // Later, set to false so student answer access depends on covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => { message.textContent = ""; }, 3000);
+      }
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => { event.preventDefault(); showPasteMessage(field); });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => { event.preventDefault(); showPasteMessage(field); });
+      });
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

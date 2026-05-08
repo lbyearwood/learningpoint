@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1D lists or arrays workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Lists or arrays</a></li>
+        <li><span aria-current="page">1D lists or arrays workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Back to Lists or arrays</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>1D lists or arrays workbook</h1>
+      <p class="lead">Learn how a 1D list or array stores several related values under one name.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define a 1D list or array.</li>
+          <li>I can explain why lists or arrays are useful.</li>
+          <li>I can identify the elements stored in a list or array.</li>
+          <li>I can use an index to read a value from a list or array.</li>
+          <li>I can explain that a 1D list or array is a single row of values.</li>
+          <li>I can choose when a list or array is more suitable than separate variables.</li>
+          <li>I can trace simple code that reads values from a list or array.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What is a 1D list or array?</h2>
+        <p>A <strong>1D list or array</strong> is a data structure that stores several values under one name.</p>
+        <p>The values in a list or array are called <strong>elements</strong>. A 1D list or array stores these elements in one line or sequence.</p>
+
+        <div class="diagram-card">
+          <h3>One name, many values</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">List name</th>
+                <th scope="col">Elements stored</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>scores</code></td>
+                <td><code>[12, 9, 15, 7]</code></td>
+              </tr>
+              <tr>
+                <td><code>names</code></td>
+                <td><code>["Ava", "Sam", "Noor"]</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="diagram-caption">The list name lets the program refer to the whole collection of related values.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define">Write a definition of a 1D list or array.</label>
+          <textarea id="activity-define" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define">Show model answer</button>
+          <div id="answer-define" class="answer-block" hidden>
+            <p>A 1D list or array is a data structure that stores multiple related values in one sequence under one name.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Why use a list or array?</h2>
+        <p>A list or array is useful when a program needs to store many related values. It avoids creating lots of separate variables.</p>
+
+        <div class="diagram-card">
+          <h3>Separate variables compared with a list</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Separate variables</th>
+                <th scope="col">1D list or array</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>score1 = 8</code><br><code>score2 = 10</code><br><code>score3 = 6</code></td>
+                <td><code>scores = [8, 10, 6]</code></td>
+              </tr>
+              <tr>
+                <td>Harder to process if there are many values.</td>
+                <td>Easier to loop through, search, count or update.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Explain the benefit</h3>
+          <label class="answer-label" for="activity-benefit">Why is <code>scores = [8, 10, 6]</code> better than creating <code>score1</code>, <code>score2</code> and <code>score3</code>?</label>
+          <textarea id="activity-benefit" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-benefit">Show model answer</button>
+          <div id="answer-benefit" class="answer-block" hidden>
+            <p>The scores are related values, so storing them in one list is clearer and easier to process, especially if the program needs to loop through them.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Elements in a 1D list or array</h2>
+        <p>Each value stored in a list or array is an element. The number of elements is the length or size of the list or array.</p>
+
+        <div class="diagram-card">
+          <h3>Counting elements</h3>
+          <pre><code>colours = ["red", "blue", "green", "yellow"]</code></pre>
+          <p class="diagram-caption">This list has 4 elements: red, blue, green and yellow.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Count and identify</h3>
+          <p>Look at this list:</p>
+          <pre><code>temperatures = [18.5, 19.0, 17.5]</code></pre>
+          <label class="answer-label" for="activity-elements">How many elements are in the list, and what values are stored?</label>
+          <textarea id="activity-elements" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-elements">Show answer</button>
+          <div id="answer-elements" class="answer-block" hidden>
+            <p>There are 3 elements: <code>18.5</code>, <code>19.0</code> and <code>17.5</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Indexing in a 1D list or array</h2>
+        <p>An <strong>index</strong> is the position number used to read a specific element from a list or array.</p>
+        <p>In these examples, the first element is at index <code>0</code>. This means <code>scores[0]</code> reads the first value, <code>scores[1]</code> reads the second value, and so on.</p>
+
+        <div class="diagram-card">
+          <h3>Index positions</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">List</th>
+                <th scope="col">Index</th>
+                <th scope="col">Value read</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>scores = [4, 7, 9]</code></td>
+                <td><code>scores[0]</code></td>
+                <td><code>4</code></td>
+              </tr>
+              <tr>
+                <td><code>scores = [4, 7, 9]</code></td>
+                <td><code>scores[1]</code></td>
+                <td><code>7</code></td>
+              </tr>
+              <tr>
+                <td><code>scores = [4, 7, 9]</code></td>
+                <td><code>scores[2]</code></td>
+                <td><code>9</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Read by index</h3>
+          <p>Look at this list:</p>
+          <pre><code>names = ["Ava", "Sam", "Noor"]</code></pre>
+          <label class="answer-label" for="activity-index">What value is read by <code>names[1]</code>?</label>
+          <input id="activity-index" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-index">Show answer</button>
+          <div id="answer-index" class="answer-block" hidden>
+            <p><code>names[1]</code> reads <code>"Sam"</code>, because index 1 is the second element.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Reading from a list or array</h2>
+        <p>A program can read values from a list or array and use them in calculations or output.</p>
+
+        <div class="diagram-card">
+          <h3>Example trace</h3>
+          <pre><code>scores = [4, 7, 9]
+total = scores[0] + scores[1] + scores[2]
+print(total)</code></pre>
+          <p class="diagram-caption">The program reads the values from the list and adds them to <code>total</code>. The output is 20.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Trace the values</h3>
+          <p>What total would be calculated by this code?</p>
+          <pre><code>marks = [5, 6, 8]
+total = marks[0] + marks[1] + marks[2]</code></pre>
+          <label class="answer-label" for="activity-trace">Total:</label>
+          <input id="activity-trace" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-trace">Show answer</button>
+          <div id="answer-trace" class="answer-block" hidden>
+            <p>The total is 19 because <code>5 + 6 + 8 = 19</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Choosing when to use a list or array</h2>
+        <p>Use a list or array when values belong together and the same kind of processing may happen to each value.</p>
+
+        <div class="diagram-card">
+          <h3>Good uses</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Data</th>
+                <th scope="col">Why a list or array helps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Scores for a class</td>
+                <td>The program can find totals, averages or highest scores.</td>
+              </tr>
+              <tr>
+                <td>Names in a team</td>
+                <td>The program can search, display or count names.</td>
+              </tr>
+              <tr>
+                <td>Temperatures recorded each day</td>
+                <td>The program can compare values across the week.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 6: Choose a structure</h3>
+          <label class="answer-label" for="activity-choice">A program stores 30 quiz scores. Explain why a list or array is suitable.</label>
+          <textarea id="activity-choice" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-choice">Show model answer</button>
+          <div id="answer-choice" class="answer-block" hidden>
+            <p>A list or array is suitable because the 30 scores are related values. Storing them together makes them easier to count, total, search or process with a loop.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Definition</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Define a 1D list or array.</label>
+            <textarea id="exam-q1" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>A 1D list or array stores multiple related values in one sequence under one name.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Reasoning</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">Explain why a game might store player scores in a list or array.</label>
+            <textarea id="exam-q2" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>The scores are related values. A list or array stores them under one name, making it easier to process them, such as finding the total, highest score or average.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Trace values</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>Look at this code:</p>
+            <pre><code>points = [3, 5, 2, 10]
+total = points[0] + points[1] + points[2] + points[3]</code></pre>
+            <label class="answer-label" for="exam-q3">How many elements are stored, and what is the final value of <code>total</code>?</label>
+            <textarea id="exam-q3" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>There are 4 elements. The total is 20.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define a 1D list or array.</li>
+          <li>I can explain why lists or arrays are useful.</li>
+          <li>I can identify the elements stored in a list or array.</li>
+          <li>I can use an index to read a value from a list or array.</li>
+          <li>I can explain that a 1D list or array is a single row of values.</li>
+          <li>I can choose when a list or array is more suitable than separate variables.</li>
+          <li>I can trace simple code that reads values from a list or array.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

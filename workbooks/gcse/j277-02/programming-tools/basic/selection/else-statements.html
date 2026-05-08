@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELSE statements | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../../assets/css/styles.css">
+  <style>
+    .selection-diagram{max-width:760px;margin:1rem 0}.selection-diagram svg{width:100%;height:auto;display:block}.flow-start{fill:#e0f2fe;stroke:#0369a1}.flow-decision{fill:#fef3c7;stroke:#b45309}.flow-true{fill:#dcfce7;stroke:#15803d}.flow-false{fill:#ffe4e6;stroke:#be123c}.flow-code{fill:#ede9fe;stroke:#6d28d9}.flow-line{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}.true-line{stroke:#15803d;stroke-width:2;marker-end:url(#arrow-green)}.false-line{stroke:#be123c;stroke-width:2;marker-end:url(#arrow-red)}.diagram-label{font:600 14px Arial,sans-serif;fill:#0f172a}.small-label{font:500 12px Arial,sans-serif;fill:#334155}.mistake-list li{margin-bottom:.5rem}
+  </style>
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../../index.html" aria-label="LearningPoint home"><span class="brand-mark">LP</span><span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation"><a href="../../../../../../admin/control-panel.html">Teacher dashboard</a><a href="../../../../../../student/dashboard.html">Student dashboard</a><a href="../../../../../../login.html">Sign out</a></nav>
+  </header>
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+      <li><a data-role-link="dashboard" href="../../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+      <li><a data-role-link="gcse" href="../../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+      <li><a data-role-link="unit" href="../../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+      <li><a data-role-link="tools" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+      <li><a data-role-link="section" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+      <li><a data-role-link="topic" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/selection.html">Selection</a></li>
+      <li><span aria-current="page">ELSE statements</span></li>
+    </ol></nav>
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row"><a class="button button-secondary back-button" data-role-link="back" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/selection.html">Back to Selection</a></div>
+      <p class="eyebrow">OCR J277 &middot; Programming tools &middot; Selection</p>
+      <h1>ELSE statements</h1>
+      <p class="lead">Learn how ELSE gives a program a false branch as well as a true branch.</p>
+    </section>
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block"><h2>Learning checklist</h2><ul class="checklist"><li>I can explain why ELSE is used.</li><li>I can identify the true and false branches.</li><li>I can explain that exactly one branch runs.</li><li>I can read IF ELSE code.</li><li>I can write simple IF ELSE decisions.</li></ul></section>
+      <section class="lesson-block">
+        <h2>Why ELSE is used</h2>
+        <p>An IF statement handles what happens when a condition is true. An <strong>ELSE</strong> statement handles what happens when the same condition is false.</p>
+        <p>In an IF ELSE structure, exactly one branch runs: either the IF branch or the ELSE branch.</p>
+        <figure class="teaching-diagram"><h3 class="diagram-title">IF ELSE flowchart</h3><svg viewBox="0 0 900 310" role="img" aria-label="IF ELSE flowchart with labelled true and false branches"><defs><marker id="elseTrueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#15803d"/></marker><marker id="elseFalseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#be123c"/></marker><marker id="elseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs><rect class="flow-start-node" x="35" y="132" width="90" height="46" rx="18"/><text class="flow-label" x="80" y="161" text-anchor="middle">Start</text><path class="flow-line-neutral" marker-end="url(#elseArrow)" d="M125 155 H215"/><polygon class="flow-choice-node" points="350,80 490,155 350,230 210,155"/><text class="flow-label" x="350" y="161" text-anchor="middle">condition?</text><path class="flow-line-true" marker-end="url(#elseTrueArrow)" d="M490 155 H610"/><text class="flow-note" x="550" y="140" text-anchor="middle">True</text><rect class="flow-action-node" x="610" y="125" width="130" height="60" rx="14"/><text class="flow-label" x="675" y="161" text-anchor="middle">IF branch</text><path class="flow-line-neutral" marker-end="url(#elseArrow)" d="M740 155 H810"/><rect class="flow-end-node" x="810" y="132" width="80" height="46" rx="18"/><text class="flow-label" x="850" y="161" text-anchor="middle">End</text><path class="flow-line-false" marker-end="url(#elseFalseArrow)" d="M350 230 V270 H610"/><text class="flow-note" x="380" y="258">False</text><rect class="flow-false-node" x="610" y="245" width="130" height="50" rx="14"/><text class="flow-label" x="675" y="276" text-anchor="middle">ELSE branch</text><path class="flow-line-neutral" marker-end="url(#elseArrow)" d="M740 270 H850 V178"/></svg><figcaption class="diagram-caption">Exactly one branch runs. The IF branch runs when the condition is true; the ELSE branch runs when it is false.</figcaption></figure>
+        <div class="activity-box"><h3>Activity 1: Explain ELSE</h3><label class="answer-label" for="else-purpose">Why is ELSE useful?</label><textarea id="else-purpose" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-else-purpose">Show model answer</button><div id="answer-else-purpose" class="answer-block" hidden><p>ELSE is useful because it tells the program what to do when the IF condition is false.</p></div></div>
+      </section>
+      <section class="lesson-block">
+        <h2>Two-path decisions</h2>
+        <p>ELSE is best when there are two possible outcomes.</p>
+        <figure class="teaching-diagram"><h3 class="diagram-title">Two-path decision</h3><svg viewBox="0 0 900 250" role="img" aria-label="Temperature decision with warm and cold outcomes"><defs><marker id="tempTrueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#15803d"/></marker><marker id="tempFalseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#be123c"/></marker></defs><polygon class="flow-choice-node" points="450,40 610,125 450,210 290,125"/><text class="flow-label" x="450" y="131" text-anchor="middle">temperature &gt;= 20?</text><path class="flow-line-true" marker-end="url(#tempTrueArrow)" d="M610 125 H720"/><text class="flow-note" x="665" y="110" text-anchor="middle">True</text><rect class="flow-output-node" x="720" y="95" width="140" height="60" rx="14"/><text class="flow-label" x="790" y="131" text-anchor="middle">print "Warm"</text><path class="flow-line-false" marker-end="url(#tempFalseArrow)" d="M290 125 H180"/><text class="flow-note" x="235" y="110" text-anchor="middle">False</text><rect class="flow-false-node" x="35" y="95" width="145" height="60" rx="14"/><text class="flow-label" x="108" y="131" text-anchor="middle">print "Cold"</text></svg><figcaption class="diagram-caption">The same condition creates two possible outputs. A true result follows the Warm path; a false result follows the Cold path.</figcaption></figure>
+        <div class="diagram-card"><h3>Worked example</h3><pre><code>temperature = 16
+
+if temperature &gt;= 20 then
+    print("Warm")
+else
+    print("Cold")
+endif</code></pre><p>The output is <code>Cold</code> because the condition is false.</p></div>
+        <div class="activity-box"><h3>Activity 2: Predict true</h3><pre><code>score = 72
+if score &gt;= 50 then
+    print("Pass")
+else
+    print("Try again")
+endif</code></pre><label class="answer-label" for="predict-true">What is printed?</label><input id="predict-true" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-predict-true">Show answer</button><div id="answer-predict-true" class="answer-block" hidden><p><code>Pass</code> is printed.</p></div></div>
+        <div class="activity-box"><h3>Activity 3: Predict false</h3><pre><code>password = "cat"
+if password == "secure" then
+    print("Accepted")
+else
+    print("Rejected")
+endif</code></pre><label class="answer-label" for="predict-false">What is printed?</label><input id="predict-false" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-predict-false">Show answer</button><div id="answer-predict-false" class="answer-block" hidden><p><code>Rejected</code> is printed.</p></div></div>
+      </section>
+      <section class="lesson-block">
+        <h2>IF ELSE structure</h2>
+        <figure class="selection-diagram"><svg viewBox="0 0 760 230" role="img" aria-label="IF ELSE code structure diagram"><rect class="flow-code" x="80" y="25" width="600" height="180" rx="16"/><text class="diagram-label" x="130" y="65">if condition then</text><text class="small-label" x="420" y="65">true path starts</text><text class="diagram-label" x="160" y="100">action if true</text><text class="diagram-label" x="130" y="135">else</text><text class="small-label" x="420" y="135">false path starts</text><text class="diagram-label" x="160" y="170">action if false</text><text class="diagram-label" x="130" y="195">endif</text></svg><figcaption class="diagram-caption">The ELSE branch belongs to the same IF statement.</figcaption></figure>
+        <div class="activity-box"><h3>Activity 4: Complete the ELSE branch</h3><label class="answer-label" for="complete-else">Complete the code so it prints <code>"Rejected"</code> when the password is wrong.</label><pre><code>if password == "letmein" then
+    print("Accepted")
+else
+    ...
+endif</code></pre><textarea id="complete-else" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-complete-else">Show answer</button><div id="answer-complete-else" class="answer-block" hidden><pre><code>print("Rejected")</code></pre></div></div>
+        <div class="activity-box"><h3>Activity 5: Write IF ELSE</h3><label class="answer-label" for="write-else">Write an IF ELSE statement for a password that prints <code>"Accepted"</code> if <code>password == "open"</code>, otherwise prints <code>"Rejected"</code>.</label><textarea id="write-else" class="student-answer" rows="6"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-write-else">Show model answer</button><div id="answer-write-else" class="answer-block" hidden><pre><code>if password == "open" then
+    print("Accepted")
+else
+    print("Rejected")
+endif</code></pre></div></div>
+      </section>
+      <section class="lesson-block"><h2>Common mistakes</h2><ul class="mistake-list"><li>Thinking both branches run. Only one branch runs.</li><li>Forgetting that ELSE is the false path.</li><li>Writing another condition after ELSE. ELSE does not need a condition.</li><li>Forgetting <code>endif</code> at the end.</li></ul></section>
+      <section class="lesson-block"><h2>Exam-style questions</h2><div class="question-stack">
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 1</h3><p>Purpose</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q1">Describe the purpose of ELSE.</label><textarea id="exam-q1" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button><div id="answer-q1" class="answer-block" hidden><p>ELSE gives the program code to run when the IF condition is false.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 2</h3><p>Predict</p></div><span class="mark-tag">2 marks</span></div><pre><code>age = 12
+if age &gt;= 13 then
+    print("Teen")
+else
+    print("Child")
+endif</code></pre><textarea id="exam-q2" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button><div id="answer-q2" class="answer-block" hidden><p><code>Child</code> is printed.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 3</h3><p>Complete</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q3">Complete an IF ELSE statement that prints <code>"Open"</code> if <code>door == "unlocked"</code>, otherwise <code>"Closed"</code>.</label><textarea id="exam-q3" class="student-answer" rows="6"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button><div id="answer-q3" class="answer-block" hidden><pre><code>if door == "unlocked" then
+    print("Open")
+else
+    print("Closed")
+endif</code></pre></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 4</h3><p>Branch</p></div><span class="mark-tag">2 marks</span></div><label class="answer-label" for="exam-q4">Explain which branch runs when an IF condition is false.</label><textarea id="exam-q4" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show model answer</button><div id="answer-q4" class="answer-block" hidden><p>The ELSE branch runs because it is the false path.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 5</h3><p>Write</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q5">Write a simple IF ELSE statement for pass/fail using <code>mark &gt;= 50</code>.</label><textarea id="exam-q5" class="student-answer" rows="6"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q5">Show model answer</button><div id="answer-q5" class="answer-block" hidden><pre><code>if mark &gt;= 50 then
+    print("Pass")
+else
+    print("Fail")
+endif</code></pre></div></article>
+      </div></section>
+      <section class="lesson-block"><h2>Final review checklist</h2><ul class="checklist"><li>I can explain ELSE.</li><li>I can trace true and false branches.</li><li>I can write IF ELSE code.</li></ul></section>
+    </article>
+  </main>
+  <script src="../../../../../../assets/js/utils/dom.js"></script><script src="../../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search); const role = params.get("role");
+      if (role === "student") { const links = { dashboard:["../../../../../../student/dashboard.html","Student dashboard"], gcse:["../../../../../../student/courses/gcse-computer-science.html"], unit:["../../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"], tools:["../../../../../../student/courses/gcse/j277-02/programming-tools.html"], section:["../../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"], topic:["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/selection.html"], back:["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/selection.html"] }; Object.entries(links).forEach(([key,value])=>document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link)=>{link.href=value[0]; if(value[1]) link.textContent=value[1];})); }
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student"); const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing.
+      // Later, set to false so student answer access depends on covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers = allWorkbookAnswersAvailable === true || currentUserRole === "teacher" || workbookCovered === true;
+      function showPasteMessage(field){const message=field.parentElement.querySelector(".paste-message"); if(!message)return; message.textContent="Please type your answer rather than pasting it."; window.clearTimeout(message.dataset.timer); message.dataset.timer=window.setTimeout(()=>{message.textContent="";},3000);}
+      document.querySelectorAll(".student-answer").forEach((field)=>{field.addEventListener("paste",(event)=>{event.preventDefault();showPasteMessage(field);});field.addEventListener("keydown",(event)=>{if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="v"){event.preventDefault();showPasteMessage(field);}});field.addEventListener("contextmenu",(event)=>{event.preventDefault();showPasteMessage(field);});});
+      if(!canViewAnswers){const notice=document.createElement("p");notice.className="learning-state-notice";notice.textContent="Answers will be available after your teacher has marked this workbook as covered.";document.querySelector(".interactive-workbook").prepend(notice);document.querySelectorAll(".toggle-answer").forEach((button)=>button.hidden=true);return;}
+      document.querySelectorAll(".toggle-answer").forEach((button)=>button.addEventListener("click",()=>{const answer=document.getElementById(button.dataset.answer);if(!answer)return;answer.hidden=!answer.hidden;button.textContent=answer.hidden?"Show answer":"Hide answer";}));
+    })();
+  </script>
+</body>
+</html>

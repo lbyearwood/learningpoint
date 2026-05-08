@@ -470,7 +470,14 @@
     // Later, currentUserRole and workbookCovered will come from Supabase.
     const currentUserRole = params.get("role") || (params.get("route") === "teacher" || document.referrer.includes("/admin/") ? "teacher" : "student");
     const workbookCovered = false || params.get("covered") === "true";
-    const canViewAnswers = currentUserRole === "teacher" || workbookCovered === true;
+    // Development prototype setting.
+    // Keep true while building and testing the site.
+    // Set to false later when workbook answer access should depend on teacher role or covered status.
+    const allWorkbookAnswersAvailable = true;
+    const canViewAnswers =
+      allWorkbookAnswersAvailable === true ||
+      currentUserRole === "teacher" ||
+      workbookCovered === true;
 
     const routeIsTeacher = currentUserRole === "teacher";
     if (routeIsTeacher) {

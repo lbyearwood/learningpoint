@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updating list values quiz | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science quiz</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Lists or arrays</a></li>
+        <li><span aria-current="page">Updating list values quiz</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Back to Lists or arrays</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Updating list values quiz</h1>
+      <p class="lead">Check your understanding of replacing list or array elements using indexes.</p>
+    </section>
+
+    <article class="quiz-card">
+      <section id="quizLocked" class="lesson-block">
+        <h2>Quiz locked</h2>
+        <p>This quiz will unlock when your teacher has marked the Updating list values workbook as covered.</p>
+      </section>
+
+      <form id="updatingListValuesQuizForm" hidden>
+        <section class="lesson-block">
+          <h2>Instructions</h2>
+          <p>Answer all 10 questions, then submit the quiz to see your prototype score and feedback.</p>
+        </section>
+
+        <fieldset class="quiz-question">
+          <legend>1. What does updating a list value mean?</legend>
+          <label><input type="radio" name="q1" value="replace"> Replacing an existing element with a new value</label>
+          <label><input type="radio" name="q1" value="delete-list"> Deleting the whole list</label>
+          <label><input type="radio" name="q1" value="comment"> Adding a comment above the list</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>2. Which line updates the second element of <code>scores</code>?</legend>
+          <label><input type="radio" name="q2" value="scores1"> <code>scores[1] = 10</code></label>
+          <label><input type="radio" name="q2" value="scores2"> <code>scores[2] = 10</code></label>
+          <label><input type="radio" name="q2" value="score"> <code>score = 10</code></label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>3. What happens to the old value when an element is updated?</legend>
+          <label><input type="radio" name="q3" value="replaced"> It is replaced by the new value</label>
+          <label><input type="radio" name="q3" value="kept"> It is always kept as an extra element</label>
+          <label><input type="radio" name="q3" value="locked"> It becomes locked</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>4. Which indexes exist for <code>items = ["pen", "bag", "book"]</code>?</legend>
+          <label><input type="radio" name="q4" value="zero-two"> <code>0</code>, <code>1</code> and <code>2</code></label>
+          <label><input type="radio" name="q4" value="one-three"> <code>1</code>, <code>2</code> and <code>3</code></label>
+          <label><input type="radio" name="q4" value="zero-three"> <code>0</code>, <code>1</code>, <code>2</code> and <code>3</code></label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q5">5. What is the final value of <code>scores</code>?</label>
+          <pre><code>scores = [4, 7, 9]
+scores[1] = 10</code></pre>
+          <textarea id="q5" name="q5" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q6">6. What is the final value of <code>names</code>?</label>
+          <pre><code>names = ["Ava", "Sam", "Noor"]
+names[0] = "Mia"</code></pre>
+          <textarea id="q6" name="q6" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q7">7. Explain why <code>scores[3] = 10</code> is a problem for <code>scores = [4, 7, 9]</code>.</label>
+          <textarea id="q7" name="q7" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="quiz-question">
+          <legend>8. Does <code>items[1] = "ruler"</code> insert a new element or replace an existing one?</legend>
+          <label><input type="radio" name="q8" value="replace"> Replace an existing element</label>
+          <label><input type="radio" name="q8" value="insert"> Insert a new element</label>
+          <label><input type="radio" name="q8" value="sort"> Sort the list</label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q9">9. What is the final value of <code>numbers</code>?</label>
+          <pre><code>numbers = [2, 4, 6]
+numbers[1] = 10
+numbers[2] = numbers[0] + numbers[1]</code></pre>
+          <textarea id="q9" name="q9" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q10">10. Explain what this line does: <code>colours[2] = "purple"</code></label>
+          <textarea id="q10" name="q10" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="button-row">
+          <button class="button" type="submit">Submit quiz</button>
+        </div>
+      </form>
+
+      <section id="quizResult" class="lesson-block" hidden aria-live="polite">
+        <h2>Your result</h2>
+        <p id="scoreText"></p>
+        <div id="feedbackList"></div>
+        <p class="muted">Scores will be saved later when Supabase is connected.</p>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const workbookCovered = params.get("covered") === "true";
+      const lockedPanel = document.getElementById("quizLocked");
+      const quizForm = document.getElementById("updatingListValuesQuizForm");
+      if (workbookCovered) {
+        lockedPanel.hidden = true;
+        quizForm.hidden = false;
+      }
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      function normalise(value) {
+        return String(value || "").trim().toLowerCase();
+      }
+
+      function containsAny(value, keywords) {
+        const answer = normalise(value);
+        return keywords.some((keyword) => answer.includes(keyword));
+      }
+
+      function markShortAnswer(value, keywordGroups) {
+        return keywordGroups.every((group) => containsAny(value, group));
+      }
+
+      quizForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(quizForm);
+        let score = 0;
+        const feedback = [];
+
+        const exactAnswers = {
+          q1: "replace",
+          q2: "scores1",
+          q3: "replaced",
+          q4: "zero-two",
+          q8: "replace",
+        };
+
+        Object.entries(exactAnswers).forEach(([question, answer]) => {
+          if (formData.get(question) === answer) {
+            score += 1;
+            feedback.push(`${question.toUpperCase()}: correct.`);
+          } else {
+            feedback.push(`${question.toUpperCase()}: check this one again.`);
+          }
+        });
+
+        if (markShortAnswer(formData.get("q5"), [["4"], ["10"], ["9"]])) {
+          score += 1;
+          feedback.push("Q5: correct.");
+        } else {
+          feedback.push("Q5: scores[1] replaces 7 with 10, so the final list is [4, 10, 9].");
+        }
+
+        if (markShortAnswer(formData.get("q6"), [["mia"], ["sam"], ["noor"]])) {
+          score += 1;
+          feedback.push("Q6: correct.");
+        } else {
+          feedback.push("Q6: names[0] replaces Ava with Mia, so the final list is [Mia, Sam, Noor].");
+        }
+
+        if (markShortAnswer(formData.get("q7"), [["3"], ["index"], ["not", "no", "does not", "invalid", "exist"]])) {
+          score += 1;
+          feedback.push("Q7: good explanation.");
+        } else {
+          feedback.push("Q7: explain that the valid indexes are 0, 1 and 2, so index 3 does not exist.");
+        }
+
+        if (markShortAnswer(formData.get("q9"), [["2"], ["10"], ["12"]])) {
+          score += 1;
+          feedback.push("Q9: correct.");
+        } else {
+          feedback.push("Q9: numbers[1] becomes 10, then numbers[2] becomes 2 + 10, so the final list is [2, 10, 12].");
+        }
+
+        if (markShortAnswer(formData.get("q10"), [["index", "2", "third"], ["replace", "update", "change"], ["purple"]])) {
+          score += 1;
+          feedback.push("Q10: good explanation.");
+        } else {
+          feedback.push("Q10: mention that the element at index 2, the third element, is replaced with purple.");
+        }
+
+        document.getElementById("scoreText").textContent = `Score: ${score} out of 10`;
+        document.getElementById("feedbackList").innerHTML = `<ul>${feedback.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+        document.getElementById("quizResult").hidden = false;
+        document.getElementById("quizResult").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    })();
+  </script>
+</body>
+</html>

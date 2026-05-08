@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Programming data</a></li>
+        <li><span aria-current="page">Variables workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Back to Programming data</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Variables workbook</h1>
+      <p class="lead">Learn how programs use variables to store values that can change while a program is running.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term variable.</li>
+          <li>I can explain why programs use variables.</li>
+          <li>I can identify a variable name and its value in code.</li>
+          <li>I can explain that a variable value can change while a program runs.</li>
+          <li>I can choose clear variable names.</li>
+          <li>I can trace simple code that updates variables.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What is a variable?</h2>
+        <p>A <strong>variable</strong> is a named storage location in a program. It stores a value so the program can use it later.</p>
+        <p>The value stored in a variable can change while the program is running. The variable name stays the same, but the value it holds can be replaced.</p>
+
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">Variable box diagram</h3>
+          <svg viewBox="0 0 820 220" role="img" aria-label="Variable name score pointing to a storage box containing 42">
+            <defs><marker id="varArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="flow-code-node" x="70" y="82" width="140" height="58" rx="14"/><text class="flow-label" x="140" y="117" text-anchor="middle">score</text>
+            <path class="flow-line-neutral" marker-end="url(#varArrow)" d="M210 111 H330"/><text class="flow-note" x="270" y="96" text-anchor="middle">name points to</text>
+            <rect class="flow-action-node" x="330" y="58" width="250" height="106" rx="18"/><text class="flow-note" x="455" y="88" text-anchor="middle">stored value</text><text class="flow-label" x="455" y="128" text-anchor="middle" style="font-size:30px">42</text>
+            <rect class="flow-start-node" x="620" y="82" width="130" height="58" rx="14"/><text class="flow-note" x="685" y="106" text-anchor="middle">program can</text><text class="flow-note" x="685" y="124" text-anchor="middle">use it later</text>
+          </svg>
+          <figcaption class="diagram-caption">The variable name gives the program a way to find and use the value stored in memory.</figcaption>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define-variable">Write a definition of a variable.</label>
+          <textarea id="activity-define-variable" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define-variable">Show model answer</button>
+          <div id="answer-define-variable" class="answer-block" hidden>
+            <p>A variable is a named storage location that stores a value used by a program. The value can change while the program runs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Assigning values</h2>
+        <p>Assignment means putting a value into a variable. In pseudocode and many programming languages, the value on the right is stored in the variable on the left.</p>
+
+        <div class="diagram-card">
+          <h3>Example assignments</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>score = 0</code></td>
+                <td>Store the value 0 in the variable called score.</td>
+              </tr>
+              <tr>
+                <td><code>name = "Amira"</code></td>
+                <td>Store the text Amira in the variable called name.</td>
+              </tr>
+              <tr>
+                <td><code>lives = 3</code></td>
+                <td>Store the value 3 in the variable called lives.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Explain an assignment</h3>
+          <label class="answer-label" for="activity-assignment">Explain what this line does: <code>attempts = 1</code></label>
+          <textarea id="activity-assignment" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-assignment">Show model answer</button>
+          <div id="answer-assignment" class="answer-block" hidden>
+            <p>It stores the value 1 in the variable called attempts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Changing a variable</h2>
+        <p>A variable can be updated. When a new value is assigned to the same variable, the old value is replaced.</p>
+
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">Variable update sequence</h3>
+          <svg viewBox="0 0 850 230" role="img" aria-label="Variable score updates from 10 to 15">
+            <defs><marker id="updateArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="flow-code-node" x="35" y="70" width="190" height="70" rx="14"/><text class="flow-label" x="130" y="98" text-anchor="middle">score = 10</text><text class="flow-note" x="130" y="120" text-anchor="middle">box holds 10</text>
+            <path class="flow-line-neutral" marker-end="url(#updateArrow)" d="M225 105 H310"/>
+            <rect class="flow-process-node" x="310" y="70" width="230" height="70" rx="14"/><text class="flow-label" x="425" y="98" text-anchor="middle">score = score + 5</text><text class="flow-note" x="425" y="120" text-anchor="middle">use old value, then replace it</text>
+            <path class="flow-line-neutral" marker-end="url(#updateArrow)" d="M540 105 H625"/>
+            <rect class="flow-action-node" x="625" y="70" width="190" height="70" rx="14"/><text class="flow-label" x="720" y="98" text-anchor="middle">score = 15</text><text class="flow-note" x="720" y="120" text-anchor="middle">box now holds 15</text>
+          </svg>
+          <figcaption class="diagram-caption">An update reads the current value, calculates a new value, then stores the new value back in the same variable.</figcaption>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Line</th>
+                <th scope="col">Code</th>
+                <th scope="col">Value of score after the line runs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><code>score = 10</code></td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><code>score = score + 5</code></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><code>score = score * 2</code></td>
+                <td>30</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 3: Trace the value</h3>
+          <p>What is the final value of <code>points</code>?</p>
+          <pre><code>points = 4
+points = points + 6
+points = points - 3</code></pre>
+          <label class="answer-label" for="activity-trace">Final value:</label>
+          <input id="activity-trace" name="activity-trace" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-trace">Show answer</button>
+          <div id="answer-trace" class="answer-block" hidden>
+            <p>The final value is 7. The value starts at 4, becomes 10, then becomes 7.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Variable names</h2>
+        <p>Clear variable names make programs easier to read. A good variable name should describe the data being stored.</p>
+        <p>For example, <code>totalScore</code> is clearer than <code>x</code> if the variable stores a player's total score.</p>
+
+        <div class="diagram-card">
+          <h3>Clearer names</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Weak name</th>
+                <th scope="col">Clearer name</th>
+                <th scope="col">Why it is clearer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>n</code></td>
+                <td><code>studentName</code></td>
+                <td>Shows that the value is a student's name.</td>
+              </tr>
+              <tr>
+                <td><code>t</code></td>
+                <td><code>totalCost</code></td>
+                <td>Shows that the value is a total cost.</td>
+              </tr>
+              <tr>
+                <td><code>a</code></td>
+                <td><code>age</code></td>
+                <td>Shows that the value is an age.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Choose a name</h3>
+          <label class="answer-label" for="activity-name">Suggest a clear variable name for storing the number of lives left in a game.</label>
+          <textarea id="activity-name" class="student-answer short-answer" rows="2" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-name">Show model answer</button>
+          <div id="answer-name" class="answer-block" hidden>
+            <p>A clear answer could be <code>livesLeft</code>, <code>remainingLives</code> or <code>numberOfLives</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Variables and data types</h2>
+        <p>Variables can store different kinds of data, such as numbers, text or Boolean values. The kind of value stored is called the data type.</p>
+
+        <div class="diagram-card">
+          <h3>Examples</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Example value</th>
+                <th scope="col">Kind of data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>score</code></td>
+                <td><code>12</code></td>
+                <td>Integer</td>
+              </tr>
+              <tr>
+                <td><code>username</code></td>
+                <td><code>"Max"</code></td>
+                <td>String</td>
+              </tr>
+              <tr>
+                <td><code>gameOver</code></td>
+                <td><code>False</code></td>
+                <td>Boolean</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Identify the value</h3>
+          <p>Look at this code:</p>
+          <pre><code>username = "Sam"
+score = 8
+score = score + 2</code></pre>
+          <label class="answer-label" for="activity-identify">What are the final values of <code>username</code> and <code>score</code>?</label>
+          <textarea id="activity-identify" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-identify">Show answer</button>
+          <div id="answer-identify" class="answer-block" hidden>
+            <p><code>username</code> is <code>"Sam"</code>. <code>score</code> is 10.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Definition</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Define the term variable.</label>
+            <textarea id="exam-q1" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>A variable is a named storage location in a program. It stores a value that can be used and changed while the program runs.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Trace code</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>What is output by this code?</p>
+            <pre><code>total = 5
+total = total + 3
+print(total)</code></pre>
+            <label class="answer-label" for="exam-q2">Output:</label>
+            <input id="exam-q2" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>The output is 8.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Clear names</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q3">Explain why <code>totalCost</code> is a better variable name than <code>x</code> for storing the total cost of an order.</label>
+            <textarea id="exam-q3" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p><code>totalCost</code> describes what the value stores, so the code is easier to read and understand. <code>x</code> does not give useful meaning.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term variable.</li>
+          <li>I can explain why programs use variables.</li>
+          <li>I can identify a variable name and its value in code.</li>
+          <li>I can explain that a variable value can change while a program runs.</li>
+          <li>I can choose clear variable names.</li>
+          <li>I can trace simple code that updates variables.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

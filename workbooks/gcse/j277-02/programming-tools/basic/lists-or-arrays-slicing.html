@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slicing workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Lists or arrays</a></li>
+        <li><span aria-current="page">Slicing workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Back to Lists or arrays</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Slicing workbook</h1>
+      <p class="lead">Learn how Python can copy part of a list using slice notation.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can explain what slicing does.</li>
+          <li>I can use Python slice notation with a start and stop value.</li>
+          <li>I can explain that the stop position is not included.</li>
+          <li>I can slice from the start of a list.</li>
+          <li>I can slice to the end of a list.</li>
+          <li>I can trace the output of simple list slices.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What is slicing?</h2>
+        <p>Slicing means taking a copy of part of a list. In Python, a slice uses a colon inside square brackets.</p>
+        <p>A slice does not change the original list unless the program assigns a new value back into the list. In this workbook, the slices make new shorter lists.</p>
+
+        <div class="diagram-card">
+          <h3>Slice idea</h3>
+          <pre><code>colours = ["red", "blue", "green", "yellow"]
+chosen = colours[1:3]</code></pre>
+          <p class="diagram-caption"><code>chosen</code> becomes <code>["blue", "green"]</code>. The original <code>colours</code> list is still unchanged.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define">Explain what slicing a list means.</label>
+          <textarea id="activity-define" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define">Show model answer</button>
+          <div id="answer-define" class="answer-block" hidden>
+            <p>Slicing means copying part of a list to create a smaller list.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Start and stop values</h2>
+        <p>The general Python pattern is <code>list_name[start:stop]</code>.</p>
+        <p>The slice starts at the <code>start</code> index and stops before the <code>stop</code> index. The stop index is not included.</p>
+
+        <div class="diagram-card">
+          <h3>Start included, stop excluded</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Result</th>
+                <th scope="col">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>numbers = [10, 20, 30, 40, 50]</code></td>
+                <td><code>[10, 20, 30, 40, 50]</code></td>
+                <td>The full list</td>
+              </tr>
+              <tr>
+                <td><code>numbers[1:4]</code></td>
+                <td><code>[20, 30, 40]</code></td>
+                <td>Starts at index <code>1</code> and stops before index <code>4</code></td>
+              </tr>
+              <tr>
+                <td><code>numbers[0:2]</code></td>
+                <td><code>[10, 20]</code></td>
+                <td>Starts at index <code>0</code> and stops before index <code>2</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Trace a slice</h3>
+          <p>What is stored in <code>part</code>?</p>
+          <pre><code>letters = ["a", "b", "c", "d", "e"]
+part = letters[2:5]</code></pre>
+          <label class="answer-label" for="activity-trace">Value of <code>part</code>:</label>
+          <textarea id="activity-trace" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-trace">Show answer</button>
+          <div id="answer-trace" class="answer-block" hidden>
+            <p><code>part</code> is <code>["c", "d", "e"]</code>. The slice starts at index <code>2</code> and stops before index <code>5</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Slicing from the start</h2>
+        <p>If the start value is left blank, Python starts from the beginning of the list.</p>
+
+        <div class="diagram-card">
+          <h3>From the start</h3>
+          <pre><code>scores = [4, 7, 9, 12]
+first_two = scores[:2]</code></pre>
+          <p class="diagram-caption"><code>first_two</code> becomes <code>[4, 7]</code>. Python starts at index <code>0</code> and stops before index <code>2</code>.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: First values</h3>
+          <p>What is stored in <code>first_three</code>?</p>
+          <pre><code>names = ["Ava", "Sam", "Noor", "Mia"]
+first_three = names[:3]</code></pre>
+          <label class="answer-label" for="activity-start">Value of <code>first_three</code>:</label>
+          <textarea id="activity-start" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-start">Show answer</button>
+          <div id="answer-start" class="answer-block" hidden>
+            <p><code>first_three</code> is <code>["Ava", "Sam", "Noor"]</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Slicing to the end</h2>
+        <p>If the stop value is left blank, Python continues to the end of the list.</p>
+
+        <div class="diagram-card">
+          <h3>To the end</h3>
+          <pre><code>scores = [4, 7, 9, 12]
+last_three = scores[1:]</code></pre>
+          <p class="diagram-caption"><code>last_three</code> becomes <code>[7, 9, 12]</code>. Python starts at index <code>1</code> and keeps going to the end.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: End values</h3>
+          <p>What is stored in <code>ending</code>?</p>
+          <pre><code>items = ["pen", "bag", "book", "ruler"]
+ending = items[2:]</code></pre>
+          <label class="answer-label" for="activity-end">Value of <code>ending</code>:</label>
+          <textarea id="activity-end" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-end">Show answer</button>
+          <div id="answer-end" class="answer-block" hidden>
+            <p><code>ending</code> is <code>["book", "ruler"]</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Slicing does not edit the original list</h2>
+        <p>A slice creates a new list containing the selected elements. The original list stays the same.</p>
+
+        <div class="diagram-card">
+          <h3>Original list unchanged</h3>
+          <pre><code>items = ["pen", "bag", "book", "ruler"]
+small_list = items[1:3]</code></pre>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>small_list</code></td>
+                <td><code>["bee", "cat"]</code></td>
+              </tr>
+              <tr>
+                <td><code>items</code></td>
+                <td><code>["pen", "bag", "book", "ruler"]</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Original or copy?</h3>
+          <label class="answer-label" for="activity-copy">After <code>small_list = items[1:3]</code>, has the original <code>items</code> list changed? Explain your answer.</label>
+          <textarea id="activity-copy" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-copy">Show model answer</button>
+          <div id="answer-copy" class="answer-block" hidden>
+            <p>No. The slice creates a new list. The original <code>items</code> list still contains all four values.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Trace a slice</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>What is stored in <code>result</code>?</p>
+            <pre><code>values = [2, 4, 6, 8, 10]
+result = values[1:4]</code></pre>
+            <textarea id="exam-q1" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p><code>result</code> is <code>[4, 6, 8]</code>.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Explain notation</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">Explain what <code>names[:2]</code> does.</label>
+            <textarea id="exam-q2" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>It creates a new list from the start of <code>names</code> up to, but not including, index <code>2</code>.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Stop value</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q3">In <code>items[1:3]</code>, is index <code>3</code> included in the slice? Explain your answer.</label>
+            <textarea id="exam-q3" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>No. The stop value is not included. The slice includes index <code>1</code> and index <code>2</code>, then stops before index <code>3</code>.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can explain what slicing does.</li>
+          <li>I can use Python slice notation with a start and stop value.</li>
+          <li>I can explain that the stop position is not included.</li>
+          <li>I can slice from the start of a list.</li>
+          <li>I can slice to the end of a list.</li>
+          <li>I can trace the output of simple list slices.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

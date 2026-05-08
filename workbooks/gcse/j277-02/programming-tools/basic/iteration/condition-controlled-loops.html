@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condition-controlled loops | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../../assets/css/styles.css">
+  <style>
+    .loop-diagram{max-width:820px;margin:1rem 0}.loop-diagram svg{width:100%;height:auto;display:block}.node-start{fill:#e0f2fe;stroke:#0369a1}.node-process{fill:#ede9fe;stroke:#6d28d9}.node-decision{fill:#fef3c7;stroke:#b45309}.node-true{fill:#dcfce7;stroke:#15803d}.node-warn{fill:#ffe4e6;stroke:#be123c}.flow-line{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}.true-line{stroke:#15803d;stroke-width:2;marker-end:url(#arrow-green)}.false-line{stroke:#be123c;stroke-width:2;marker-end:url(#arrow-red)}.diagram-label{font:600 14px Arial,sans-serif;fill:#0f172a}.small-label{font:500 12px Arial,sans-serif;fill:#334155}.mistake-list li{margin-bottom:.5rem}
+  </style>
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../../index.html" aria-label="LearningPoint home"><span class="brand-mark">LP</span><span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation"><a href="../../../../../../admin/control-panel.html">Teacher dashboard</a><a href="../../../../../../student/dashboard.html">Student dashboard</a><a href="../../../../../../login.html">Sign out</a></nav>
+  </header>
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol>
+      <li><a data-role-link="dashboard" href="../../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+      <li><a data-role-link="gcse" href="../../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+      <li><a data-role-link="unit" href="../../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+      <li><a data-role-link="tools" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+      <li><a data-role-link="section" href="../../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+      <li><a data-role-link="topic" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/iteration.html">Iteration</a></li>
+      <li><span aria-current="page">Condition-controlled loops</span></li>
+    </ol></nav>
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row"><a class="button button-secondary back-button" data-role-link="back" href="../../../../../../admin/courses/gcse/j277-02/programming-tools/basic/iteration.html">Back to Iteration</a></div>
+      <p class="eyebrow">OCR J277 &middot; Programming tools &middot; Iteration &middot; Python</p>
+      <h1>Condition-controlled loops</h1>
+      <p class="lead">Learn how Python <code>while</code> loops repeat code until a condition changes.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block"><h2>Learning checklist</h2><ul class="checklist"><li>I can define a condition-controlled loop.</li><li>I can identify a Python while loop condition.</li><li>I can explain how the loop body repeats.</li><li>I can update a variable inside a loop.</li><li>I can recognise sentinel values.</li><li>I can avoid infinite loops.</li></ul></section>
+
+      <section class="lesson-block">
+        <h2>What a condition-controlled loop is</h2>
+        <p>A <strong>condition-controlled loop</strong> repeats while a condition is true. The number of repeats is not always known before the loop starts.</p>
+        <p>Python uses a <code>while</code> loop for condition-controlled iteration. The condition is checked before each repeat.</p>
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">While-loop flowchart</h3>
+          <svg viewBox="0 0 900 360" role="img" aria-label="While loop flowchart showing condition, true body, update and repeated checking">
+            <defs><marker id="whileArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker><marker id="whileTrueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#15803d"/></marker><marker id="whileFalseArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#be123c"/></marker></defs>
+            <rect class="flow-start-node" x="35" y="142" width="90" height="46" rx="18"/><text class="flow-label" x="80" y="171" text-anchor="middle">Start</text>
+            <path class="flow-line-neutral" marker-end="url(#whileArrow)" d="M125 165 H215"/>
+            <polygon class="flow-choice-node" points="350,90 490,165 350,240 210,165"/><text class="flow-label" x="350" y="161" text-anchor="middle">condition?</text><text class="flow-note" x="350" y="181" text-anchor="middle">checked first</text>
+            <path class="flow-line-true" marker-end="url(#whileTrueArrow)" d="M490 165 H610"/><text class="flow-note" x="550" y="150" text-anchor="middle">True</text>
+            <rect class="flow-action-node" x="610" y="135" width="120" height="60" rx="14"/><text class="flow-label" x="670" y="171" text-anchor="middle">Run body</text>
+            <path class="flow-line-neutral" marker-end="url(#whileArrow)" d="M670 195 V270 H500"/>
+            <rect class="flow-process-node" x="370" y="240" width="130" height="60" rx="14"/><text class="flow-note" x="435" y="264" text-anchor="middle">Update</text><text class="flow-note" x="435" y="282" text-anchor="middle">value</text>
+            <path class="flow-line-neutral" marker-end="url(#whileArrow)" d="M370 270 H350 V240"/><text class="flow-note" x="520" y="258" text-anchor="middle">check again</text>
+            <path class="flow-line-false" marker-end="url(#whileFalseArrow)" d="M350 240 V325 H760"/><text class="flow-note" x="380" y="315">False</text>
+            <rect class="flow-end-node" x="760" y="302" width="90" height="46" rx="18"/><text class="flow-label" x="805" y="331" text-anchor="middle">Stop</text>
+          </svg>
+          <figcaption class="diagram-caption">A while loop checks the condition before every repeat. The loop stops when the condition becomes false.</figcaption>
+        </figure>
+        <div class="diagram-card"><h3>Basic while loop</h3><pre><code>count = 1
+while count &lt;= 5:
+    print(count)
+    count = count + 1</code></pre><p>The update line is important because it changes <code>count</code>, so the condition can eventually become false.</p></div>
+        <div class="activity-box"><h3>Activity 1: Identify the condition</h3><label class="answer-label" for="identify-condition">What is the loop condition?</label><pre><code>count = 1
+while count &lt;= 5:
+    print(count)
+    count = count + 1</code></pre><input id="identify-condition" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-identify-condition">Show answer</button><div id="answer-identify-condition" class="answer-block" hidden><p>The condition is <code>count &lt;= 5</code>.</p></div></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Tracing while loops</h2>
+        <p>When tracing a while loop, check the condition before each repeat, then update the variable inside the loop.</p>
+        <figure class="loop-diagram" aria-label="While loop trace table">
+          <table class="data-table">
+            <thead><tr><th scope="col">Iteration</th><th scope="col">condition</th><th scope="col">count value</th><th scope="col">output</th></tr></thead>
+            <tbody><tr><td>1</td><td><code>1 &lt;= 3</code> true</td><td><code>1</code></td><td><code>1</code></td></tr><tr><td>2</td><td><code>2 &lt;= 3</code> true</td><td><code>2</code></td><td><code>2</code></td></tr><tr><td>3</td><td><code>3 &lt;= 3</code> true</td><td><code>3</code></td><td><code>3</code></td></tr><tr><td>Stop</td><td><code>4 &lt;= 3</code> false</td><td><code>4</code></td><td>Loop ends</td></tr></tbody>
+          </table>
+          <figcaption class="diagram-caption">The false condition stops the loop.</figcaption>
+        </figure>
+        <div class="activity-box"><h3>Activity 2: Predict output</h3><pre><code>count = 1
+while count &lt;= 3:
+    print(count)
+    count = count + 1</code></pre><label class="answer-label" for="predict-output">What is printed?</label><textarea id="predict-output" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-predict-output">Show answer</button><div id="answer-predict-output" class="answer-block" hidden><p>The output is <code>1</code>, <code>2</code>, <code>3</code>.</p></div></div>
+        <div class="activity-box"><h3>Activity 3: Missing update</h3><label class="answer-label" for="missing-update">Add the missing update line so the loop can stop.</label><pre><code>count = 1
+while count &lt;= 5:
+    print(count)
+    ...</code></pre><textarea id="missing-update" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-missing-update">Show answer</button><div id="answer-missing-update" class="answer-block" hidden><pre><code>count = count + 1</code></pre></div></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Indefinite repetition and sentinel values</h2>
+        <p>A while loop is useful when the program does not know how many attempts or values there will be.</p>
+        <div class="diagram-card"><h3>User input loop</h3><pre><code>password = ""
+while password != "open":
+    password = input("Enter password: ")
+print("Access granted")</code></pre><p>The loop continues until the password is <code>"open"</code>.</p></div>
+        <figure class="loop-diagram" aria-label="Sentinel value diagram">
+          <svg viewBox="0 0 820 180" role="img">
+            <defs><marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="node-process" x="30" y="55" width="180" height="60" rx="14"/><text class="diagram-label" x="120" y="82" text-anchor="middle">User enters</text><text class="small-label" x="120" y="101" text-anchor="middle">numbers</text>
+            <path class="flow-line" marker-end="url(#arrow2)" d="M210 85 H310"/>
+            <rect class="node-true" x="310" y="55" width="180" height="60" rx="14"/><text class="diagram-label" x="400" y="82" text-anchor="middle">Continue</text><text class="small-label" x="400" y="101" text-anchor="middle">while not -1</text>
+            <path class="flow-line" marker-end="url(#arrow2)" d="M490 85 H590"/>
+            <rect class="node-warn" x="590" y="55" width="180" height="60" rx="14"/><text class="diagram-label" x="680" y="82" text-anchor="middle">-1 entered</text><text class="small-label" x="680" y="101" text-anchor="middle">loop stops</text>
+          </svg>
+          <figcaption class="diagram-caption">A sentinel value is a special input used to end a loop.</figcaption>
+        </figure>
+        <div class="diagram-card"><h3>Sentinel-controlled loop</h3><pre><code>total = 0
+number = int(input("Enter a number, or -1 to stop: "))
+while number != -1:
+    total = total + number
+    number = int(input("Enter a number, or -1 to stop: "))
+print(total)</code></pre><p>The sentinel value is <code>-1</code>. It tells the program to stop entering numbers.</p></div>
+        <div class="activity-box"><h3>Activity 4: When does it stop?</h3><label class="answer-label" for="when-stop">When does the password loop stop?</label><textarea id="when-stop" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-when-stop">Show answer</button><div id="answer-when-stop" class="answer-block" hidden><p>It stops when <code>password</code> is equal to <code>"open"</code>.</p></div></div>
+        <div class="activity-box"><h3>Activity 5: Write a password loop</h3><label class="answer-label" for="write-password">Write a while loop that keeps asking for a password until it is <code>"open"</code>.</label><textarea id="write-password" class="student-answer" rows="6"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-write-password">Show model answer</button><div id="answer-write-password" class="answer-block" hidden><pre><code>password = ""
+while password != "open":
+    password = input("Enter password: ")
+print("Access granted")</code></pre></div></div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Infinite loops</h2>
+        <p>An infinite loop keeps repeating because the condition never becomes false. This can freeze a program or make it keep producing output.</p>
+        <figure class="loop-diagram" aria-label="Infinite loop warning diagram">
+          <svg viewBox="0 0 820 170" role="img">
+            <rect class="node-warn" x="40" y="45" width="260" height="80" rx="14"/><text class="diagram-label" x="170" y="77" text-anchor="middle">condition never</text><text class="small-label" x="170" y="100" text-anchor="middle">becomes false</text>
+            <rect class="node-warn" x="520" y="45" width="260" height="80" rx="14"/><text class="diagram-label" x="650" y="77" text-anchor="middle">loop never</text><text class="small-label" x="650" y="100" text-anchor="middle">stops</text>
+            <path class="flow-line" d="M300 85 H520"/>
+          </svg>
+          <figcaption class="diagram-caption">A while loop needs a clear way for its condition to become false, or a carefully planned break condition.</figcaption>
+        </figure>
+        <div class="diagram-card"><h3>Infinite loop warning</h3><pre><code>while True:
+    print("This will keep going")</code></pre><p>This can be dangerous unless there is a clear break condition. The condition <code>True</code> does not change by itself.</p></div>
+        <div class="activity-box"><h3>Activity 6: Identify the problem</h3><label class="answer-label" for="infinite-problem">Why is this loop infinite?</label><pre><code>count = 1
+while count &lt;= 5:
+    print(count)</code></pre><textarea id="infinite-problem" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-infinite-problem">Show answer</button><div id="answer-infinite-problem" class="answer-block" hidden><p><code>count</code> is never updated, so <code>count &lt;= 5</code> stays true forever.</p></div></div>
+      </section>
+
+      <section class="lesson-block"><h2>Common mistakes</h2><ul class="mistake-list"><li>Forgetting to update the variable inside the loop.</li><li>Creating an infinite loop.</li><li>Using <code>=</code> instead of <code>==</code> when explaining equality checks.</li><li>Forgetting the colon at the end of the <code>while</code> line.</li><li>Forgetting indentation.</li><li>Using a while loop when a for loop would be simpler.</li><li>Not thinking about what makes the condition become false.</li></ul></section>
+
+      <section class="lesson-block"><h2>Exam-style questions</h2><div class="question-stack">
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 1</h3><p>Define</p></div><span class="mark-tag">1 mark</span></div><label class="answer-label" for="exam-q1">Define a condition-controlled loop.</label><textarea id="exam-q1" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show answer</button><div id="answer-q1" class="answer-block" hidden><p>A condition-controlled loop repeats while a condition is true.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 2</h3><p>Condition</p></div><span class="mark-tag">1 mark</span></div><pre><code>while password != "open":
+    password = input("Enter password: ")</code></pre><label class="answer-label" for="exam-q2">Identify the condition.</label><input id="exam-q2" class="student-answer short-answer" type="text"><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button><div id="answer-q2" class="answer-block" hidden><p><code>password != "open"</code></p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 3</h3><p>Predict</p></div><span class="mark-tag">2 marks</span></div><pre><code>count = 1
+while count &lt;= 3:
+    print(count)
+    count = count + 1</code></pre><textarea id="exam-q3" class="student-answer" rows="3"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button><div id="answer-q3" class="answer-block" hidden><p>The output is <code>1</code>, <code>2</code>, <code>3</code>.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 4</h3><p>Infinite loop</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q4">Explain why this loop is infinite: <code>while True:</code>.</label><textarea id="exam-q4" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show answer</button><div id="answer-q4" class="answer-block" hidden><p>The condition is always true and does not change, so the loop has no natural stopping point unless a break condition is added.</p></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 5</h3><p>Write loop</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q5">Write a Python while loop that counts from 1 to 5.</label><textarea id="exam-q5" class="student-answer" rows="6"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q5">Show answer</button><div id="answer-q5" class="answer-block" hidden><pre><code>count = 1
+while count &lt;= 5:
+    print(count)
+    count = count + 1</code></pre></div></article>
+        <article class="question-card"><div class="question-card-header"><div><h3>Question 6</h3><p>Choose loop</p></div><span class="mark-tag">3 marks</span></div><label class="answer-label" for="exam-q6">Explain when a while loop is more suitable than a for loop.</label><textarea id="exam-q6" class="student-answer" rows="4"></textarea><p class="paste-message" aria-live="polite"></p><button class="button button-secondary toggle-answer" type="button" data-answer="answer-q6">Show answer</button><div id="answer-q6" class="answer-block" hidden><p>A while loop is more suitable when the number of repeats is not known in advance, such as repeating until a user enters the correct password.</p></div></article>
+      </div></section>
+
+      <section class="lesson-block"><h2>Final review checklist</h2><ul class="checklist"><li>I can explain condition-controlled iteration.</li><li>I can trace Python while loops.</li><li>I can use sentinel values.</li><li>I can spot and fix infinite loop risks.</li></ul></section>
+    </article>
+  </main>
+  <script src="../../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/iteration.html"],
+          back: ["../../../../../../student/courses/gcse/j277-02/programming-tools/basic/iteration.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing.
+      // Later, set to false so student answer access depends on covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => { message.textContent = ""; }, 3000);
+      }
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => { event.preventDefault(); showPasteMessage(field); });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => { event.preventDefault(); showPasteMessage(field); });
+      });
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

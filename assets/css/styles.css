@@ -2288,3 +2288,143 @@ th + th {
     display: grid;
   }
 }
+
+/* Programming tools teaching diagrams */
+.teaching-diagram {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  margin: 1rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.teaching-diagram .diagram-title {
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.teaching-diagram svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  min-width: 620px;
+}
+
+.diagram-caption {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0.75rem 0 0;
+}
+
+.flow-label {
+  fill: #0f172a;
+  font: 700 15px Arial, sans-serif;
+}
+
+.flow-note {
+  fill: #334155;
+  font: 600 12px Arial, sans-serif;
+}
+
+.flow-start-node,
+.flow-end-node {
+  fill: #e0f2fe;
+  stroke: #0369a1;
+  stroke-width: 2;
+}
+
+.flow-action-node {
+  fill: #dcfce7;
+  stroke: #15803d;
+  stroke-width: 2;
+}
+
+.flow-output-node {
+  fill: #f0fdf4;
+  stroke: #16a34a;
+  stroke-width: 2;
+}
+
+.flow-skip-node,
+.flow-false-node {
+  fill: #ffe4e6;
+  stroke: #be123c;
+  stroke-width: 2;
+}
+
+.flow-process-node,
+.flow-code-node {
+  fill: #ede9fe;
+  stroke: #6d28d9;
+  stroke-width: 2;
+}
+
+.flow-choice-node {
+  fill: #fef3c7;
+  stroke: #b45309;
+  stroke-width: 2;
+}
+
+.flow-line-neutral {
+  fill: none;
+  stroke: #334155;
+  stroke-width: 2.4;
+}
+
+.flow-line-true {
+  fill: none;
+  stroke: #15803d;
+  stroke-width: 2.8;
+}
+
+.flow-line-false {
+  fill: none;
+  stroke: #be123c;
+  stroke-width: 2.8;
+}
+
+.code-flow-pair {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.code-flow-pair pre {
+  margin: 0;
+}
+
+.trace-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.trace-table th,
+.trace-table td {
+  border: 1px solid #cbd5e1;
+  padding: 0.65rem;
+  text-align: left;
+}
+
+.trace-table th {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+@media (max-width: 760px) {
+  .teaching-diagram {
+    padding: 0.75rem;
+  }
+
+  .teaching-diagram svg {
+    min-width: 680px;
+  }
+
+  .code-flow-pair {
+    grid-template-columns: 1fr;
+  }
+}

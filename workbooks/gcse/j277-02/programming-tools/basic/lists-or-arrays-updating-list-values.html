@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updating list values workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Lists or arrays</a></li>
+        <li><span aria-current="page">Updating list values workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Back to Lists or arrays</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Updating list values workbook</h1>
+      <p class="lead">Learn how programs replace an existing value in a 1D list or array using its index.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can explain what it means to update a list or array value.</li>
+          <li>I can use an index to choose which element is updated.</li>
+          <li>I can trace the value of a list before and after an update.</li>
+          <li>I can explain that updating replaces the old value.</li>
+          <li>I can identify errors caused by using the wrong index.</li>
+          <li>I can write simple code that updates a list or array element.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What does updating mean?</h2>
+        <p>Updating a list or array value means replacing one existing element with a new value.</p>
+        <p>The list keeps the same name and the same position. Only the value stored at that position changes.</p>
+
+        <div class="diagram-card">
+          <h3>Before and after</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">List after the line runs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>scores = [4, 7, 9]</code></td>
+                <td><code>[4, 7, 9]</code></td>
+              </tr>
+              <tr>
+                <td><code>scores[1] = 10</code></td>
+                <td><code>[4, 10, 9]</code></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="diagram-caption"><code>scores[1]</code> is the second element, so <code>7</code> is replaced with <code>10</code>.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define">Explain what it means to update a list or array value.</label>
+          <textarea id="activity-define" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define">Show model answer</button>
+          <div id="answer-define" class="answer-block" hidden>
+            <p>Updating a list or array value means replacing an existing element with a new value, usually by using its index.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Using an index to update</h2>
+        <p>An index tells the program which element to change. In these examples, the first element is at index <code>0</code>.</p>
+
+        <div class="diagram-card">
+          <h3>Index positions</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">List</th>
+                <th scope="col">Update</th>
+                <th scope="col">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>names = ["Ava", "Sam", "Noor"]</code></td>
+                <td><code>names[0] = "Mia"</code></td>
+                <td><code>["Mia", "Sam", "Noor"]</code></td>
+              </tr>
+              <tr>
+                <td><code>names = ["Ava", "Sam", "Noor"]</code></td>
+                <td><code>names[2] = "Kai"</code></td>
+                <td><code>["Ava", "Sam", "Kai"]</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Update by index</h3>
+          <p>Look at this list:</p>
+          <pre><code>colours = ["red", "blue", "green"]
+colours[0] = "yellow"</code></pre>
+          <label class="answer-label" for="activity-index">What is the list after the update?</label>
+          <textarea id="activity-index" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-index">Show answer</button>
+          <div id="answer-index" class="answer-block" hidden>
+            <p>The list becomes <code>["yellow", "blue", "green"]</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Tracing several updates</h2>
+        <p>A list can be updated more than once. Trace each line in order because later updates use the current list, not the original one.</p>
+
+        <div class="diagram-card">
+          <h3>Example trace</h3>
+          <pre><code>scores = [3, 5, 8]
+scores[0] = 4
+scores[2] = scores[1] + scores[2]</code></pre>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">After line</th>
+                <th scope="col">List value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>scores = [3, 5, 8]</code></td>
+                <td><code>[3, 5, 8]</code></td>
+              </tr>
+              <tr>
+                <td><code>scores[0] = 4</code></td>
+                <td><code>[4, 5, 8]</code></td>
+              </tr>
+              <tr>
+                <td><code>scores[2] = scores[1] + scores[2]</code></td>
+                <td><code>[4, 5, 13]</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Trace updates</h3>
+          <p>What is the final value of <code>numbers</code>?</p>
+          <pre><code>numbers = [2, 4, 6]
+numbers[1] = 10
+numbers[2] = numbers[0] + numbers[1]</code></pre>
+          <label class="answer-label" for="activity-trace">Final list:</label>
+          <textarea id="activity-trace" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-trace">Show answer</button>
+          <div id="answer-trace" class="answer-block" hidden>
+            <p>The final list is <code>[2, 10, 12]</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Replacing, not inserting</h2>
+        <p>Updating an element replaces the value at that index. It does not add a new element to the list.</p>
+
+        <div class="diagram-card">
+          <h3>Replacement example</h3>
+          <pre><code>items = ["pen", "bag", "book"]
+items[1] = "ruler"</code></pre>
+          <p class="diagram-caption">The list becomes <code>["pen", "ruler", "book"]</code>. It still has 3 elements.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Replacement or extra value?</h3>
+          <label class="answer-label" for="activity-replace">After <code>items[1] = "ruler"</code>, how many elements are in the list? Explain why.</label>
+          <textarea id="activity-replace" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-replace">Show model answer</button>
+          <div id="answer-replace" class="answer-block" hidden>
+            <p>There are still 3 elements. The value at index 1 has been replaced; no new element has been added.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Using the wrong index</h2>
+        <p>An update only works if the index exists. A list with 3 elements has indexes <code>0</code>, <code>1</code> and <code>2</code> in these examples.</p>
+
+        <div class="diagram-card">
+          <h3>Index error example</h3>
+          <pre><code>scores = [4, 7, 9]
+scores[3] = 10</code></pre>
+          <p class="diagram-caption">This would cause a problem because there is no index <code>3</code>. The last element is at index <code>2</code>.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Spot the problem</h3>
+          <label class="answer-label" for="activity-error">Why would <code>scores[3] = 10</code> be a problem for <code>scores = [4, 7, 9]</code>?</label>
+          <textarea id="activity-error" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-error">Show model answer</button>
+          <div id="answer-error" class="answer-block" hidden>
+            <p>The list has three elements, so the valid indexes are <code>0</code>, <code>1</code> and <code>2</code>. Index <code>3</code> does not exist.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Trace update</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>What is the final value of <code>scores</code>?</p>
+            <pre><code>scores = [6, 8, 10]
+scores[1] = 12</code></pre>
+            <textarea id="exam-q1" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>The final value is <code>[6, 12, 10]</code>.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Explain</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">Explain what this line does: <code>names[2] = "Mia"</code></label>
+            <textarea id="exam-q2" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>It updates the element at index <code>2</code>, which is the third element in these examples, and replaces it with <code>"Mia"</code>.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Index error</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q3">A list is <code>items = ["pen", "bag"]</code>. Explain why <code>items[2] = "book"</code> is a problem.</label>
+            <textarea id="exam-q3" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>The list has two elements, so the valid indexes are <code>0</code> and <code>1</code>. Index <code>2</code> does not exist.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can explain what it means to update a list or array value.</li>
+          <li>I can use an index to choose which element is updated.</li>
+          <li>I can trace the value of a list before and after an update.</li>
+          <li>I can explain that updating replaces the old value.</li>
+          <li>I can identify errors caused by using the wrong index.</li>
+          <li>I can write simple code that updates a list or array element.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

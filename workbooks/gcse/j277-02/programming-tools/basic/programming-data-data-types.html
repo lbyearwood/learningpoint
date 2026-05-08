@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data types workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Programming data</a></li>
+        <li><span aria-current="page">Data types workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Back to Programming data</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Data types workbook</h1>
+      <p class="lead">Learn how data types tell a program what kind of value is being stored and what can be done with it.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term data type.</li>
+          <li>I can identify strings, integers, real numbers and Boolean values.</li>
+          <li>I can choose a suitable data type for a value.</li>
+          <li>I can explain why programs need to know the data type.</li>
+          <li>I can describe problems caused by using the wrong data type.</li>
+          <li>I can trace simple code that uses different data types.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What is a data type?</h2>
+        <p>A <strong>data type</strong> describes the kind of value stored in a variable or constant.</p>
+        <p>The data type matters because it affects what operations can be carried out. For example, numbers can be used in calculations, but text is usually treated as characters.</p>
+
+        <div class="diagram-card">
+          <h3>Same-looking value, different meaning</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Value</th>
+                <th scope="col">Data type</th>
+                <th scope="col">How the program treats it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>7</code></td>
+                <td>Integer</td>
+                <td>A whole number that can be used in calculations.</td>
+              </tr>
+              <tr>
+                <td><code>"7"</code></td>
+                <td>String</td>
+                <td>Text made from characters.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define">Write a definition of a data type.</label>
+          <textarea id="activity-define" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define">Show model answer</button>
+          <div id="answer-define" class="answer-block" hidden>
+            <p>A data type describes the kind of value stored, such as text, a whole number, a decimal number or True/False.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Common data types</h2>
+        <p>OCR J277 programming questions often use these common data types.</p>
+
+        <div class="diagram-card">
+          <h3>Core examples</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Data type</th>
+                <th scope="col">Meaning</th>
+                <th scope="col">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>String</td>
+                <td>Text made from characters.</td>
+                <td><code>"Sam"</code>, <code>"A12"</code>, <code>"hello"</code></td>
+              </tr>
+              <tr>
+                <td>Integer</td>
+                <td>A whole number.</td>
+                <td><code>0</code>, <code>17</code>, <code>-4</code></td>
+              </tr>
+              <tr>
+                <td>Real or float</td>
+                <td>A number with a decimal part.</td>
+                <td><code>3.5</code>, <code>0.25</code>, <code>-2.8</code></td>
+              </tr>
+              <tr>
+                <td>Boolean</td>
+                <td>One of two logical values.</td>
+                <td><code>True</code>, <code>False</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Identify the types</h3>
+          <label class="answer-label" for="activity-identify">Identify the data type of <code>"Maya"</code>, <code>42</code>, <code>6.5</code> and <code>False</code>.</label>
+          <textarea id="activity-identify" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-identify">Show answer</button>
+          <div id="answer-identify" class="answer-block" hidden>
+            <p><code>"Maya"</code> is a string, <code>42</code> is an integer, <code>6.5</code> is a real/float, and <code>False</code> is Boolean.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Choosing suitable data types</h2>
+        <p>A programmer should choose the data type that matches how the value will be used.</p>
+
+        <div class="diagram-card">
+          <h3>Choosing examples</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Data to store</th>
+                <th scope="col">Suitable data type</th>
+                <th scope="col">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A student's name</td>
+                <td>String</td>
+                <td>Names are text.</td>
+              </tr>
+              <tr>
+                <td>Number of lives left</td>
+                <td>Integer</td>
+                <td>Lives are counted as whole numbers.</td>
+              </tr>
+              <tr>
+                <td>Temperature such as 18.5</td>
+                <td>Real or float</td>
+                <td>The value may include a decimal part.</td>
+              </tr>
+              <tr>
+                <td>Whether a user is logged in</td>
+                <td>Boolean</td>
+                <td>There are two possible states: True or False.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Choose the type</h3>
+          <label class="answer-label" for="activity-choose">Choose a suitable data type for storing a product price such as 4.99. Explain your choice.</label>
+          <textarea id="activity-choose" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-choose">Show model answer</button>
+          <div id="answer-choose" class="answer-block" hidden>
+            <p>A real or float is suitable because the price can include a decimal part.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Why data types matter</h2>
+        <p>The wrong data type can make code behave incorrectly or cause an error. A common example is storing a number as a string.</p>
+
+        <div class="diagram-card">
+          <h3>Number or text?</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Expression</th>
+                <th scope="col">Likely result</th>
+                <th scope="col">Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>7 + 3</code></td>
+                <td><code>10</code></td>
+                <td>Both values are numbers.</td>
+              </tr>
+              <tr>
+                <td><code>"7" + "3"</code></td>
+                <td><code>"73"</code> in many languages</td>
+                <td>Both values are strings, so they are joined as text.</td>
+              </tr>
+              <tr>
+                <td><code>"7" + 3</code></td>
+                <td>May cause an error</td>
+                <td>The program is trying to mix text and a number.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Explain the problem</h3>
+          <label class="answer-label" for="activity-problem">Why might <code>"20"</code> be a poor choice if the value needs to be used in a calculation?</label>
+          <textarea id="activity-problem" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-problem">Show model answer</button>
+          <div id="answer-problem" class="answer-block" hidden>
+            <p><code>"20"</code> is a string, so the program may treat it as text rather than a number. It may need to be converted before arithmetic can be carried out.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Definition</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Define the term data type.</label>
+            <textarea id="exam-q1" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>A data type describes the kind of value being stored, such as a string, integer, real/float or Boolean.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Choosing types</p>
+              </div>
+              <span class="mark-tag">4 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">Choose a suitable data type for each value: username, age, height in metres, and whether payment has been made.</label>
+            <textarea id="exam-q2" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>Username: string. Age: integer. Height in metres: real/float. Whether payment has been made: Boolean.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Reasoning</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q3">Explain why a program needs to know the data type of a value.</label>
+            <textarea id="exam-q3" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>The data type tells the program what kind of value is stored and what operations are suitable. For example, numbers can be used in arithmetic, strings can be joined as text, and Boolean values can be used in conditions.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term data type.</li>
+          <li>I can identify strings, integers, real numbers and Boolean values.</li>
+          <li>I can choose a suitable data type for a value.</li>
+          <li>I can explain why programs need to know the data type.</li>
+          <li>I can describe problems caused by using the wrong data type.</li>
+          <li>I can trace simple code that uses different data types.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

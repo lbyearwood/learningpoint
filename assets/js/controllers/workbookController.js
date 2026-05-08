@@ -38,7 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentUserRole = params.get("role") || (params.get("route") === "teacher" || document.referrer.includes("/admin/") ? "teacher" : "student");
   const coveredParam = params.get("covered");
   const workbookCovered = coveredParam === null ? false : coveredParam === "true";
-  const canViewAnswers = currentUserRole === "teacher" || workbookCovered === true;
+  // Development prototype setting.
+  // Keep true while building and testing the site.
+  // Set to false later when workbook answer access should depend on teacher role or covered status.
+  const allWorkbookAnswersAvailable = true;
+  const canViewAnswers =
+    allWorkbookAnswersAvailable === true ||
+    currentUserRole === "teacher" ||
+    workbookCovered === true;
 
   if (!canViewAnswers) {
     const notice = document.createElement("div");

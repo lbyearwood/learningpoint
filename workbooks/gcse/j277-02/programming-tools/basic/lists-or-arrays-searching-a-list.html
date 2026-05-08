@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Searching a list workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Lists or arrays</a></li>
+        <li><span aria-current="page">Searching a list workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html">Back to Lists or arrays</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Searching a list workbook</h1>
+      <p class="lead">Learn how a program checks a list or array to find whether a target value is stored.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can explain what it means to search a list.</li>
+          <li>I can trace a simple linear search.</li>
+          <li>I can use a target value in a search.</li>
+          <li>I can use a Python <code>for index in range(...)</code> loop to search by index.</li>
+          <li>I can use a Python <code>for value in list</code> loop to search by value.</li>
+          <li>I can explain found and not found outcomes.</li>
+          <li>I can identify the index where a value is found.</li>
+          <li>I can explain why each element may need to be checked.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What does searching a list mean?</h2>
+        <p>Searching a list means checking the elements in the list to see whether a particular value is stored.</p>
+        <p>The value being searched for is often called the <strong>target</strong>. A search may return whether the target was found, or the index where it was found.</p>
+
+        <div class="diagram-card">
+          <h3>Search idea</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">List</th>
+                <th scope="col">Target</th>
+                <th scope="col">Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>names = ["Ava", "Sam", "Noor"]</code></td>
+                <td><code>"Sam"</code></td>
+                <td>Found at index <code>1</code></td>
+              </tr>
+              <tr>
+                <td><code>names = ["Ava", "Sam", "Noor"]</code></td>
+                <td><code>"Mia"</code></td>
+                <td>Not found</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define">Explain what it means to search a list.</label>
+          <textarea id="activity-define" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define">Show model answer</button>
+          <div id="answer-define" class="answer-block" hidden>
+            <p>Searching a list means checking its elements to find whether a target value is stored in the list.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Linear search</h2>
+        <p>A simple way to search a list is a <strong>linear search</strong>. This checks each element in order until the target is found or the list ends.</p>
+        <p>Writing lots of separate <code>if</code> statements for <code>scores[0]</code>, <code>scores[1]</code>, <code>scores[2]</code> and so on is poor practice because it only works for a fixed-size list and creates repeated code. A loop is the correct way to search a list in Python.</p>
+
+        <div class="diagram-card">
+          <h3>Checking in order with Python</h3>
+          <pre><code>scores = [4, 7, 9]
+target = 7
+found = False
+
+for score in scores:
+    if score == target:
+        found = True</code></pre>
+          <p class="diagram-caption">The target <code>7</code> is found when <code>scores[1]</code> is checked.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 2: Trace a search</h3>
+          <p>Look at this list:</p>
+          <pre><code>colours = ["red", "blue", "green"]
+target = "green"</code></pre>
+          <label class="answer-label" for="activity-trace">Which index contains the target?</label>
+          <input id="activity-trace" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-trace">Show answer</button>
+          <div id="answer-trace" class="answer-block" hidden>
+            <p>The target <code>"green"</code> is at index <code>2</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Searching with an index loop</h2>
+        <p>When a list could contain many values, writing a separate <code>if</code> statement for every index is not practical and should be avoided. A loop can repeat the same check for each index.</p>
+        <p>A Python <code>for index in range(...)</code> loop is useful when the program needs to know the position where the target is found.</p>
+
+        <div class="diagram-card">
+          <h3>Index loop search</h3>
+          <pre><code>scores = [4, 7, 9]
+target = 7
+position = -1
+
+for index in range(0, len(scores)):
+    if scores[index] == target:
+        position = index</code></pre>
+          <p class="diagram-caption">The loop checks index <code>0</code>, then index <code>1</code>, then index <code>2</code>. The target is found at index <code>1</code>, so <code>position</code> becomes <code>1</code>.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Trace an index loop</h3>
+          <p>What final value should <code>position</code> have?</p>
+          <pre><code>letters = ["a", "b", "c", "d"]
+target = "c"
+position = -1
+
+for index in range(0, len(letters)):
+    if letters[index] == target:
+        position = index</code></pre>
+          <label class="answer-label" for="activity-index-loop">Position:</label>
+          <input id="activity-index-loop" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-index-loop">Show answer</button>
+          <div id="answer-index-loop" class="answer-block" hidden>
+            <p>The final value is <code>2</code> because <code>"c"</code> is stored at index <code>2</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Searching with a value loop</h2>
+        <p>A Python <code>for value in list</code> loop works like a for-each loop. It is useful when the program only needs to know whether the target exists. It checks each value directly, without using an index.</p>
+
+        <div class="diagram-card">
+          <h3>Value loop search</h3>
+          <pre><code>names = ["Ava", "Sam", "Noor"]
+target = "Noor"
+found = False
+
+for name in names:
+    if name == target:
+        found = True</code></pre>
+          <p class="diagram-caption">The loop checks each name in the list. When <code>"Noor"</code> is checked, <code>found</code> becomes <code>True</code>.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Trace a value loop</h3>
+          <p>What final value should <code>found</code> have?</p>
+          <pre><code>items = ["pen", "bag", "book"]
+target = "ruler"
+found = False
+
+for item in items:
+    if item == target:
+        found = True</code></pre>
+          <label class="answer-label" for="activity-for-each">Final value:</label>
+          <input id="activity-for-each" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-for-each">Show answer</button>
+          <div id="answer-for-each" class="answer-block" hidden>
+            <p>The final value is <code>False</code> because <code>"ruler"</code> is not stored in the list.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Using a found flag</h2>
+        <p>A program can use a Boolean variable, often called a <strong>flag</strong>, to remember whether the target has been found. In Python, a found flag is normally updated inside a loop.</p>
+
+        <div class="diagram-card">
+          <h3>Found flag example</h3>
+          <pre><code>names = ["Ava", "Sam", "Noor"]
+target = "Noor"
+found = False
+
+for name in names:
+    if name == target:
+        found = True</code></pre>
+          <p class="diagram-caption"><code>found</code> starts as <code>False</code>. It becomes <code>True</code> when <code>"Noor"</code> is checked.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Found or not found?</h3>
+          <p>What is the final value of <code>found</code>?</p>
+          <pre><code>items = ["pen", "bag", "book"]
+target = "ruler"
+found = False
+
+for item in items:
+    if item == target:
+        found = True</code></pre>
+          <label class="answer-label" for="activity-found">Final value:</label>
+          <input id="activity-found" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-found">Show answer</button>
+          <div id="answer-found" class="answer-block" hidden>
+            <p>The final value is <code>False</code> because <code>"ruler"</code> is not in the list.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Finding the index</h2>
+        <p>Sometimes it is not enough to know that a value exists. The program may also need to know the index where it was found.</p>
+
+        <div class="diagram-card">
+          <h3>Position example</h3>
+          <pre><code>numbers = [12, 18, 25]
+target = 18
+position = -1
+
+for index in range(0, len(numbers)):
+    if numbers[index] == target:
+        position = index</code></pre>
+          <p class="diagram-caption"><code>position</code> becomes <code>1</code> because <code>18</code> is at index <code>1</code>. A value such as <code>-1</code> can mean not found.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 6: Find the position</h3>
+          <p>What final value should <code>position</code> have?</p>
+          <pre><code>letters = ["a", "b", "c"]
+target = "a"</code></pre>
+          <label class="answer-label" for="activity-position">Position:</label>
+          <input id="activity-position" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-position">Show answer</button>
+          <div id="answer-position" class="answer-block" hidden>
+            <p>The position should be <code>0</code> because <code>"a"</code> is the first element.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Not found</h2>
+        <p>If the target is not in the list, the search should clearly show that it was not found.</p>
+        <p>This can be done with <code>found = False</code>, <code>position = -1</code>, or a message such as <code>"Not found"</code>.</p>
+
+        <div class="activity-box">
+          <h3>Activity 7: Explain not found</h3>
+          <label class="answer-label" for="activity-not-found">Why might a program set <code>position = -1</code> before searching a list?</label>
+          <textarea id="activity-not-found" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-not-found">Show model answer</button>
+          <div id="answer-not-found" class="answer-block" hidden>
+            <p><code>-1</code> can be used to mean not found. If the target is found, the program replaces <code>-1</code> with the real index.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Definition</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Explain what it means to search a list.</label>
+            <textarea id="exam-q1" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>Searching a list means checking elements in the list to find whether a target value is stored.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Trace search</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>Look at this list:</p>
+            <pre><code>names = ["Ava", "Sam", "Noor"]
+target = "Sam"</code></pre>
+            <label class="answer-label" for="exam-q2">Is the target found? If yes, at which index?</label>
+            <textarea id="exam-q2" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p>Yes. <code>"Sam"</code> is found at index <code>1</code>.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Found flag</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q3">Explain why a Boolean variable such as <code>found</code> is useful when searching a list.</label>
+            <textarea id="exam-q3" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show model answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>A Boolean flag can start as <code>False</code>. If the target is found, it is changed to <code>True</code>, so the program can tell whether the search succeeded.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 4</h3>
+                <p>Choose a loop</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q4">Explain why a Python <code>for index in range(...)</code> loop is useful when the program needs to find the position of a target value.</label>
+            <textarea id="exam-q4" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q4">Show model answer</button>
+            <div id="answer-q4" class="answer-block" hidden>
+              <p>An index loop checks each position in the list. If the target is found, the current index can be stored as the target's position.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can explain what it means to search a list.</li>
+          <li>I can trace a simple linear search.</li>
+          <li>I can use a target value in a search.</li>
+          <li>I can use a Python <code>for index in range(...)</code> loop to search by index.</li>
+          <li>I can use a Python <code>for value in list</code> loop to search by value.</li>
+          <li>I can explain found and not found outcomes.</li>
+          <li>I can identify the index where a value is found.</li>
+          <li>I can explain why each element may need to be checked.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/lists-or-arrays.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

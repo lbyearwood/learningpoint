@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constants workbook | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science workbook</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Programming data</a></li>
+        <li><span aria-current="page">Constants workbook</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Back to Programming data</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Constants workbook</h1>
+      <p class="lead">Learn how programs use constants to store important values that should not change while the program runs.</p>
+    </section>
+
+    <article class="workbook-page interactive-workbook">
+      <section class="lesson-block">
+        <h2>Learning checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term constant.</li>
+          <li>I can explain the difference between a variable and a constant.</li>
+          <li>I can identify when a value should be stored as a constant.</li>
+          <li>I can explain why constants make code easier to maintain.</li>
+          <li>I can choose clear names for constants.</li>
+          <li>I can trace simple code that uses constants in calculations.</li>
+        </ul>
+      </section>
+
+      <section class="lesson-block">
+        <h2>What is a constant?</h2>
+        <p>A <strong>constant</strong> is a named value that should not change while a program is running.</p>
+        <p>Constants are useful for values that have a fixed meaning, such as a tax rate, maximum score, number of lives, password length limit or conversion rate used throughout a program.</p>
+
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">Constant storage diagram</h3>
+          <svg viewBox="0 0 820 220" role="img" aria-label="Constant MAX_LIVES points to a fixed stored value of 3">
+            <defs><marker id="constArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="flow-code-node" x="50" y="80" width="170" height="60" rx="14"/><text class="flow-label" x="135" y="116" text-anchor="middle">MAX_LIVES</text>
+            <path class="flow-line-neutral" marker-end="url(#constArrow)" d="M220 110 H335"/><text class="flow-note" x="278" y="95" text-anchor="middle">fixed name</text>
+            <rect class="flow-action-node" x="335" y="55" width="220" height="110" rx="18"/><text class="flow-note" x="445" y="88" text-anchor="middle">stored value</text><text class="flow-label" x="445" y="128" text-anchor="middle" style="font-size:30px">3</text>
+            <rect class="flow-false-node" x="610" y="80" width="160" height="60" rx="14"/><text class="flow-note" x="690" y="104" text-anchor="middle">should not change</text><text class="flow-note" x="690" y="124" text-anchor="middle">during the run</text>
+          </svg>
+          <figcaption class="diagram-caption">The constant is called <strong>MAX_LIVES</strong>. Its value should stay as <strong>3</strong> while the program runs.</figcaption>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 1: Define it</h3>
+          <label class="answer-label" for="activity-define-constant">Write a definition of a constant.</label>
+          <textarea id="activity-define-constant" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-define-constant">Show model answer</button>
+          <div id="answer-define-constant" class="answer-block" hidden>
+            <p>A constant is a named value in a program that should not change while the program is running.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Constants and variables</h2>
+        <p>Variables and constants both give names to values. The key difference is whether the value is expected to change.</p>
+
+        <figure class="teaching-diagram">
+          <h3 class="diagram-title">Variable vs constant</h3>
+          <svg viewBox="0 0 850 260" role="img" aria-label="Comparison of variable value changing and constant value staying the same">
+            <defs><marker id="compareArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+            <rect class="flow-process-node" x="55" y="45" width="310" height="80" rx="16"/><text class="flow-label" x="210" y="76" text-anchor="middle">Variable</text><text class="flow-note" x="210" y="101" text-anchor="middle">score: 10 -> 15 -> 30</text>
+            <path class="flow-line-neutral" marker-end="url(#compareArrow)" d="M210 125 V170"/>
+            <rect class="flow-action-node" x="55" y="170" width="310" height="55" rx="14"/><text class="flow-note" x="210" y="202" text-anchor="middle">value can be replaced</text>
+            <rect class="flow-code-node" x="485" y="45" width="310" height="80" rx="16"/><text class="flow-label" x="640" y="76" text-anchor="middle">Constant</text><text class="flow-note" x="640" y="101" text-anchor="middle">MAX_SCORE: 100</text>
+            <path class="flow-line-neutral" marker-end="url(#compareArrow)" d="M640 125 V170"/>
+            <rect class="flow-false-node" x="485" y="170" width="310" height="55" rx="14"/><text class="flow-note" x="640" y="202" text-anchor="middle">value should stay the same</text>
+          </svg>
+          <figcaption class="diagram-caption">Variables are designed to change. Constants are used for values that should remain fixed.</figcaption>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Variable</th>
+                <th scope="col">Constant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Can the value change?</th>
+                <td>Yes, it can be updated while the program runs.</td>
+                <td>No, it should stay the same while the program runs.</td>
+              </tr>
+              <tr>
+                <th scope="row">Example</th>
+                <td><code>score = score + 1</code></td>
+                <td><code>MAX_SCORE = 100</code></td>
+              </tr>
+              <tr>
+                <th scope="row">Typical use</th>
+                <td>Current score, username, lives remaining.</td>
+                <td>VAT rate, maximum attempts, fixed conversion factor.</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
+        <div class="activity-box">
+          <h3>Activity 2: Spot the difference</h3>
+          <label class="answer-label" for="activity-difference">Explain one difference between a variable and a constant.</label>
+          <textarea id="activity-difference" class="student-answer" rows="3" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-difference">Show model answer</button>
+          <div id="answer-difference" class="answer-block" hidden>
+            <p>A variable's value can change while the program runs, but a constant's value should stay the same.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Why use constants?</h2>
+        <p>Constants make code easier to read because the name explains what the value means. They also make code easier to update because the value is written once and reused.</p>
+        <p>If the value needs to change later, the programmer can change the constant in one place instead of finding every copy of the same number in the program.</p>
+
+        <div class="diagram-card">
+          <h3>Example</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Less clear</th>
+                <th scope="col">Clearer with a constant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>total = price * 1.2</code></td>
+                <td><code>VAT_RATE = 1.2</code><br><code>total = price * VAT_RATE</code></td>
+              </tr>
+              <tr>
+                <td>The value <code>1.2</code> has no meaning unless you already know what it represents.</td>
+                <td><code>VAT_RATE</code> explains the purpose of the value.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 3: Explain the benefit</h3>
+          <label class="answer-label" for="activity-benefit">Why is <code>VAT_RATE</code> clearer than writing <code>1.2</code> throughout a program?</label>
+          <textarea id="activity-benefit" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-benefit">Show model answer</button>
+          <div id="answer-benefit" class="answer-block" hidden>
+            <p><code>VAT_RATE</code> explains what the value means. If the VAT rate changes, the programmer can update the constant once rather than changing lots of separate values.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Naming constants</h2>
+        <p>Constants should have clear names that describe the value. Many programmers write constant names in uppercase with underscores, such as <code>MAX_ATTEMPTS</code>.</p>
+
+        <div class="diagram-card">
+          <h3>Clear constant names</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Constant name</th>
+                <th scope="col">Value</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>MAX_ATTEMPTS</code></td>
+                <td><code>3</code></td>
+                <td>Maximum number of login attempts.</td>
+              </tr>
+              <tr>
+                <td><code>PASS_MARK</code></td>
+                <td><code>50</code></td>
+                <td>Score needed to pass.</td>
+              </tr>
+              <tr>
+                <td><code>FREE_DELIVERY_LIMIT</code></td>
+                <td><code>25</code></td>
+                <td>Minimum order value for free delivery.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 4: Choose a name</h3>
+          <label class="answer-label" for="activity-name">Suggest a clear constant name for the maximum number of students allowed in a class.</label>
+          <textarea id="activity-name" class="student-answer short-answer" rows="2" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-name">Show model answer</button>
+          <div id="answer-name" class="answer-block" hidden>
+            <p>A clear answer could be <code>MAX_STUDENTS</code>, <code>MAX_CLASS_SIZE</code> or <code>CLASS_LIMIT</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Tracing code with constants</h2>
+        <p>Constants can be used in calculations. The constant value is read whenever it is needed, but it should not be changed by the program.</p>
+
+        <div class="diagram-card">
+          <h3>Example trace</h3>
+          <pre><code>POINTS_PER_WIN = 3
+wins = 4
+points = wins * POINTS_PER_WIN</code></pre>
+          <p class="diagram-caption">The value of <code>POINTS_PER_WIN</code> is 3, so <code>points</code> becomes 12.</p>
+        </div>
+
+        <div class="activity-box">
+          <h3>Activity 5: Calculate using a constant</h3>
+          <p>What is the final value of <code>total</code>?</p>
+          <pre><code>ITEM_PRICE = 5
+quantity = 6
+total = quantity * ITEM_PRICE</code></pre>
+          <label class="answer-label" for="activity-trace">Final value:</label>
+          <input id="activity-trace" name="activity-trace" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+          <button class="button button-secondary toggle-answer" type="button" data-answer="answer-trace">Show answer</button>
+          <div id="answer-trace" class="answer-block" hidden>
+            <p>The final value of <code>total</code> is 30 because <code>6 * 5 = 30</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Exam-style questions</h2>
+        <div class="question-stack">
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 1</h3>
+                <p>Definition</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q1">Define the term constant.</label>
+            <textarea id="exam-q1" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q1">Show model answer</button>
+            <div id="answer-q1" class="answer-block" hidden>
+              <p>A constant is a named value in a program that should not change while the program is running.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 2</h3>
+                <p>Usefulness</p>
+              </div>
+              <span class="mark-tag">3 marks</span>
+            </div>
+            <label class="answer-label" for="exam-q2">Explain why a programmer might use a constant for <code>MAX_ATTEMPTS</code> in a login program.</label>
+            <textarea id="exam-q2" class="student-answer" rows="5" placeholder="Type your answer here..."></textarea>
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q2">Show model answer</button>
+            <div id="answer-q2" class="answer-block" hidden>
+              <p><code>MAX_ATTEMPTS</code> makes the code easier to read because it explains what the value means. The value should not change while the program runs. If the allowed number of attempts changes later, the programmer can update it in one place.</p>
+            </div>
+          </article>
+
+          <article class="question-card">
+            <div class="question-card-header">
+              <div>
+                <h3>Question 3</h3>
+                <p>Trace code</p>
+              </div>
+              <span class="mark-tag">2 marks</span>
+            </div>
+            <p>What is output by this code?</p>
+            <pre><code>PASS_MARK = 50
+score = 42
+score = score + 10
+print(score)</code></pre>
+            <label class="answer-label" for="exam-q3">Output:</label>
+            <input id="exam-q3" class="student-answer short-answer" type="text" autocomplete="off" placeholder="Type your answer...">
+            <p class="paste-message" aria-live="polite"></p>
+            <button class="button button-secondary toggle-answer" type="button" data-answer="answer-q3">Show answer</button>
+            <div id="answer-q3" class="answer-block" hidden>
+              <p>The output is 52. <code>PASS_MARK</code> is not changed; <code>score</code> is updated from 42 to 52.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson-block">
+        <h2>Final review checklist</h2>
+        <ul class="checklist">
+          <li>I can define the term constant.</li>
+          <li>I can explain the difference between a variable and a constant.</li>
+          <li>I can identify when a value should be stored as a constant.</li>
+          <li>I can explain why constants make code easier to maintain.</li>
+          <li>I can choose clear names for constants.</li>
+          <li>I can trace simple code that uses constants in calculations.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const currentUserRole = role === "admin" ? "teacher" : (role || "student");
+      const workbookCovered = params.get("covered") === "true";
+      // Development prototype setting.
+      // Keep true while building and testing the site.
+      // Set to false later when workbook answer access should depend on teacher role or covered status.
+      const allWorkbookAnswersAvailable = true;
+      const canViewAnswers =
+        allWorkbookAnswersAvailable === true ||
+        currentUserRole === "teacher" ||
+        workbookCovered === true;
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      if (!canViewAnswers) {
+        const notice = document.createElement("p");
+        notice.className = "learning-state-notice";
+        notice.textContent = "Answers will be available after your teacher has marked this workbook as covered.";
+        document.querySelector(".interactive-workbook").prepend(notice);
+        document.querySelectorAll(".toggle-answer").forEach((button) => button.hidden = true);
+        return;
+      }
+
+      document.querySelectorAll(".toggle-answer").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = document.getElementById(button.dataset.answer);
+          if (!answer) return;
+          answer.hidden = !answer.hidden;
+          button.textContent = answer.hidden ? "Show answer" : "Hide answer";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

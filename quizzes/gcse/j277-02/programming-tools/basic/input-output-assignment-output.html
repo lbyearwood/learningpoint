@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Output quiz | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science quiz</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/input-output-assignment.html">Input, output and assignment</a></li>
+        <li><span aria-current="page">Output quiz</span></li>
+      </ol>
+    </nav>
+    <section class="page-title admin-page-title compact-title">
+      <h1>Output quiz</h1>
+      <p class="lead">This quiz has not been built yet.</p>
+      <div class="button-row"><a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/input-output-assignment.html">Back to Input, output and assignment</a></div>
+    </section>
+    <article class="quiz-card">
+      <section class="lesson-block">
+        <h2>Quiz placeholder</h2>
+        <p>This quiz has not been built yet.</p>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script src="../../../../../assets/js/controllers/quizAccessController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("role") !== "student") return;
+      const links = {
+        dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+        gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+        unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+        tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+        section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+        topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/input-output-assignment.html"],
+        back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/input-output-assignment.html"],
+      };
+      Object.entries(links).forEach(([key, value]) => {
+        document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+          link.href = value[0];
+          if (value[1]) link.textContent = value[1];
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

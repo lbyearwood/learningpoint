@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constants quiz | LearningPoint</title>
+  <link rel="stylesheet" href="../../../../../assets/css/styles.css">
+</head>
+<body class="admin-page">
+  <header class="site-header admin-header">
+    <a class="brand" href="../../../../../index.html" aria-label="LearningPoint home">
+      <span class="brand-mark">LP</span>
+      <span><strong>LearningPoint</strong><small>GCSE Computer Science quiz</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../../../../../admin/control-panel.html">Teacher dashboard</a>
+      <a href="../../../../../student/dashboard.html">Student dashboard</a>
+      <a href="../../../../../login.html">Sign out</a>
+    </nav>
+  </header>
+
+  <main class="content-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a data-role-link="dashboard" href="../../../../../admin/control-panel.html">Teacher dashboard</a></li>
+        <li><a data-role-link="gcse" href="../../../../../admin/courses/gcse-computer-science.html">GCSE Computer Science</a></li>
+        <li><a data-role-link="unit" href="../../../../../admin/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html">J277/02 Computational thinking, algorithms and programming</a></li>
+        <li><a data-role-link="tools" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html">Programming tools</a></li>
+        <li><a data-role-link="section" href="../../../../../admin/courses/gcse/j277-02/programming-tools.html#basic">Basic programming tools</a></li>
+        <li><a data-role-link="topic" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Programming data</a></li>
+        <li><span aria-current="page">Constants quiz</span></li>
+      </ol>
+    </nav>
+
+    <section class="page-title admin-page-title compact-title">
+      <div class="button-row">
+        <a class="button button-secondary back-button" data-role-link="back" href="../../../../../admin/courses/gcse/j277-02/programming-tools/basic/programming-data.html">Back to Programming data</a>
+      </div>
+      <p class="eyebrow">OCR J277 &middot; 2.2 Programming fundamentals</p>
+      <h1>Constants quiz</h1>
+      <p class="lead">Check your understanding of constants, fixed values, naming and maintainability.</p>
+    </section>
+
+    <article class="quiz-card">
+      <section id="quizLocked" class="lesson-block">
+        <h2>Quiz locked</h2>
+        <p>This quiz will unlock when your teacher has marked the Constants workbook as covered.</p>
+      </section>
+
+      <form id="constantsQuizForm" hidden>
+        <section class="lesson-block">
+          <h2>Instructions</h2>
+          <p>Answer all 10 questions, then submit the quiz to see your prototype score and feedback.</p>
+        </section>
+
+        <fieldset class="quiz-question">
+          <legend>1. What is a constant?</legend>
+          <label><input type="radio" name="q1" value="fixed-named-value"> A named value that should not change while a program runs</label>
+          <label><input type="radio" name="q1" value="changing-storage"> A named value that must change every time it is used</label>
+          <label><input type="radio" name="q1" value="comment"> A note that explains code</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>2. Which value is most suitable to store as a constant?</legend>
+          <label><input type="radio" name="q2" value="current-score"> A player's current score</label>
+          <label><input type="radio" name="q2" value="max-lives"> The maximum number of lives allowed in the game</label>
+          <label><input type="radio" name="q2" value="username"> The username entered by a user</label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>3. Which name is clearest for a constant storing the maximum number of login attempts?</legend>
+          <label><input type="radio" name="q3" value="x"> <code>x</code></label>
+          <label><input type="radio" name="q3" value="max-attempts"> <code>MAX_ATTEMPTS</code></label>
+          <label><input type="radio" name="q3" value="num"> <code>num</code></label>
+        </fieldset>
+
+        <fieldset class="quiz-question">
+          <legend>4. Why can constants make code easier to maintain?</legend>
+          <label><input type="radio" name="q4" value="one-place"> The value can be changed in one place if the fixed value needs updating</label>
+          <label><input type="radio" name="q4" value="random"> Constants make values random</label>
+          <label><input type="radio" name="q4" value="remove-code"> Constants remove the need for code</label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q5">5. What is the final value of <code>total</code>?</label>
+          <pre><code>ITEM_PRICE = 4
+quantity = 5
+total = quantity * ITEM_PRICE</code></pre>
+          <input id="q5" name="q5" class="student-answer short-answer" type="text" autocomplete="off" inputmode="numeric" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q6">6. What is the final value of <code>points</code>?</label>
+          <pre><code>POINTS_PER_WIN = 3
+wins = 7
+points = wins * POINTS_PER_WIN</code></pre>
+          <input id="q6" name="q6" class="student-answer short-answer" type="text" autocomplete="off" inputmode="numeric" placeholder="Type your answer...">
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q7">7. Explain one difference between a variable and a constant.</label>
+          <textarea id="q7" name="q7" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q8">8. Explain why <code>VAT_RATE</code> is clearer than writing <code>1.2</code> throughout a program.</label>
+          <textarea id="q8" name="q8" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <fieldset class="quiz-question">
+          <legend>9. Which line is most likely to define a constant?</legend>
+          <label><input type="radio" name="q9" value="lives-minus"> <code>lives = lives - 1</code></label>
+          <label><input type="radio" name="q9" value="pass-mark"> <code>PASS_MARK = 50</code></label>
+          <label><input type="radio" name="q9" value="input-name"> <code>name = input()</code></label>
+        </fieldset>
+
+        <div class="quiz-question">
+          <label class="answer-label" for="q10">10. A game uses <code>MAX_LIVES = 3</code>. Explain why this is better than writing <code>3</code> in several different places.</label>
+          <textarea id="q10" name="q10" class="student-answer" rows="4" placeholder="Type your answer here..."></textarea>
+          <p class="paste-message" aria-live="polite"></p>
+        </div>
+
+        <div class="button-row">
+          <button class="button" type="submit">Submit quiz</button>
+        </div>
+      </form>
+
+      <section id="quizResult" class="lesson-block" hidden aria-live="polite">
+        <h2>Your result</h2>
+        <p id="scoreText"></p>
+        <div id="feedbackList"></div>
+        <p class="muted">Scores will be saved later when Supabase is connected.</p>
+      </section>
+    </article>
+  </main>
+
+  <script src="../../../../../assets/js/utils/dom.js"></script>
+  <script src="../../../../../assets/js/controllers/uiController.js"></script>
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      const role = params.get("role");
+      if (role === "student") {
+        const links = {
+          dashboard: ["../../../../../student/dashboard.html", "Student dashboard"],
+          gcse: ["../../../../../student/courses/gcse-computer-science.html"],
+          unit: ["../../../../../student/courses/gcse/j277-02-computational-thinking-algorithms-and-programming.html"],
+          tools: ["../../../../../student/courses/gcse/j277-02/programming-tools.html"],
+          section: ["../../../../../student/courses/gcse/j277-02/programming-tools.html#basic"],
+          topic: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+          back: ["../../../../../student/courses/gcse/j277-02/programming-tools/basic/programming-data.html"],
+        };
+        Object.entries(links).forEach(([key, value]) => {
+          document.querySelectorAll(`[data-role-link="${key}"]`).forEach((link) => {
+            link.href = value[0];
+            if (value[1]) link.textContent = value[1];
+          });
+        });
+      }
+
+      const workbookCovered = params.get("covered") === "true";
+      const lockedPanel = document.getElementById("quizLocked");
+      const quizForm = document.getElementById("constantsQuizForm");
+      if (workbookCovered) {
+        lockedPanel.hidden = true;
+        quizForm.hidden = false;
+      }
+
+      function showPasteMessage(field) {
+        const message = field.parentElement.querySelector(".paste-message");
+        if (!message) return;
+        message.textContent = "Please type your answer rather than pasting it.";
+        window.clearTimeout(message.dataset.timer);
+        message.dataset.timer = window.setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+
+      document.querySelectorAll(".student-answer").forEach((field) => {
+        field.addEventListener("paste", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+        field.addEventListener("keydown", (event) => {
+          if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "v") {
+            event.preventDefault();
+            showPasteMessage(field);
+          }
+        });
+        field.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          showPasteMessage(field);
+        });
+      });
+
+      function normalise(value) {
+        return String(value || "").trim().toLowerCase();
+      }
+
+      function containsAny(value, keywords) {
+        const answer = normalise(value);
+        return keywords.some((keyword) => answer.includes(keyword));
+      }
+
+      function markShortAnswer(value, keywordGroups) {
+        return keywordGroups.every((group) => containsAny(value, group));
+      }
+
+      quizForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(quizForm);
+        let score = 0;
+        const feedback = [];
+
+        const exactAnswers = {
+          q1: "fixed-named-value",
+          q2: "max-lives",
+          q3: "max-attempts",
+          q4: "one-place",
+          q9: "pass-mark",
+        };
+
+        Object.entries(exactAnswers).forEach(([question, answer]) => {
+          if (formData.get(question) === answer) {
+            score += 1;
+            feedback.push(`${question.toUpperCase()}: correct.`);
+          } else {
+            feedback.push(`${question.toUpperCase()}: check this one again.`);
+          }
+        });
+
+        if (normalise(formData.get("q5")) === "20") {
+          score += 1;
+          feedback.push("Q5: correct.");
+        } else {
+          feedback.push("Q5: quantity is 5 and ITEM_PRICE is 4, so total is 20.");
+        }
+
+        if (normalise(formData.get("q6")) === "21") {
+          score += 1;
+          feedback.push("Q6: correct.");
+        } else {
+          feedback.push("Q6: wins is 7 and POINTS_PER_WIN is 3, so points is 21.");
+        }
+
+        if (markShortAnswer(formData.get("q7"), [["variable", "constant"], ["change", "same", "fixed", "not change"]])) {
+          score += 1;
+          feedback.push("Q7: good comparison.");
+        } else {
+          feedback.push("Q7: mention that variables can change, while constants should stay fixed while the program runs.");
+        }
+
+        if (markShortAnswer(formData.get("q8"), [["clear", "meaning", "read", "understand", "describe"], ["vat", "rate", "1.2"]])) {
+          score += 1;
+          feedback.push("Q8: good explanation.");
+        } else {
+          feedback.push("Q8: explain that VAT_RATE gives meaning to the value and makes the code easier to read.");
+        }
+
+        if (markShortAnswer(formData.get("q10"), [["max_lives", "max lives", "3"], ["clear", "meaning", "read", "understand", "update", "change"], ["one", "place", "several", "many"]])) {
+          score += 1;
+          feedback.push("Q10: good explanation.");
+        } else {
+          feedback.push("Q10: mention that MAX_LIVES explains the value and can be updated in one place instead of changing several copies of 3.");
+        }
+
+        document.getElementById("scoreText").textContent = `Score: ${score} out of 10`;
+        document.getElementById("feedbackList").innerHTML = `<ul>${feedback.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+        document.getElementById("quizResult").hidden = false;
+        document.getElementById("quizResult").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    })();
+  </script>
+</body>
+</html>
